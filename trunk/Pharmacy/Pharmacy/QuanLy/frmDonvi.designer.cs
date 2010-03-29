@@ -177,7 +177,6 @@
             // 
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX4.Enabled = false;
             this.buttonX4.Location = new System.Drawing.Point(233, 2);
             this.buttonX4.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX4.Name = "buttonX4";
@@ -222,6 +221,8 @@
             this.ClientSize = new System.Drawing.Size(576, 401);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.groupPanel2);
+            this.MaximumSize = new System.Drawing.Size(584, 435);
+            this.MinimumSize = new System.Drawing.Size(584, 435);
             this.Name = "frmDonvi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmDonvi_Load);

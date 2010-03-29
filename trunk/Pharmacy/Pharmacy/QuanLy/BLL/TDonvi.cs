@@ -21,15 +21,15 @@ namespace Pharmacy.QuanLy.BLL
         public int InsertDVT(Info.DonViInfo info)
         {
             int id = cn.ExecuteInsert("SP_INSERTDONVI",
-                new string[] { "@TEN" },
-                new object[] { info.Ten });
+                new string[] { "@TEN", "@TRANGTHAI" },
+                new object[] { info.Ten,info.TrangThai });
             return id;
         }
 
         public int DeleteDVT(Info.DonViInfo info)
         {
             int id = cn.ExecuteNonQuery("sp_DeleteDONVI",
-                new string[] { "@MADONVI" },
+                new string[] { "@MA" },
                 new object[] { info.Ma });
             return id;
         }
@@ -37,8 +37,8 @@ namespace Pharmacy.QuanLy.BLL
         public int UpdateDVT(Info.DonViInfo info)
         {
             cn.ExecuteNonQuery("SP_UPDATEDONVI",
-                new string[] { "@MADONVI", "@TEN" },
-                new object[] { info.Ma, info.Ten });
+                new string[] { "@MADONVI", "@TEN", "@TRANGTHAI" },
+                new object[] { info.Ma, info.Ten,info.TrangThai });
             return 1;
         }
        

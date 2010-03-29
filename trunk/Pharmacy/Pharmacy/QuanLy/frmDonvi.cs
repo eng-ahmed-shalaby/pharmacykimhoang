@@ -66,21 +66,12 @@ namespace Pharmacy.QuanLy
         {
             infoDVT.Ma = int.Parse(HH.Rows[id]["MADONVI"].ToString());
             txttennsx.Text = HH.Rows[id]["TEN"].ToString();
-
-
         }
         public void InsertDVT()
         {
             if (CheckDVT())
             {
-
-
-
                 tDVT.InsertDVT(infoDVT);
-
-
-
-
             }
             else
             {
@@ -116,30 +107,49 @@ namespace Pharmacy.QuanLy
 
         private void buttonX5_Click(object sender, EventArgs e)
         {
-            SetInfoDVT();
-            InsertDVT();
-            set_md();
+            try
+            {
+                SetInfoDVT();
+                InsertDVT();
+                set_md();
+            }
+            catch (Exception ex)
+            {
+                TLog.WriteErr("frmDONVI_Insert", ex.Message + "|||" + ex.StackTrace);
+            }
         }
-
         private void buttonX6_Click(object sender, EventArgs e)
         {
-            SetInfoDVT();
-            UpdateDVT();
-            set_md();
+            try
+            {
+                SetInfoDVT();
+                UpdateDVT();
+                set_md();
+            }
+            catch (Exception ex)
+            {
+                TLog.WriteErr("frmDONVI_update", ex.Message + "|||" + ex.StackTrace);
+            }
         }
 
         private void buttonX4_Click(object sender, EventArgs e)
         {
-            SetInfoDVT();
-            DeleteDVT();
-            set_md();
+            try
+            {
+                SetInfoDVT();
+                DeleteDVT();
+                set_md();
+            }
+            catch (Exception ex)
+            {
+                TLog.WriteErr("frmDONVI_delete", ex.Message + "|||" + ex.StackTrace);
+            }
         }
 
         public void SetInfoDVT()
         {
             infoDVT.Ten = txttennsx.Text;
-
-
+            infoDVT.TrangThai = "1";
 
         }
 
