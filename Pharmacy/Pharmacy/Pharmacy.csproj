@@ -265,6 +265,7 @@
     <Compile Include="BASIC\frmChild.Designer.cs">
       <DependentUpon>frmChild.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\TBus.cs" />
     <Compile Include="BLL\TKhachHang.cs" />
     <Compile Include="BLL\TKho.cs" />
     <Compile Include="BLL\THangHoa.cs" />

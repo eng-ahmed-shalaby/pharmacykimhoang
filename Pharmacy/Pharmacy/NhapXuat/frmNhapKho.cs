@@ -20,6 +20,7 @@ namespace Pharmacy.NhapXuat
         Info.HDNhapInfo infoHDNhap = new NhapXuat.Info.HDNhapInfo();
         Info.CTNHAPInfo infoCTNhap = new NhapXuat.Info.CTNHAPInfo();
         Info.CTNHAPInfo[] infoCTNhapArr = new NhapXuat.Info.CTNHAPInfo[50];
+        Pharmacy.BLL.TBus tbus = new Pharmacy.BLL.TBus();
         double tienhh = 0;
         int num = 0;
        bool fagInsert = false;
@@ -486,13 +487,24 @@ namespace Pharmacy.NhapXuat
             LoadHD(dpkDateHD.Value);
         }
 
-
-
+       
         private void cmbVAT_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            double dg = txtDonGiaNhap.Value;
-            txtTienHH.Text =(dg * txtSoLuong.Value * txtTyGia.Value + (dg * txtSoLuong.Value * txtTyGia.Value) * (float.Parse(cmbVAT.Text) / 100)).ToString();
-            tienhh = double.Parse(txtTienHH.Text);  
+            if (!tbus.IsNumber(cmbVAT.Text))
+                MessageBox.Show("Nhập số");
+            else
+            {
+                try
+                {
+                    double dg = txtDonGiaNhap.Value;
+                    txtTienHH.Text = (dg * txtSoLuong.Value * txtTyGia.Value + (dg * txtSoLuong.Value * txtTyGia.Value) * (float.Parse(cmbVAT.Text) / 100)).ToString();
+                    tienhh = double.Parse(txtTienHH.Text);
+                }
+                catch (Exception ex) {
+                    TLog.WriteErr("frmNhapkho_cmbVAT_SelectedIndexChanged_1", ex.Message + "||" + ex.StackTrace);
+       
+                }
+            }
         }
 
         private void txtDonGiaNhap_TabIndexChanged(object sender, EventArgs e)
