@@ -149,7 +149,7 @@ namespace Pharmacy.QuanLy
         public void SetInfoDVT()
         {
             infoDVT.Ten = txttennsx.Text;
-            infoDVT.TrangThai = "1";
+            infoDVT.TrangThai = 1;
 
         }
 

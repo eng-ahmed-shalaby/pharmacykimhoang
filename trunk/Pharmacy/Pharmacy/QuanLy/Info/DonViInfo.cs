@@ -21,8 +21,8 @@ namespace Pharmacy.QuanLy.Info
             get { return _ten; }
             set { _ten = value; }
         }
-        private string _trangthai;
-        public string TrangThai
+        private int _trangthai;
+        public int TrangThai
         {
             get { return _trangthai; }
             set { _trangthai = value; }
