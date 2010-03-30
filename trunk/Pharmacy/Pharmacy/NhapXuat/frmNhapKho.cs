@@ -537,9 +537,16 @@ namespace Pharmacy.NhapXuat
 
         private void txtDonGiaNhap_ValueChanged(object sender, EventArgs e)
         {
-            double dg = txtDonGiaNhap.Value;
-            txtTienHH.Text = (dg * txtSoLuong.Value * txtTyGia.Value + (dg * txtSoLuong.Value * txtTyGia.Value) * (float.Parse(cmbVAT.Text) / 100)).ToString();
-            tienhh = double.Parse(txtTienHH.Text);    
+            try
+            {
+                double dg = txtDonGiaNhap.Value;
+                txtTienHH.Text = (dg * txtSoLuong.Value * txtTyGia.Value + (dg * txtSoLuong.Value * txtTyGia.Value) * (float.Parse(cmbVAT.Text) / 100)).ToString();
+                tienhh = double.Parse(txtTienHH.Text);
+            }
+            catch (Exception ex)
+            {
+                TLog.WriteErr("frmNhapkho_txtDonGiaNhap_ValueChanged", ex.Message + "||" + ex.StackTrace);
+            }
         }
 
         private void buttonX1_Click(object sender, EventArgs e)
