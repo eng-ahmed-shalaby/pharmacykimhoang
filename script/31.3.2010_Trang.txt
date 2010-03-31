@@ -1,0 +1,22 @@
+
+create PROCEDURE [dbo].[usp_SelectKhuyenMai_HH]
+@MaHH int
+
+AS
+--declare @MaHH int
+--declare @SL int
+--
+--set @MaHH=13
+--set @SL =230
+SET NOCOUNT ON
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+
+SELECT top 1 KHUYENMAI.*,HANGHOA.TENHANGHOA, DONVI.TEN
+FROM
+	dbo.KHUYENMAI, HANGHOA, DONVI
+Where TrangThai=1
+	and MaHH=@MaHH
+and MaHHKM=HANGHOA.MA
+and DONVI.MADONVI =HANGHOA.MADV
+order by NgayKM desc
+--endregion
