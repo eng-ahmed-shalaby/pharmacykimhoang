@@ -20,6 +20,8 @@ namespace Pharmacy.NhapXuat
         DataTable CTHD = new DataTable();
         DataTable HD = new DataTable();
         DataTable LO = new DataTable();
+        DataTable KM = new DataTable();
+        DataTable dataKM = new DataTable();
         Info.HDXuatInfo infoHDXUAT= new NhapXuat.Info.HDXuatInfo();
         Info.CTXUATInfo infoCTXuat = new NhapXuat.Info.CTXUATInfo();
         int slton = 0;
@@ -175,6 +177,8 @@ namespace Pharmacy.NhapXuat
         }
         public bool CheckCTHD()
         {
+            Pharmacy.BLL.TBus tbus = new Pharmacy.BLL.TBus();
+            if (!tbus.IsNumber(cmbVat.Text)) return false;
             if (txtDG.Text == "") return false;
          
             if (txtSL.Text == "") return false;
@@ -191,6 +195,7 @@ namespace Pharmacy.NhapXuat
         private void cmbTenThuoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             ShowLo(int.Parse(cmbTenThuoc.SelectedValue.ToString()));
+            ShowKM(int.Parse(cmbTenThuoc.SelectedValue.ToString()));
         }
 
         private void cmbLo_SelectedIndexChanged(object sender, EventArgs e)
@@ -404,9 +409,14 @@ namespace Pharmacy.NhapXuat
 
                     SetInfoCTXUAT();
                     tXuatKho.InsertCTNHAP(infoCTXuat);
+
                     txtTongTien.Text = (double.Parse(txtTongTien.Text) + double.Parse(txtGia.Text)).ToString();
                     tXuatKho.UpdateTongtienHD(infoHDXUAT.Ma, float.Parse(txtTongTien.Text));
-
+                   
+                    slton = slton - int.Parse(txtSLban.Text);
+                    UpdateLo(int.Parse(cmbLo.SelectedValue.ToString()), slton);
+         //////////////////////////////
+                    SetHHKhuyenMai();
                 }
                 else MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             }
@@ -439,17 +449,67 @@ namespace Pharmacy.NhapXuat
                 }
             }
         }
-        public void UpdateLo(int sl){
+        public void UpdateLo(int MaCT, int sl){
             int tt = 1;
             if (sl <= 0)
+            {
+                sl = 0;
                 tt = 0;
-            tXuatKho.UpdateSLLo(int.Parse(cmbLo.SelectedValue.ToString()), sl,tt);
+            }
+            tXuatKho.UpdateSLLo(MaCT, sl,tt);
+        }
+        public void SetHHKhuyenMai() {
+            int tt = 1;
+            KM = tXuatKho.GetLO(int.Parse(dataKM.Rows[0]["MaHHKM"].ToString()), 1);
+            if (KM.Rows.Count < 0)
+            {
+                MessageBox.Show("Hết Hàng Khuyến mãi");
+            }
+            else
+            {
+                try
+                {
+                    int slKM = int.Parse(txtSLban.Text.ToString()) / int.Parse(dataKM.Rows[0]["SL"].ToString());
+                    slKM = slKM * int.Parse(dataKM.Rows[0]["SLKM"].ToString());
+                    int slKMTon = int.Parse(KM.Rows[0]["SLTON_LO"].ToString()) - slKM;
+                    if (slKMTon <= 0)
+                    {
+                        slKMTon = 0;
+                        tt = 0;
+                    }
+                    ////////Insert Update
+                    Info.CTXUATInfo info = SetCTKM(slKM);
+                    tXuatKho.InsertCTNHAP(info);
+                    UpdateLo(int.Parse(KM.Rows[0]["MA"].ToString().ToString()), slKMTon);
+
+                }
+                catch (Exception ex)
+                {
+                    TLog.WriteErr("frmXuatKho_SetHHKhuyenMai", ex.Message + "|" + ex.StackTrace);
+                }
+            }
+
+            
+
+        }
+        public Info.CTXUATInfo SetCTKM(int soluong) {
+            Info.CTXUATInfo info = new Info.CTXUATInfo();
+            info.Mahdxuat = infoHDXUAT.Ma;
+            info.Solo =KM.Rows[0]["MALO"].ToString().ToString();
+            info.Mahh = int.Parse(dataKM.Rows[0]["MaHHKM"].ToString());
+            info.Soluong = soluong;
+            info.Dongia = 0;
+            info.Tienchuavat = 0;
+            info.Vat = 0;
+            info.Tiencovat = 0;
+            info.CK =0;
+            info.Tinhtrang = 1;
+            return info;
         }
         private void cmdThemCT_Click(object sender, EventArgs e)
         {
+   
             InsertCTHD();
-            slton = slton - int.Parse(txtSLban.Text);
-            UpdateLo(slton);
             LoadCTHD(infoHDXUAT.Ma);
             ShowLo(int.Parse(cmbTenThuoc.SelectedValue.ToString()));
             ShowInfoLo(cmbLo.Text);
@@ -525,12 +585,23 @@ namespace Pharmacy.NhapXuat
 
         private void txtSLban_ValueChanged(object sender, EventArgs e)
         {
+
             if (txtSLban.Text != "")
             if (int.Parse(txtSL.Text) < int.Parse(txtSLban.Text))
             {
                 MessageBox.Show("Không đủ số lượng trong lô");
                 txtSLban.Value = 0;
             }
+
+        }
+        private void ShowKM(int MaHH) {
+            dataKM = tXuatKho.GetHangKM(MaHH);
+            if (dataKM.Rows.Count > 0)
+            {
+                //   MessageBox.Show(string.Format("Mua {0}{1} \n Khuyễn mãi \n{2} {3} {4}", dataKM.Rows[0]["SL"], cmbDVT.Text, dataKM.Rows[0]["SLKM"], dataKM.Rows[0]["Ten"], dataKM.Rows[0]["TENHANGHOA"]));
+                lblKM.Text = string.Format("{0}{1}\nKhuyễn mãi\n{2} {3}\n{4}", dataKM.Rows[0]["SL"], cmbDVT.Text, dataKM.Rows[0]["SLKM"], dataKM.Rows[0]["Ten"], dataKM.Rows[0]["TENHANGHOA"]);
+            }
+            else lblKM.Text = "";
 
         }
 
@@ -542,15 +613,7 @@ namespace Pharmacy.NhapXuat
 
      
 
-
-    
-
-      
-
-
    
-
-
 
 
     }

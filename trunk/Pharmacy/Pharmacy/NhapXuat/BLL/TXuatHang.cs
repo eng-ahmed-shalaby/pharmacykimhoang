@@ -22,7 +22,18 @@ namespace Pharmacy.NhapXuat.BLL
             }
             catch (Exception ex) { return null; }
         }
-
+         public DataTable GetHangKM(int maHH)
+         {
+             try
+             {
+                 DataTable data = new DataTable();
+                 data = cn.GetDataByStoredProcedure("usp_SelectKhuyenMai_HH",
+                 new string[] { "@MaHH",  },
+                     new object[] { maHH});
+                 return data;
+             }
+             catch (Exception ex) { throw ex; }
+         }
          public DataTable GetHD(string maHD)
          {
              try
@@ -163,7 +174,8 @@ namespace Pharmacy.NhapXuat.BLL
              catch (Exception ex)
              {
                  //ghi log
-                 return id;
+                 throw ex;
+               //  return id;
              }
          }
 
