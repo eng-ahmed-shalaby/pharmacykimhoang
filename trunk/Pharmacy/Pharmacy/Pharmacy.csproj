@@ -831,6 +831,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LogoCauVong.ico" />
+    <None Include="Resources\+1.png" />
+    <None Include="Resources\NSX.png" />
+    <None Include="Resources\NCC1.png" />
+    <None Include="Resources\7112.png" />
+    <None Include="Resources\Congno.png" />
+    <None Include="Resources\chi.png" />
+    <None Include="Resources\Thu.png" />
+    <None Include="Resources\%284992%29.png" />
+    <None Include="Resources\tevx.png" />
+    <None Include="Resources\tevNhap.png" />
+    <None Include="Resources\tev.png" />
+    <None Include="Resources\Nut.png" />
     <None Include="Resources\cauvonglogin2.png" />
     <None Include="Resources\GIAO DIEN CAU VONG.jpg" />
     <None Include="BaoCao\ds\dstonghopthu.xsc">
