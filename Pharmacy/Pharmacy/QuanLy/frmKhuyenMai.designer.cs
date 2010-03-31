@@ -73,7 +73,7 @@
             this.groupPanel1.Controls.Add(this.lvhanghoa);
             this.groupPanel1.Location = new System.Drawing.Point(0, 214);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(730, 255);
+            this.groupPanel1.Size = new System.Drawing.Size(841, 255);
             // 
             // 
             // 
@@ -114,9 +114,9 @@
             this.columnHeader6});
             this.lvhanghoa.FullRowSelect = true;
             this.lvhanghoa.GridLines = true;
-            this.lvhanghoa.Location = new System.Drawing.Point(7, 3);
+            this.lvhanghoa.Location = new System.Drawing.Point(3, 3);
             this.lvhanghoa.Name = "lvhanghoa";
-            this.lvhanghoa.Size = new System.Drawing.Size(713, 230);
+            this.lvhanghoa.Size = new System.Drawing.Size(829, 230);
             this.lvhanghoa.TabIndex = 71;
             this.lvhanghoa.UseCompatibleStateImageBehavior = false;
             this.lvhanghoa.View = System.Windows.Forms.View.Details;
@@ -171,7 +171,7 @@
             this.groupPanel2.Controls.Add(this.groupBox2);
             this.groupPanel2.Controls.Add(this.groupBox1);
             this.groupPanel2.Controls.Add(this.panel5);
-            this.groupPanel2.Location = new System.Drawing.Point(0, 38);
+            this.groupPanel2.Location = new System.Drawing.Point(52, 38);
             this.groupPanel2.Name = "groupPanel2";
             this.groupPanel2.Size = new System.Drawing.Size(730, 178);
             // 
@@ -392,7 +392,7 @@
             // 
             // frmKhuyenMai
             // 
-            this.ClientSize = new System.Drawing.Size(736, 504);
+            this.ClientSize = new System.Drawing.Size(841, 543);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.groupPanel2);
             this.Name = "frmKhuyenMai";

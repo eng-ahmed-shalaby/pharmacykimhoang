@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.lblKM = new DevComponents.DotNetBar.LabelX();
             this.labelX27 = new DevComponents.DotNetBar.LabelX();
             this.txtCK = new DevComponents.Editors.DoubleInput();
             this.txtGia = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -151,6 +152,7 @@
             this.groupPanel1.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.lblKM);
             this.groupPanel1.Controls.Add(this.labelX27);
             this.groupPanel1.Controls.Add(this.txtCK);
             this.groupPanel1.Controls.Add(this.txtGia);
@@ -209,6 +211,30 @@
             this.groupPanel1.TabIndex = 54;
             this.groupPanel1.Text = "CHI TIẾT HOA ĐƠN";
             // 
+            // lblKM
+            // 
+            this.lblKM.AllowDrop = true;
+            this.lblKM.AutoSize = true;
+            this.lblKM.BackColor = System.Drawing.SystemColors.Info;
+            // 
+            // 
+            // 
+            this.lblKM.BackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemHotBackground2;
+            this.lblKM.BackgroundStyle.BackColorGradientAngle = 20;
+            this.lblKM.BackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.DockSiteBackColor2;
+            this.lblKM.BackgroundStyle.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.lblKM.BackgroundStyle.BorderBottomWidth = 1;
+            this.lblKM.BackgroundStyle.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.lblKM.BackgroundStyle.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.lblKM.BackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.lblKM.ForeColor = System.Drawing.Color.Red;
+            this.lblKM.Location = new System.Drawing.Point(258, 63);
+            this.lblKM.Name = "lblKM";
+            this.lblKM.SingleLineColor = System.Drawing.Color.Transparent;
+            this.lblKM.Size = new System.Drawing.Size(12, 19);
+            this.lblKM.TabIndex = 65;
+            this.lblKM.Text = "--";
+            // 
             // labelX27
             // 
             this.labelX27.Location = new System.Drawing.Point(666, 114);
@@ -257,7 +283,7 @@
             // 
             // labelX20
             // 
-            this.labelX20.Location = new System.Drawing.Point(463, 117);
+            this.labelX20.Location = new System.Drawing.Point(472, 117);
             this.labelX20.Name = "labelX20";
             this.labelX20.Size = new System.Drawing.Size(15, 25);
             this.labelX20.TabIndex = 60;
@@ -274,11 +300,12 @@
             this.comboItem7,
             this.comboItem8,
             this.comboItem9});
-            this.cmbVat.Location = new System.Drawing.Point(406, 118);
+            this.cmbVat.Location = new System.Drawing.Point(414, 119);
             this.cmbVat.Name = "cmbVat";
             this.cmbVat.Size = new System.Drawing.Size(56, 24);
             this.cmbVat.TabIndex = 59;
             this.cmbVat.Tag = "140,22";
+            this.cmbVat.Text = "0";
             this.cmbVat.SelectedIndexChanged += new System.EventHandler(this.cmbVat_SelectedIndexChanged);
             // 
             // comboItem7
@@ -295,7 +322,7 @@
             // 
             // labelX16
             // 
-            this.labelX16.Location = new System.Drawing.Point(342, 119);
+            this.labelX16.Location = new System.Drawing.Point(350, 120);
             this.labelX16.Name = "labelX16";
             this.labelX16.Size = new System.Drawing.Size(37, 25);
             this.labelX16.TabIndex = 58;
@@ -308,7 +335,7 @@
             // 
             this.txtSLban.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtSLban.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtSLban.Location = new System.Drawing.Point(406, 60);
+            this.txtSLban.Location = new System.Drawing.Point(414, 61);
             this.txtSLban.Name = "txtSLban";
             this.txtSLban.ShowUpDown = true;
             this.txtSLban.Size = new System.Drawing.Size(160, 24);
@@ -317,9 +344,9 @@
             // 
             // labelX14
             // 
-            this.labelX14.Location = new System.Drawing.Point(339, 63);
+            this.labelX14.Location = new System.Drawing.Point(347, 59);
             this.labelX14.Name = "labelX14";
-            this.labelX14.Size = new System.Drawing.Size(47, 14);
+            this.labelX14.Size = new System.Drawing.Size(61, 22);
             this.labelX14.TabIndex = 56;
             this.labelX14.Text = "SL bán:";
             // 
@@ -502,7 +529,7 @@
             this.comboItem4,
             this.comboItem5,
             this.comboItem6});
-            this.cmbLoaiDG.Location = new System.Drawing.Point(406, 91);
+            this.cmbLoaiDG.Location = new System.Drawing.Point(414, 92);
             this.cmbLoaiDG.Name = "cmbLoaiDG";
             this.cmbLoaiDG.Size = new System.Drawing.Size(56, 24);
             this.cmbLoaiDG.TabIndex = 47;
@@ -532,7 +559,7 @@
             // 
             // labelX18
             // 
-            this.labelX18.Location = new System.Drawing.Point(339, 88);
+            this.labelX18.Location = new System.Drawing.Point(347, 89);
             this.labelX18.Name = "labelX18";
             this.labelX18.Size = new System.Drawing.Size(66, 25);
             this.labelX18.TabIndex = 19;
@@ -540,7 +567,7 @@
             // 
             // labelX11
             // 
-            this.labelX11.Location = new System.Drawing.Point(339, 2);
+            this.labelX11.Location = new System.Drawing.Point(347, 3);
             this.labelX11.Name = "labelX11";
             this.labelX11.Size = new System.Drawing.Size(37, 14);
             this.labelX11.TabIndex = 12;
@@ -562,7 +589,7 @@
             this.cmbDVT.FocusCuesEnabled = false;
             this.cmbDVT.FormattingEnabled = true;
             this.cmbDVT.ItemHeight = 18;
-            this.cmbDVT.Location = new System.Drawing.Point(406, 3);
+            this.cmbDVT.Location = new System.Drawing.Point(414, 4);
             this.cmbDVT.Name = "cmbDVT";
             this.cmbDVT.Size = new System.Drawing.Size(160, 24);
             this.cmbDVT.TabIndex = 41;
@@ -584,7 +611,7 @@
             this.txtDG.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtDG.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtDG.Increment = 1;
-            this.txtDG.Location = new System.Drawing.Point(469, 91);
+            this.txtDG.Location = new System.Drawing.Point(478, 91);
             this.txtDG.Name = "txtDG";
             this.txtDG.ShowUpDown = true;
             this.txtDG.Size = new System.Drawing.Size(98, 24);
@@ -594,7 +621,7 @@
             // 
             // labelX15
             // 
-            this.labelX15.Location = new System.Drawing.Point(339, 30);
+            this.labelX15.Location = new System.Drawing.Point(347, 31);
             this.labelX15.Name = "labelX15";
             this.labelX15.Size = new System.Drawing.Size(58, 23);
             this.labelX15.TabIndex = 16;
@@ -608,7 +635,7 @@
             this.txtSL.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtSL.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtSL.Enabled = false;
-            this.txtSL.Location = new System.Drawing.Point(406, 31);
+            this.txtSL.Location = new System.Drawing.Point(414, 32);
             this.txtSL.Name = "txtSL";
             this.txtSL.ShowUpDown = true;
             this.txtSL.Size = new System.Drawing.Size(160, 24);
@@ -1102,17 +1129,17 @@
             this.panel4.Location = new System.Drawing.Point(330, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(553, 29);
+            this.panel4.Size = new System.Drawing.Size(553, 30);
             this.panel4.TabIndex = 55;
             // 
             // buttonX3
             // 
             this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX3.Location = new System.Drawing.Point(166, 1);
+            this.buttonX3.Location = new System.Drawing.Point(212, 2);
             this.buttonX3.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(75, 27);
+            this.buttonX3.Size = new System.Drawing.Size(90, 27);
             this.buttonX3.TabIndex = 54;
             this.buttonX3.Text = "Sửa CT";
             this.buttonX3.Visible = false;
@@ -1121,10 +1148,10 @@
             // 
             this.cmdXoaCT.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdXoaCT.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.cmdXoaCT.Location = new System.Drawing.Point(84, 1);
+            this.cmdXoaCT.Location = new System.Drawing.Point(107, 2);
             this.cmdXoaCT.Margin = new System.Windows.Forms.Padding(0);
             this.cmdXoaCT.Name = "cmdXoaCT";
-            this.cmdXoaCT.Size = new System.Drawing.Size(75, 27);
+            this.cmdXoaCT.Size = new System.Drawing.Size(90, 27);
             this.cmdXoaCT.TabIndex = 53;
             this.cmdXoaCT.Text = "Xóa CT";
             this.cmdXoaCT.Click += new System.EventHandler(this.cmdXoaCT_Click);
@@ -1136,7 +1163,7 @@
             this.cmdThemCT.Location = new System.Drawing.Point(3, 1);
             this.cmdThemCT.Margin = new System.Windows.Forms.Padding(0);
             this.cmdThemCT.Name = "cmdThemCT";
-            this.cmdThemCT.Size = new System.Drawing.Size(75, 27);
+            this.cmdThemCT.Size = new System.Drawing.Size(90, 27);
             this.cmdThemCT.TabIndex = 28;
             this.cmdThemCT.Text = "Thêm CT";
             this.cmdThemCT.Click += new System.EventHandler(this.cmdThemCT_Click);
@@ -1206,7 +1233,7 @@
             this.panel5.Location = new System.Drawing.Point(3, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(321, 29);
+            this.panel5.Size = new System.Drawing.Size(321, 30);
             this.panel5.TabIndex = 56;
             // 
             // cmdTaoMoi
@@ -1216,7 +1243,7 @@
             this.cmdTaoMoi.Location = new System.Drawing.Point(1, 1);
             this.cmdTaoMoi.Margin = new System.Windows.Forms.Padding(0);
             this.cmdTaoMoi.Name = "cmdTaoMoi";
-            this.cmdTaoMoi.Size = new System.Drawing.Size(80, 27);
+            this.cmdTaoMoi.Size = new System.Drawing.Size(95, 27);
             this.cmdTaoMoi.TabIndex = 55;
             this.cmdTaoMoi.Text = "Tạo mới";
             this.cmdTaoMoi.Click += new System.EventHandler(this.cmdTaoMoi_Click);
@@ -1225,10 +1252,10 @@
             // 
             this.buttonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX6.Location = new System.Drawing.Point(171, 1);
+            this.buttonX6.Location = new System.Drawing.Point(209, 1);
             this.buttonX6.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX6.Name = "buttonX6";
-            this.buttonX6.Size = new System.Drawing.Size(75, 27);
+            this.buttonX6.Size = new System.Drawing.Size(95, 27);
             this.buttonX6.TabIndex = 54;
             this.buttonX6.Text = "Sửa HĐ";
             this.buttonX6.Visible = false;
@@ -1237,10 +1264,10 @@
             // 
             this.cmdXoaHD.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdXoaHD.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.cmdXoaHD.Location = new System.Drawing.Point(89, 1);
+            this.cmdXoaHD.Location = new System.Drawing.Point(105, 1);
             this.cmdXoaHD.Margin = new System.Windows.Forms.Padding(0);
             this.cmdXoaHD.Name = "cmdXoaHD";
-            this.cmdXoaHD.Size = new System.Drawing.Size(75, 27);
+            this.cmdXoaHD.Size = new System.Drawing.Size(95, 27);
             this.cmdXoaHD.TabIndex = 53;
             this.cmdXoaHD.Text = "Xóa HĐ";
             this.cmdXoaHD.Click += new System.EventHandler(this.cmdXoaHD_Click);
@@ -1252,7 +1279,7 @@
             this.cmdThemHD.Location = new System.Drawing.Point(1, 1);
             this.cmdThemHD.Margin = new System.Windows.Forms.Padding(0);
             this.cmdThemHD.Name = "cmdThemHD";
-            this.cmdThemHD.Size = new System.Drawing.Size(80, 27);
+            this.cmdThemHD.Size = new System.Drawing.Size(95, 27);
             this.cmdThemHD.TabIndex = 28;
             this.cmdThemHD.Text = "Lập hóa đơn";
             this.cmdThemHD.Click += new System.EventHandler(this.cmdThemHD_Click);
@@ -1328,11 +1355,13 @@
             this.Controls.Add(this.groupPanel1);
             this.Name = "frmXuatKho";
             this.Text = "frmXuatKho";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmXuatKho_Load);
             this.Controls.SetChildIndex(this.groupPanel1, 0);
             this.Controls.SetChildIndex(this.groupPanel2, 0);
             this.Controls.SetChildIndex(this.panel3, 0);
             this.groupPanel1.ResumeLayout(false);
+            this.groupPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSLban)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dpkHH)).EndInit();
@@ -1453,6 +1482,7 @@
         private DevComponents.DotNetBar.LabelX labelX29;
         private DevComponents.DotNetBar.Controls.TextBoxX txtCO;
         private DevComponents.DotNetBar.Controls.TextBoxX txtNo;
+        private DevComponents.DotNetBar.LabelX lblKM;
 
     }
 }
