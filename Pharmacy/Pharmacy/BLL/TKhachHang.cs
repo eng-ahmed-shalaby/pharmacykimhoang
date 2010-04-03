@@ -23,7 +23,18 @@ namespace Pharmacy.BLL
             data = cn.GetDataByStoredProcedure("usp_SelectKH_All");
             return data;
         }
-        
+        public DataTable GetKhachHang(string CodeKH)
+        {
+            DataTable data = new DataTable();
+            data = cn.GetDataBySQL("Select * from KH where CODEKH='"+ CodeKH +"'");
+            return data;
+        }
+        public DataTable GetKhachHangID(int ID)
+        {
+            DataTable data = new DataTable();
+            data = cn.GetDataBySQL("Select * from KH where MAKH=" + ID);
+            return data;
+        }
         public DataTable GetKhachHang(int maNhom)
         {
             DataTable data = new DataTable();

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BrightIdeasSoftware;
 
 namespace Pharmacy.QuanLy
 {
@@ -275,6 +276,14 @@ namespace Pharmacy.QuanLy
         {
             frmNhomHH frm = new frmNhomHH();
             frm.ShowDialog();
+        }
+
+        private void cmdInDS_Click(object sender, EventArgs e)
+        {
+
+            ListViewPrinter pr = new ListViewPrinter("DANH SÁCH HÀNG HÓA");
+            pr.ListView = lvhanghoa;
+            pr.PrintPreview();
         }
 
       

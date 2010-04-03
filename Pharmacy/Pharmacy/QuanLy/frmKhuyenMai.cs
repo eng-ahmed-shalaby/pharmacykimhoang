@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using BrightIdeasSoftware;
 
 namespace Pharmacy.QuanLy
 {
@@ -16,6 +17,7 @@ namespace Pharmacy.QuanLy
         BLL.TkhuyenMai tKM = new BLL.TkhuyenMai();
         Info.KhuyenMaiInfo info = new Info.KhuyenMaiInfo();
         Pharmacy.BLL.THangHoa tHH= new Pharmacy.BLL.THangHoa();
+        DataTable dt = new DataTable();
         #endregion
         public frmKhuyenMai()
         {
@@ -25,7 +27,7 @@ namespace Pharmacy.QuanLy
         private void frmKhuyenMai_Load(object sender, EventArgs e)
         {
             Init();
-            SetTitle("NHÓM NHÀ CUNG CẤP");
+            SetTitle("KHUYẾN MÃI");
         }
         private void Init()
         {
@@ -67,7 +69,7 @@ namespace Pharmacy.QuanLy
         {
             try
             {
-                DataTable dt = tKM.GetKM(t1,t2);
+                dt = tKM.GetKM(t1,t2);
                 if (dt != null)
                 {
                     lvhanghoa.Items.Clear();
@@ -97,22 +99,25 @@ namespace Pharmacy.QuanLy
         //    txt_mota.Text = "";
         //    loadnhomcc();
         //}
-        //public void ShowListToForm(int id)
-        //{
-        //    try
-        //    {
-        //        infoNhomCC.Mannhomcc = int.Parse(HH.Rows[id]["MANHOMNCC"].ToString());
-        //        txttennsx.Text = HH.Rows[id]["TENNHOM"].ToString();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        TLog.WriteErr("frmKhuyenMai_ShowlisttoData", ex.Message + "|" + ex.StackTrace);
-        //    }
+        public void ShowListToForm(int id)
+        {
+            try
+            {
+                info.Ma = int.Parse(dt.Rows[id]["MA"].ToString());
+                cmbHH.Text = dt.Rows[id]["TENHH"].ToString();
+                txtDVTban.Text = dt.Rows[id]["TenDV"].ToString();
+                txtSLBan.Text = dt.Rows[id]["SL"].ToString();
+                cmbHHKM.Text = dt.Rows[id]["TENHHKM"].ToString();
+                txtSLKM.Text = dt.Rows[id]["SLKM"].ToString();
+            }
+            catch (Exception ex)
+            {
+                TLog.WriteErr("frmKhuyenMai_ShowlisttoData", ex.Message + "|" + ex.StackTrace);
+            }
 
-        //}
+        }
         public bool CheckFrom()
         {
-
             double Num;
             bool isNum;
             isNum= double.TryParse(txtSLKM.Text, out Num);
@@ -153,60 +158,65 @@ namespace Pharmacy.QuanLy
             }
         }
 
-        //public void UpdateNhomCC()
-        //{
-        //    try
-        //    {
-        //        if (CheckNhomCC())
-        //            tNhomCC.UpdateNhomCC(infoNhomCC);
-        //        else
-        //        {
-        //            MessageBox.Show("Điền đầy đủ thông tin Nhóm NCC!");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        TLog.WriteErr("frmKhuyenMai_Update", ex.Message + "|" + ex.StackTrace);
-        //    }
-        //}
+        public void Update()
+        {
+            try
+            {
+                if (CheckFrom())
+                {
+                    SetInfoKhuyenMai();
+                    tKM.UpdateKM(info);
+                }
+                else
+                {
+                    MessageBox.Show("Điền đầy đủ thông tin KM!");
+                }
+            }
+            catch (Exception ex)
+            {
+                TLog.WriteErr("frmKhuyenMai_Update", ex.Message + "|" + ex.StackTrace);
+            }
+        }
 
-        //public void DeleteNhomCC()
-        //{
-        //    try
-        //    {
-        //        if (CheckNhomCC())
-        //            tNhomCC.DeleteNhomCC(infoNhomCC);
-        //        else
-        //        {
-        //            MessageBox.Show("Điền đầy đủ thông tin Nhóm NCC!");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        TLog.WriteErr("frmKhuyenMai_Delete", ex.Message + "|" + ex.StackTrace);
-        //    }
-        //}
-
-
+        public void Delete()
+        {
+            try
+            {
+                if (CheckFrom())
+                {
+                    SetInfoKhuyenMai();
+                    info.TrangThai = 0;
+                    tKM.UpdateKM(info);
+                }
+                else
+                {
+                    MessageBox.Show("Điền đầy đủ thông tin!");
+                }
+            }
+            catch (Exception ex)
+            {
+                TLog.WriteErr("frmKhuyenMai_Delete", ex.Message + "|" + ex.StackTrace);
+            }
+        }
         private void lvhanghoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-        //    if (lvhanghoa.Items.Count > 0)
-        //    {
-        //        int flag = -1;
-        //        for (int i = 0; i < lvhanghoa.Items.Count; i++)
-        //        {
-        //            if (lvhanghoa.Items[i].Selected)
-        //            {
-        //                flag = i;
-        //            }
-        //        }
-        //        if (flag != -1)
-        //        {
+            if (lvhanghoa.Items.Count > 0)
+            {
+                int flag = -1;
+                for (int i = 0; i < lvhanghoa.Items.Count; i++)
+                {
+                    if (lvhanghoa.Items[i].Selected)
+                    {
+                        flag = i;
+                    }
+                }
+                if (flag != -1)
+                {
 
-        //            ShowListToForm(flag);
+                    ShowListToForm(flag);
 
-        //        }
-        //    }
+                }
+            }
         }
 
         private void cmdThem_Click(object sender, EventArgs e)
@@ -231,7 +241,29 @@ namespace Pharmacy.QuanLy
         {
             txtDVKM.Text = GetDonVi(int.Parse(cmbHHKM.SelectedValue.ToString()));
         }
+        /// <summary>
+        /// ///////////
+        /// </summary>
+           
 
+        private void cmdXoa_Click(object sender, EventArgs e)
+        {
+            Delete();
+            LoadKM(1, 1);
+        }
+
+        private void cmdSua_Click(object sender, EventArgs e)
+        {
+            Update();
+            LoadKM(1, 1);
+        }
+
+        private void cmbIn_Click(object sender, EventArgs e)
+        {
+         ListViewPrinter pr = new ListViewPrinter("DANH SÁCH KHUYẾN MÃI");
+            pr.ListView = lvhanghoa;
+            pr.PrintPreview();
+        }
         //private void buttonX5_Click(object sender, EventArgs e)
         //{
         //    SetInfoNhomCC();

@@ -309,11 +309,18 @@ namespace Pharmacy.NhapXuat
         public void InsertCTHD() {
             if (CheckCTHD())
             {
-                SetInfoCTNhap();
-                tNhapKho.InsertCTNHAP(infoCTNhap);
-                txtTongTien.Text = (double.Parse(txtTongTien.Text) + double.Parse(txtTienHH.Text)).ToString();
+                try
+                {
+                    SetInfoCTNhap();
+                    tNhapKho.InsertCTNHAP(infoCTNhap);
+                    txtTongTien.Text = (double.Parse(txtTongTien.Text) + double.Parse(txtTienHH.Text)).ToString();
 
-                tNhapKho.UpdateTongtienHD(infoHDNhap.Ma, float.Parse(txtTongTien.Text), 0);
+                    tNhapKho.UpdateTongtienHD(infoHDNhap.Ma, float.Parse(txtTongTien.Text), 0);
+                }
+                catch (Exception ex) {
+                    TLog.WriteErr("frmNhapkho_InsertCTHD", ex.Message + "||" + ex.StackTrace);
+                }
+
                 //LoadHD(infoHDNhap.Ma.ToString());  
             }
             else MessageBox.Show("Vui lòng điền đầy đủ thông tin");
@@ -345,8 +352,7 @@ namespace Pharmacy.NhapXuat
         #endregion
 
         private void cmdThemCT_Click(object sender, EventArgs e)
-        {
-            
+        { 
             try
             {
                 InsertCTHD();

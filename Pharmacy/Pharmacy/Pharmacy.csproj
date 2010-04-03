@@ -64,6 +64,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Documents and Settings\All Users\Documents\DICHSO.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
@@ -265,6 +269,9 @@
     <Compile Include="BASIC\frmChild.Designer.cs">
       <DependentUpon>frmChild.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\ListViewPrinter.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BLL\TBus.cs" />
     <Compile Include="BLL\TKhachHang.cs" />
     <Compile Include="BLL\TKho.cs" />
@@ -286,7 +293,14 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="HeThong\BLL\TBackupRestore.cs" />
     <Compile Include="HeThong\BLL\TPhanQuyen.cs" />
+    <Compile Include="HeThong\frmBk_Restore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frmBk_Restore.Designer.cs">
+      <DependentUpon>frmBk_Restore.cs</DependentUpon>
+    </Compile>
     <Compile Include="HeThong\frmPhanQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +371,15 @@
     </Compile>
     <Compile Include="NhapXuat\Info\CTNHAPInfo.cs" />
     <Compile Include="NhapXuat\Info\CTXUATInfo.cs" />
+    <Compile Include="NhapXuat\Info\dsHoaDon.cs">
+      <DependentUpon>dsHoaDon.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\Info\dsHoaDon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHoaDon.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NhapXuat\Info\dsNhap.cs">
       <DependentUpon>dsNhap.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -378,6 +401,12 @@
     <Compile Include="NhapXuat\Info\HDNhapInfo.cs" />
     <Compile Include="NhapXuat\Info\HDXuatInfo.cs" />
     <Compile Include="NhapXuat\Info\LOInfo.cs" />
+    <Compile Include="NhapXuat\rptHD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptHD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="NhapXuat\rptHDNhap.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -484,6 +513,10 @@
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frmBk_Restore.resx">
+      <DependentUpon>frmBk_Restore.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="HeThong\frmPhanQuyen.resx">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -503,6 +536,10 @@
     <EmbeddedResource Include="NhapXuat\frmXuatKho.resx">
       <DependentUpon>frmXuatKho.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapXuat\rptHD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptHD.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapXuat\rptHDNhap.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -564,6 +601,10 @@
     <EmbeddedResource Include="ThuChi\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThuChi\frmCongNo.resx">
+      <DependentUpon>frmCongNo.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ThuChi\rptPhieuChi.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -703,6 +744,12 @@
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ThuChi\frmCongNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThuChi\frmCongNo.Designer.cs">
+      <DependentUpon>frmCongNo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThuChi\rptPhieuChi.cs">
       <DependentUpon>rptPhieuChi.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -831,6 +878,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LogoCauVong.ico" />
+    <None Include="NhapXuat\Info\dsHoaDon.xsc">
+      <DependentUpon>dsHoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="NhapXuat\Info\dsHoaDon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHoaDon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NhapXuat\Info\dsHoaDon.xss">
+      <DependentUpon>dsHoaDon.xsd</DependentUpon>
+    </None>
     <None Include="Resources\+1.png" />
     <None Include="Resources\NSX.png" />
     <None Include="Resources\NCC1.png" />

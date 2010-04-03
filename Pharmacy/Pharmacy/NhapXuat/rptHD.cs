@@ -16,14 +16,14 @@ namespace Pharmacy.NhapXuat {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptHDXuat : ReportClass {
+    public class rptHD : ReportClass {
         
-        public rptHDXuat() {
+        public rptHD() {
         }
         
         public override string ResourceName {
             get {
-                return "rptHDXuat.rpt";
+                return "rptHD.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Pharmacy.NhapXuat {
         
         public override string FullResourceName {
             get {
-                return "Pharmacy.NhapXuat.rptHDXuat.rpt";
+                return "Pharmacy.NhapXuat.rptHD.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace Pharmacy.NhapXuat {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -74,7 +74,7 @@ namespace Pharmacy.NhapXuat {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,33 +82,17 @@ namespace Pharmacy.NhapXuat {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
-            get {
-                return this.ReportDefinition.Sections[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
-            get {
-                return this.ReportDefinition.Sections[5];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
-                return this.ReportDefinition.Sections[6];
+                return this.ReportDefinition.Sections[4];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptHDXuat : Component, ICachedReport {
+    public class CachedrptHD : Component, ICachedReport {
         
-        public CachedrptHDXuat() {
+        public CachedrptHD() {
         }
         
         [Browsable(false)]
@@ -145,7 +129,7 @@ namespace Pharmacy.NhapXuat {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptHDXuat rpt = new rptHDXuat();
+            rptHD rpt = new rptHD();
             rpt.Site = this.Site;
             return rpt;
         }

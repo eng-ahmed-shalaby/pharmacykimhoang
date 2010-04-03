@@ -129,6 +129,7 @@
             this.columnHeader12 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader15 = new System.Windows.Forms.ColumnHeader();
+            this.cmdHDDon = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSLban)).BeginInit();
@@ -1043,6 +1044,7 @@
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel3.Controls.Add(this.cmdHDDon);
             this.panel3.Controls.Add(this.buttonX1);
             this.panel3.Controls.Add(this.dpkDateHD);
             this.panel3.Controls.Add(this.labelX25);
@@ -1062,9 +1064,9 @@
             this.buttonX1.Location = new System.Drawing.Point(183, 211);
             this.buttonX1.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(54, 24);
+            this.buttonX1.Size = new System.Drawing.Size(76, 25);
             this.buttonX1.TabIndex = 62;
-            this.buttonX1.Text = "In HD";
+            this.buttonX1.Text = "Phiếu Xuất";
             this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // dpkDateHD
@@ -1347,6 +1349,18 @@
             // 
             this.columnHeader15.Text = "Mã";
             // 
+            // cmdHDDon
+            // 
+            this.cmdHDDon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdHDDon.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdHDDon.Location = new System.Drawing.Point(270, 211);
+            this.cmdHDDon.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdHDDon.Name = "cmdHDDon";
+            this.cmdHDDon.Size = new System.Drawing.Size(76, 25);
+            this.cmdHDDon.TabIndex = 63;
+            this.cmdHDDon.Text = "In HD";
+            this.cmdHDDon.Click += new System.EventHandler(this.cmdHDDon_Click);
+            // 
             // frmXuatKho
             // 
             this.ClientSize = new System.Drawing.Size(892, 615);
@@ -1483,6 +1497,7 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtCO;
         private DevComponents.DotNetBar.Controls.TextBoxX txtNo;
         private DevComponents.DotNetBar.LabelX lblKM;
+        private DevComponents.DotNetBar.ButtonX cmdHDDon;
 
     }
 }

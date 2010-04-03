@@ -105,7 +105,7 @@
             this.dkpTo.BackgroundStyle.Class = "DateTimeInputBackground";
             this.dkpTo.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dkpTo.ButtonDropDown.Visible = true;
-            this.dkpTo.Location = new System.Drawing.Point(683, 8);
+            this.dkpTo.Location = new System.Drawing.Point(695, 8);
             // 
             // 
             // 
@@ -136,7 +136,7 @@
             this.dkpTo.MonthCalendar.TodayButtonVisible = true;
             this.dkpTo.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dkpTo.Name = "dkpTo";
-            this.dkpTo.Size = new System.Drawing.Size(96, 22);
+            this.dkpTo.Size = new System.Drawing.Size(96, 24);
             this.dkpTo.TabIndex = 78;
             // 
             // dpkfrom
@@ -147,7 +147,7 @@
             this.dpkfrom.BackgroundStyle.Class = "DateTimeInputBackground";
             this.dpkfrom.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dpkfrom.ButtonDropDown.Visible = true;
-            this.dpkfrom.Location = new System.Drawing.Point(518, 8);
+            this.dpkfrom.Location = new System.Drawing.Point(522, 8);
             // 
             // 
             // 
@@ -178,7 +178,7 @@
             this.dpkfrom.MonthCalendar.TodayButtonVisible = true;
             this.dpkfrom.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dpkfrom.Name = "dpkfrom";
-            this.dpkfrom.Size = new System.Drawing.Size(96, 22);
+            this.dpkfrom.Size = new System.Drawing.Size(96, 24);
             this.dpkfrom.TabIndex = 77;
             // 
             // labelX5
@@ -194,10 +194,10 @@
             this.cmbKho.DisplayMember = "Text";
             this.cmbKho.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbKho.FormattingEnabled = true;
-            this.cmbKho.ItemHeight = 16;
+            this.cmbKho.ItemHeight = 18;
             this.cmbKho.Location = new System.Drawing.Point(351, 9);
             this.cmbKho.Name = "cmbKho";
-            this.cmbKho.Size = new System.Drawing.Size(103, 22);
+            this.cmbKho.Size = new System.Drawing.Size(103, 24);
             this.cmbKho.TabIndex = 75;
             // 
             // labelX4
@@ -213,10 +213,10 @@
             this.cmbTenThuoc.DisplayMember = "Text";
             this.cmbTenThuoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbTenThuoc.FormattingEnabled = true;
-            this.cmbTenThuoc.ItemHeight = 16;
+            this.cmbTenThuoc.ItemHeight = 18;
             this.cmbTenThuoc.Location = new System.Drawing.Point(128, 8);
             this.cmbTenThuoc.Name = "cmbTenThuoc";
-            this.cmbTenThuoc.Size = new System.Drawing.Size(165, 22);
+            this.cmbTenThuoc.Size = new System.Drawing.Size(165, 24);
             this.cmbTenThuoc.TabIndex = 73;
             // 
             // cmdTheKho
@@ -231,17 +231,17 @@
             // 
             // labelX2
             // 
-            this.labelX2.Location = new System.Drawing.Point(620, 9);
+            this.labelX2.Location = new System.Drawing.Point(623, 9);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(57, 25);
+            this.labelX2.Size = new System.Drawing.Size(66, 25);
             this.labelX2.TabIndex = 70;
             this.labelX2.Text = "đến ngày:";
             // 
             // labelX3
             // 
-            this.labelX3.Location = new System.Drawing.Point(460, 9);
+            this.labelX3.Location = new System.Drawing.Point(455, 9);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(52, 25);
+            this.labelX3.Size = new System.Drawing.Size(61, 25);
             this.labelX3.TabIndex = 60;
             this.labelX3.Text = "Từ ngày:";
             // 

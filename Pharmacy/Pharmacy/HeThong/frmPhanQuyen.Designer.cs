@@ -56,9 +56,9 @@
             this.panel1.Controls.Add(this.groupPanel2);
             this.panel1.Controls.Add(this.grpQuyen);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Location = new System.Drawing.Point(0, 35);
+            this.panel1.Location = new System.Drawing.Point(0, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(753, 378);
+            this.panel1.Size = new System.Drawing.Size(753, 357);
             this.panel1.TabIndex = 5;
             // 
             // groupPanel2
@@ -70,7 +70,7 @@
             this.groupPanel2.Controls.Add(this.lvTDV);
             this.groupPanel2.Location = new System.Drawing.Point(4, 4);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(354, 311);
+            this.groupPanel2.Size = new System.Drawing.Size(354, 294);
             // 
             // 
             // 
@@ -109,7 +109,7 @@
             this.lvTDV.GridLines = true;
             this.lvTDV.Location = new System.Drawing.Point(3, 3);
             this.lvTDV.Name = "lvTDV";
-            this.lvTDV.Size = new System.Drawing.Size(343, 259);
+            this.lvTDV.Size = new System.Drawing.Size(343, 245);
             this.lvTDV.TabIndex = 0;
             this.lvTDV.UseCompatibleStateImageBehavior = false;
             this.lvTDV.View = System.Windows.Forms.View.Details;
@@ -144,7 +144,7 @@
             this.grpQuyen.Controls.Add(this.lvChucNang);
             this.grpQuyen.Location = new System.Drawing.Point(376, 4);
             this.grpQuyen.Name = "grpQuyen";
-            this.grpQuyen.Size = new System.Drawing.Size(374, 311);
+            this.grpQuyen.Size = new System.Drawing.Size(374, 294);
             // 
             // 
             // 
@@ -184,7 +184,7 @@
             this.lvChucNang.GridLines = true;
             this.lvChucNang.Location = new System.Drawing.Point(3, 3);
             this.lvChucNang.Name = "lvChucNang";
-            this.lvChucNang.Size = new System.Drawing.Size(358, 259);
+            this.lvChucNang.Size = new System.Drawing.Size(358, 245);
             this.lvChucNang.TabIndex = 0;
             this.lvChucNang.UseCompatibleStateImageBehavior = false;
             this.lvChucNang.View = System.Windows.Forms.View.Details;
@@ -214,10 +214,10 @@
             this.panel5.Controls.Add(this.cmdLuu);
             this.panel5.Controls.Add(this.cmdBo);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 349);
+            this.panel5.Location = new System.Drawing.Point(0, 330);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(753, 29);
+            this.panel5.Size = new System.Drawing.Size(753, 27);
             this.panel5.TabIndex = 57;
             // 
             // cmdLuu
@@ -227,7 +227,7 @@
             this.cmdLuu.Location = new System.Drawing.Point(303, 1);
             this.cmdLuu.Margin = new System.Windows.Forms.Padding(0);
             this.cmdLuu.Name = "cmdLuu";
-            this.cmdLuu.Size = new System.Drawing.Size(70, 27);
+            this.cmdLuu.Size = new System.Drawing.Size(70, 25);
             this.cmdLuu.TabIndex = 55;
             this.cmdLuu.Text = "Lưu lại";
             this.cmdLuu.Click += new System.EventHandler(this.cmdLuu_Click);
@@ -239,19 +239,18 @@
             this.cmdBo.Location = new System.Drawing.Point(380, 1);
             this.cmdBo.Margin = new System.Windows.Forms.Padding(0);
             this.cmdBo.Name = "cmdBo";
-            this.cmdBo.Size = new System.Drawing.Size(70, 27);
+            this.cmdBo.Size = new System.Drawing.Size(70, 25);
             this.cmdBo.TabIndex = 53;
             this.cmdBo.Text = "Bỏ";
             this.cmdBo.Click += new System.EventHandler(this.cmdBo_Click);
             // 
             // frmPhanQuyen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 425);
+            this.ClientSize = new System.Drawing.Size(753, 401);
             this.Controls.Add(this.panel1);
             this.Name = "frmPhanQuyen";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPhanQuyen";
             this.Load += new System.EventHandler(this.frmPhanQuyen_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
