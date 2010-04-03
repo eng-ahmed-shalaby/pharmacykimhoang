@@ -517,12 +517,10 @@ namespace Pharmacy.NhapXuat
             //  LoadCTHD("20");
             ResetFromCTHD();
         }
-
         private void dpkDateHD_ValueChanged(object sender, EventArgs e)
         {
             LoadHD(dpkDateHD.Value);
         }
-
         private void lvHD_SelectedIndexChanged(object sender, EventArgs e)
         {
             ListView lv = (ListView)sender;
@@ -610,11 +608,19 @@ namespace Pharmacy.NhapXuat
             double tienCK = txtCK.Value * tienhh;
             txtGia.Text = (tienhh + tienCK).ToString();
         }
-
-     
-
-   
-
-
+        /// <summary>
+        /// In Hóa đơn đỏ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cmdHDDon_Click(object sender, EventArgs e)
+        {
+             frmPrintHD frm = new frmPrintHD();
+            for (int i = 0; i < lvHD.Items.Count; i++)
+                if (lvHD.Items[i].Selected == true)
+                {
+                    frm.ShowHD(int.Parse(lvHD.Items[i].SubItems[6].Text));
+                }
+        }
     }
 }

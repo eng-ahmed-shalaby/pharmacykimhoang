@@ -32,7 +32,14 @@ namespace Pharmacy.QuanLy.BLL
         {
             int id = cn.ExecuteInsert("usp_InsertKhuyen",
                 new string[] { "@MaHH", "@SLBan","@MaHH_KM","@SLKM","@NgayKM","@TrangThai" },
-                new object[] { info.MaHH, info.SL,info.MaHHKM, info.SLKM, info.NgayKM, info.TrangThai });
+                new object[] { info.MaHH, info.SL,info.MaHHKM, info.SLKM, info.NgayKM,info.TrangThai });
+            return id;
+        }
+        public int UpdateKM(Info.KhuyenMaiInfo info)
+        {
+            int id = cn.ExecuteNonQuery("usp_UpdateKHUYENMAI",
+                new string[] {"@MA", "@MaHH", "@SL", "@MaHHKM", "@SLKM", "@TrangThai", "@NgayKM" },
+                new object[] {info.Ma, info.MaHH, info.SL, info.MaHHKM, info.SLKM, info.TrangThai, info.NgayKM });
             return id;
         }
     }

@@ -167,17 +167,17 @@
             // 
             // labelX2
             // 
-            this.labelX2.Location = new System.Drawing.Point(416, 4);
+            this.labelX2.Location = new System.Drawing.Point(405, 4);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(57, 25);
+            this.labelX2.Size = new System.Drawing.Size(68, 25);
             this.labelX2.TabIndex = 80;
             this.labelX2.Text = "đến ngày:";
             // 
             // labelX3
             // 
-            this.labelX3.Location = new System.Drawing.Point(230, 6);
+            this.labelX3.Location = new System.Drawing.Point(219, 6);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(52, 25);
+            this.labelX3.Size = new System.Drawing.Size(63, 25);
             this.labelX3.TabIndex = 79;
             this.labelX3.Text = "Từ ngày:";
             // 

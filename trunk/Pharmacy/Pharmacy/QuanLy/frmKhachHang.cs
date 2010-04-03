@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using BrightIdeasSoftware;
 
 namespace Pharmacy.QuanLy
 {
@@ -249,11 +250,17 @@ namespace Pharmacy.QuanLy
             SetTitle("KHÁCH HÀNG");
             Init();
         }
-
         private void btnNhomKH_Click(object sender, EventArgs e)
         {
             fromNhomKH frm = new fromNhomKH();
             frm.ShowDialog();
+        }
+
+        private void cmdInDS_Click(object sender, EventArgs e)
+        {
+            ListViewPrinter pr = new ListViewPrinter("DANH SÁCH KHÁCH HÀNG");
+            pr.ListView = lvhanghoa;
+            pr.PrintPreview();
         }
 
     }

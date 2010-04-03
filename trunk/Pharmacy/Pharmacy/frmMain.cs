@@ -310,6 +310,28 @@ namespace Pharmacy
             frm.Show();
         }
 
+        private void tab7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLuTru_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+                this.ActiveMdiChild.Close();
+            HeThong.frmBk_Restore frm = new HeThong.frmBk_Restore();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void tab3btnNhacNho_Click(object sender, EventArgs e)
+        {
+
+           ThuChi.frmCongNo frm = new ThuChi.frmCongNo();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
      
 
       

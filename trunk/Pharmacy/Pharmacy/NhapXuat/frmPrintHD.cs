@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using CrystalDecisions.Windows.Forms;
 
 namespace Pharmacy.NhapXuat
 {
@@ -13,6 +14,7 @@ namespace Pharmacy.NhapXuat
     {
         BLL.TrptNhap trpt = new BLL.TrptNhap();
         BLL.TrptXuat tXuat = new BLL.TrptXuat();
+        int maHD;
         public frmPrintHD()
         {
             InitializeComponent();
@@ -38,16 +40,39 @@ namespace Pharmacy.NhapXuat
             crystalReportViewer1.ReportSource = rpt;
             crystalReportViewer1.Refresh();
         }
+        public void ShowHD(int ma)
+        {  DataTable dt = new DataTable();
+            if(ma==0)
+         //   DataSet ds = new DataSet();
+           dt = tXuat.GetDataHD(maHD);
+
+          //  ds.Tables.Add(dt);
+            rptHD rpt = new rptHD();
+            rpt.SetDataSource(dt);
+            CrystalReportViewer rptview = new CrystalReportViewer();
+            rptview.ReportSource = rpt;
+            rptview.Refresh();
+            rptview.PrintReport();
+        }
         public void ShowFromNhap(int ma) {
+            maHD = ma;
+            cmdHDDon.Visible = false;
             ShowNhap(ma);
             this.ShowDialog();
 
         }
         public void ShowFromXuat(int ma)
         {
+            maHD = ma;
+            cmdHDDon.Visible = true;
             ShowXuat(ma);
             this.ShowDialog();
 
+        }
+
+        private void cmdHDDon_Click(object sender, EventArgs e)
+        {
+            ShowHD(0);
         }
     }
 }

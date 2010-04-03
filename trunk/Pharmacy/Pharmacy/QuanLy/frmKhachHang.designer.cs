@@ -69,8 +69,10 @@
             this.cmb_tinhthanh = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.comboItem2 = new DevComponents.Editors.ComboItem();
+            this.cmdInDS = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -149,7 +151,7 @@
             // columnHeader9
             // 
             this.columnHeader9.Text = "Tên KH";
-            this.columnHeader9.Width = 240;
+            this.columnHeader9.Width = 235;
             // 
             // columnHeader5
             // 
@@ -174,7 +176,7 @@
             // columnHeader12
             // 
             this.columnHeader12.Text = "Điện thoại";
-            this.columnHeader12.Width = 75;
+            this.columnHeader12.Width = 87;
             // 
             // columnHeader13
             // 
@@ -379,6 +381,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel5.Controls.Add(this.cmdInDS);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 197);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
@@ -496,6 +499,18 @@
             // 
             this.comboItem2.Text = "Trả hàng";
             // 
+            // cmdInDS
+            // 
+            this.cmdInDS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdInDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdInDS.Location = new System.Drawing.Point(571, 2);
+            this.cmdInDS.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdInDS.Name = "cmdInDS";
+            this.cmdInDS.Size = new System.Drawing.Size(70, 27);
+            this.cmdInDS.TabIndex = 54;
+            this.cmdInDS.Text = "In DS";
+            this.cmdInDS.Click += new System.EventHandler(this.cmdInDS_Click);
+            // 
             // frmKhachHang
             // 
             this.ClientSize = new System.Drawing.Size(897, 577);
@@ -507,6 +522,7 @@
             this.Controls.SetChildIndex(this.groupPanel1, 0);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -554,5 +570,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtdienthoai;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.Controls.TextBoxX txtMST;
+        private DevComponents.DotNetBar.ButtonX cmdInDS;
     }
 }

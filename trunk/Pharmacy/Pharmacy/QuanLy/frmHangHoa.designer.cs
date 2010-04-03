@@ -69,6 +69,7 @@
             this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.cmdInDS = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupPanel1.SuspendLayout();
@@ -197,6 +198,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel5.Controls.Add(this.cmdInDS);
             this.panel5.Controls.Add(this.buttonX6);
             this.panel5.Controls.Add(this.buttonX4);
             this.panel5.Controls.Add(this.buttonX5);
@@ -211,7 +213,7 @@
             // 
             this.buttonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX6.Location = new System.Drawing.Point(466, 2);
+            this.buttonX6.Location = new System.Drawing.Point(411, 2);
             this.buttonX6.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX6.Name = "buttonX6";
             this.buttonX6.Size = new System.Drawing.Size(70, 27);
@@ -224,7 +226,7 @@
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX4.Enabled = false;
-            this.buttonX4.Location = new System.Drawing.Point(560, 2);
+            this.buttonX4.Location = new System.Drawing.Point(500, 2);
             this.buttonX4.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.Size = new System.Drawing.Size(70, 27);
@@ -236,7 +238,7 @@
             // 
             this.buttonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX5.Location = new System.Drawing.Point(371, 2);
+            this.buttonX5.Location = new System.Drawing.Point(323, 2);
             this.buttonX5.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX5.Name = "buttonX5";
             this.buttonX5.Size = new System.Drawing.Size(70, 27);
@@ -533,6 +535,19 @@
             this.groupPanel1.TabIndex = 72;
             this.groupPanel1.Text = "DANH SÁCH HÀNG HÓA";
             // 
+            // cmdInDS
+            // 
+            this.cmdInDS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdInDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdInDS.Enabled = false;
+            this.cmdInDS.Location = new System.Drawing.Point(589, 2);
+            this.cmdInDS.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdInDS.Name = "cmdInDS";
+            this.cmdInDS.Size = new System.Drawing.Size(70, 27);
+            this.cmdInDS.TabIndex = 55;
+            this.cmdInDS.Text = "In";
+            this.cmdInDS.Click += new System.EventHandler(this.cmdInDS_Click);
+            // 
             // frmHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -596,5 +611,6 @@
         private DevComponents.DotNetBar.LabelX labelX4;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private DevComponents.DotNetBar.ButtonX cmdInDS;
     }
 }

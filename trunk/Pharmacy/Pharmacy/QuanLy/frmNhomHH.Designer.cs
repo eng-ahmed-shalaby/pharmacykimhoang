@@ -111,10 +111,10 @@
             this.cmb_loai.Items.AddRange(new object[] {
             this.comboItem3,
             this.comboItem4});
-            this.cmb_loai.Location = new System.Drawing.Point(106, 8);
+            this.cmb_loai.Location = new System.Drawing.Point(91, 8);
             this.cmb_loai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmb_loai.Name = "cmb_loai";
-            this.cmb_loai.Size = new System.Drawing.Size(190, 24);
+            this.cmb_loai.Size = new System.Drawing.Size(205, 24);
             this.cmb_loai.TabIndex = 75;
             this.cmb_loai.SelectedIndexChanged += new System.EventHandler(this.cmb_loai_SelectedIndexChanged);
             // 
@@ -130,7 +130,7 @@
             // 
             this.labelX1.Location = new System.Drawing.Point(5, 86);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(97, 25);
+            this.labelX1.Size = new System.Drawing.Size(80, 25);
             this.labelX1.TabIndex = 72;
             this.labelX1.Text = "Mô Tả:";
             // 
@@ -140,10 +140,10 @@
             // 
             // 
             this.txt_mota.Border.Class = "TextBoxBorder";
-            this.txt_mota.Location = new System.Drawing.Point(106, 74);
+            this.txt_mota.Location = new System.Drawing.Point(91, 74);
             this.txt_mota.Multiline = true;
             this.txt_mota.Name = "txt_mota";
-            this.txt_mota.Size = new System.Drawing.Size(193, 47);
+            this.txt_mota.Size = new System.Drawing.Size(208, 47);
             this.txt_mota.TabIndex = 71;
             // 
             // panel5
@@ -201,9 +201,9 @@
             // 
             // 
             this.txtten.Border.Class = "TextBoxBorder";
-            this.txtten.Location = new System.Drawing.Point(106, 40);
+            this.txtten.Location = new System.Drawing.Point(91, 40);
             this.txtten.Name = "txtten";
-            this.txtten.Size = new System.Drawing.Size(193, 24);
+            this.txtten.Size = new System.Drawing.Size(208, 24);
             this.txtten.TabIndex = 0;
             // 
             // labelX26

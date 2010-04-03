@@ -54,6 +54,7 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.txtSLBan = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.cmbIn = new DevComponents.DotNetBar.ButtonX();
             this.cmdSua = new DevComponents.DotNetBar.ButtonX();
             this.cmdXoa = new DevComponents.DotNetBar.ButtonX();
             this.cmdThem = new DevComponents.DotNetBar.ButtonX();
@@ -346,6 +347,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel5.Controls.Add(this.cmbIn);
             this.panel5.Controls.Add(this.cmdSua);
             this.panel5.Controls.Add(this.cmdXoa);
             this.panel5.Controls.Add(this.cmdThem);
@@ -356,33 +358,47 @@
             this.panel5.Size = new System.Drawing.Size(724, 29);
             this.panel5.TabIndex = 70;
             // 
+            // cmbIn
+            // 
+            this.cmbIn.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmbIn.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmbIn.Location = new System.Drawing.Point(458, 2);
+            this.cmbIn.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbIn.Name = "cmbIn";
+            this.cmbIn.Size = new System.Drawing.Size(70, 25);
+            this.cmbIn.TabIndex = 55;
+            this.cmbIn.Text = "In";
+            this.cmbIn.Click += new System.EventHandler(this.cmbIn_Click);
+            // 
             // cmdSua
             // 
             this.cmdSua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdSua.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.cmdSua.Location = new System.Drawing.Point(156, 2);
+            this.cmdSua.Location = new System.Drawing.Point(293, 2);
             this.cmdSua.Margin = new System.Windows.Forms.Padding(0);
             this.cmdSua.Name = "cmdSua";
             this.cmdSua.Size = new System.Drawing.Size(70, 25);
             this.cmdSua.TabIndex = 54;
             this.cmdSua.Text = "Sửa";
+            this.cmdSua.Click += new System.EventHandler(this.cmdSua_Click);
             // 
             // cmdXoa
             // 
             this.cmdXoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdXoa.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.cmdXoa.Location = new System.Drawing.Point(238, 2);
+            this.cmdXoa.Location = new System.Drawing.Point(375, 2);
             this.cmdXoa.Margin = new System.Windows.Forms.Padding(0);
             this.cmdXoa.Name = "cmdXoa";
             this.cmdXoa.Size = new System.Drawing.Size(70, 25);
             this.cmdXoa.TabIndex = 53;
             this.cmdXoa.Text = "Xóa";
+            this.cmdXoa.Click += new System.EventHandler(this.cmdXoa_Click);
             // 
             // cmdThem
             // 
             this.cmdThem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdThem.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.cmdThem.Location = new System.Drawing.Point(73, 2);
+            this.cmdThem.Location = new System.Drawing.Point(210, 2);
             this.cmdThem.Margin = new System.Windows.Forms.Padding(0);
             this.cmdThem.Name = "cmdThem";
             this.cmdThem.Size = new System.Drawing.Size(70, 25);
@@ -440,5 +456,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private DevComponents.DotNetBar.ButtonX cmbIn;
     }
 }
