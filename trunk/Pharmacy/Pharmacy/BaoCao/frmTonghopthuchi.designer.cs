@@ -45,11 +45,11 @@
             this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 108);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 100);
             this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.SelectionFormula = "";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(992, 638);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(992, 646);
             this.crystalReportViewer1.TabIndex = 72;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
@@ -67,7 +67,7 @@
             this.panelNhapXuat.Location = new System.Drawing.Point(0, 35);
             this.panelNhapXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelNhapXuat.Name = "panelNhapXuat";
-            this.panelNhapXuat.Size = new System.Drawing.Size(992, 73);
+            this.panelNhapXuat.Size = new System.Drawing.Size(992, 65);
             // 
             // 
             // 
@@ -155,6 +155,7 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.panelNhapXuat);
             this.Name = "frmTonghopthuchi";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Controls.SetChildIndex(this.panelNhapXuat, 0);
             this.Controls.SetChildIndex(this.crystalReportViewer1, 0);
             this.panelNhapXuat.ResumeLayout(false);

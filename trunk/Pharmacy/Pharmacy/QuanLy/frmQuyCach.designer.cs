@@ -35,6 +35,7 @@
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtSL = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.cmbdvQD = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -46,12 +47,11 @@
             this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.comboItem2 = new DevComponents.Editors.ComboItem();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.txt_mota = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.buttonX6 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
+            this.cmbSua = new DevComponents.DotNetBar.ButtonX();
+            this.cmbXoa = new DevComponents.DotNetBar.ButtonX();
             this.buttonX5 = new DevComponents.DotNetBar.ButtonX();
-            this.txttennsx = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtten = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX26 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
@@ -110,6 +110,7 @@
             this.lvhanghoa.TabIndex = 71;
             this.lvhanghoa.UseCompatibleStateImageBehavior = false;
             this.lvhanghoa.View = System.Windows.Forms.View.Details;
+            this.lvhanghoa.SelectedIndexChanged += new System.EventHandler(this.lvhanghoa_SelectedIndexChanged);
             // 
             // columnHeader7
             // 
@@ -137,6 +138,7 @@
             this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel2.Controls.Add(this.txtSL);
             this.groupPanel2.Controls.Add(this.buttonX2);
             this.groupPanel2.Controls.Add(this.labelX2);
             this.groupPanel2.Controls.Add(this.cmbdvQD);
@@ -144,9 +146,8 @@
             this.groupPanel2.Controls.Add(this.labelX23);
             this.groupPanel2.Controls.Add(this.cmb_dvt);
             this.groupPanel2.Controls.Add(this.labelX1);
-            this.groupPanel2.Controls.Add(this.txt_mota);
             this.groupPanel2.Controls.Add(this.panel5);
-            this.groupPanel2.Controls.Add(this.txttennsx);
+            this.groupPanel2.Controls.Add(this.txtten);
             this.groupPanel2.Controls.Add(this.labelX26);
             this.groupPanel2.Location = new System.Drawing.Point(14, 40);
             this.groupPanel2.Name = "groupPanel2";
@@ -174,12 +175,24 @@
             this.groupPanel2.TabIndex = 78;
             this.groupPanel2.Text = "THÔNG TIN QUY CÁCH";
             // 
+            // txtSL
+            // 
+            // 
+            // 
+            // 
+            this.txtSL.Border.Class = "TextBoxBorder";
+            this.txtSL.Location = new System.Drawing.Point(81, 52);
+            this.txtSL.Name = "txtSL";
+            this.txtSL.Size = new System.Drawing.Size(134, 24);
+            this.txtSL.TabIndex = 79;
+            this.txtSL.TextChanged += new System.EventHandler(this.txtSL_TextChanged);
+            // 
             // buttonX2
             // 
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Location = new System.Drawing.Point(514, 17);
+            this.buttonX2.Location = new System.Drawing.Point(537, 17);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(25, 25);
             this.buttonX2.TabIndex = 78;
@@ -187,11 +200,11 @@
             // 
             // labelX2
             // 
-            this.labelX2.Location = new System.Drawing.Point(288, 16);
+            this.labelX2.Location = new System.Drawing.Point(250, 16);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(78, 23);
+            this.labelX2.Size = new System.Drawing.Size(138, 23);
             this.labelX2.TabIndex = 76;
-            this.labelX2.Text = "ĐV quy đổi:";
+            this.labelX2.Text = "Đơn vị nhập quy đổi:";
             // 
             // cmbdvQD
             // 
@@ -202,7 +215,7 @@
             this.cmbdvQD.Items.AddRange(new object[] {
             this.comboItem3,
             this.comboItem4});
-            this.cmbdvQD.Location = new System.Drawing.Point(366, 17);
+            this.cmbdvQD.Location = new System.Drawing.Point(393, 17);
             this.cmbdvQD.Name = "cmbdvQD";
             this.cmbdvQD.Size = new System.Drawing.Size(142, 24);
             this.cmbdvQD.TabIndex = 77;
@@ -220,7 +233,7 @@
             this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX1.Location = new System.Drawing.Point(218, 17);
+            this.buttonX1.Location = new System.Drawing.Point(217, 17);
             this.buttonX1.Name = "buttonX1";
             this.buttonX1.Size = new System.Drawing.Size(25, 25);
             this.buttonX1.TabIndex = 75;
@@ -243,7 +256,7 @@
             this.cmb_dvt.Items.AddRange(new object[] {
             this.comboItem1,
             this.comboItem2});
-            this.cmb_dvt.Location = new System.Drawing.Point(82, 17);
+            this.cmb_dvt.Location = new System.Drawing.Point(81, 17);
             this.cmb_dvt.Name = "cmb_dvt";
             this.cmb_dvt.Size = new System.Drawing.Size(134, 24);
             this.cmb_dvt.TabIndex = 74;
@@ -264,23 +277,11 @@
             this.labelX1.TabIndex = 72;
             this.labelX1.Text = "SLDVT:";
             // 
-            // txt_mota
-            // 
-            // 
-            // 
-            // 
-            this.txt_mota.Border.Class = "TextBoxBorder";
-            this.txt_mota.Location = new System.Drawing.Point(82, 54);
-            this.txt_mota.Multiline = true;
-            this.txt_mota.Name = "txt_mota";
-            this.txt_mota.Size = new System.Drawing.Size(134, 22);
-            this.txt_mota.TabIndex = 71;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel5.Controls.Add(this.buttonX6);
-            this.panel5.Controls.Add(this.buttonX4);
+            this.panel5.Controls.Add(this.cmbSua);
+            this.panel5.Controls.Add(this.cmbXoa);
             this.panel5.Controls.Add(this.buttonX5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 97);
@@ -289,28 +290,29 @@
             this.panel5.Size = new System.Drawing.Size(572, 30);
             this.panel5.TabIndex = 70;
             // 
-            // buttonX6
+            // cmbSua
             // 
-            this.buttonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX6.Location = new System.Drawing.Point(223, 2);
-            this.buttonX6.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonX6.Name = "buttonX6";
-            this.buttonX6.Size = new System.Drawing.Size(70, 27);
-            this.buttonX6.TabIndex = 54;
-            this.buttonX6.Text = "Sửa";
+            this.cmbSua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmbSua.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmbSua.Location = new System.Drawing.Point(223, 2);
+            this.cmbSua.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbSua.Name = "cmbSua";
+            this.cmbSua.Size = new System.Drawing.Size(70, 27);
+            this.cmbSua.TabIndex = 54;
+            this.cmbSua.Text = "Sửa";
+            this.cmbSua.Click += new System.EventHandler(this.cmbSua_Click);
             // 
-            // buttonX4
+            // cmbXoa
             // 
-            this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX4.Enabled = false;
-            this.buttonX4.Location = new System.Drawing.Point(305, 2);
-            this.buttonX4.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonX4.Name = "buttonX4";
-            this.buttonX4.Size = new System.Drawing.Size(70, 27);
-            this.buttonX4.TabIndex = 53;
-            this.buttonX4.Text = "Xóa";
+            this.cmbXoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmbXoa.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmbXoa.Location = new System.Drawing.Point(305, 2);
+            this.cmbXoa.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbXoa.Name = "cmbXoa";
+            this.cmbXoa.Size = new System.Drawing.Size(70, 27);
+            this.cmbXoa.TabIndex = 53;
+            this.cmbXoa.Text = "Xóa";
+            this.cmbXoa.Click += new System.EventHandler(this.cmbXoa_Click);
             // 
             // buttonX5
             // 
@@ -324,24 +326,25 @@
             this.buttonX5.Text = "Thêm";
             this.buttonX5.Click += new System.EventHandler(this.buttonX5_Click);
             // 
-            // txttennsx
+            // txtten
             // 
             // 
             // 
             // 
-            this.txttennsx.Border.Class = "TextBoxBorder";
-            this.txttennsx.Location = new System.Drawing.Point(366, 51);
-            this.txttennsx.Name = "txttennsx";
-            this.txttennsx.Size = new System.Drawing.Size(142, 24);
-            this.txttennsx.TabIndex = 0;
+            this.txtten.Border.Class = "TextBoxBorder";
+            this.txtten.Enabled = false;
+            this.txtten.Location = new System.Drawing.Point(393, 52);
+            this.txtten.Name = "txtten";
+            this.txtten.Size = new System.Drawing.Size(142, 24);
+            this.txtten.TabIndex = 0;
             // 
             // labelX26
             // 
-            this.labelX26.Location = new System.Drawing.Point(291, 52);
+            this.labelX26.Location = new System.Drawing.Point(285, 52);
             this.labelX26.Name = "labelX26";
-            this.labelX26.Size = new System.Drawing.Size(54, 25);
+            this.labelX26.Size = new System.Drawing.Size(102, 25);
             this.labelX26.TabIndex = 60;
-            this.labelX26.Text = "Tên :";
+            this.labelX26.Text = "Tên Quy cách :";
             // 
             // frmQuyCach
             // 
@@ -369,12 +372,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX txt_mota;
         private System.Windows.Forms.Panel panel5;
-        private DevComponents.DotNetBar.ButtonX buttonX6;
-        private DevComponents.DotNetBar.ButtonX buttonX4;
+        private DevComponents.DotNetBar.ButtonX cmbSua;
+        private DevComponents.DotNetBar.ButtonX cmbXoa;
         private DevComponents.DotNetBar.ButtonX buttonX5;
-        private DevComponents.DotNetBar.Controls.TextBoxX txttennsx;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtten;
         private DevComponents.DotNetBar.LabelX labelX26;
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.LabelX labelX2;
@@ -386,5 +388,6 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmb_dvt;
         private DevComponents.Editors.ComboItem comboItem1;
         private DevComponents.Editors.ComboItem comboItem2;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSL;
     }
 }

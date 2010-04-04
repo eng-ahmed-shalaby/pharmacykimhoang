@@ -29,5 +29,18 @@ namespace Pharmacy.QuanLy.Info
             set { _sldv = value; }
         }
 
+        private int _dvtLo;
+
+        public int DVTLo
+        {
+            get { return _dvtLo; }
+            set { _dvtLo = value; }
+        }
+        private int _tinhtrang;
+        public int TinhTrang
+        {
+            get { return _tinhtrang; }
+            set { _tinhtrang = value; }
+        }
     }
 }

@@ -326,7 +326,6 @@ namespace Pharmacy.DLL
                     par = new SqlParameter(arrNames[i], arrValues[i]);
                     _sqlCommand.Parameters.Add(par);
                 }
-
                 return _sqlCommand.ExecuteNonQuery();
             }
             catch (SqlException ex)

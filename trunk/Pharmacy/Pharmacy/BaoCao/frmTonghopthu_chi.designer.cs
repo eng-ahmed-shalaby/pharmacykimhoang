@@ -30,13 +30,13 @@
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.panelNhapXuat = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.rdKH = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.rdKhac = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.cmdShow = new DevComponents.DotNetBar.ButtonX();
             this.txtNam = new DevComponents.Editors.IntegerInput();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtThang = new DevComponents.Editors.IntegerInput();
             this.labelX26 = new DevComponents.DotNetBar.LabelX();
-            this.rdKH = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.rdKhac = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.panelNhapXuat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThang)).BeginInit();
@@ -47,11 +47,11 @@
             this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 148);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 126);
             this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.SelectionFormula = "";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(992, 598);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(992, 620);
             this.crystalReportViewer1.TabIndex = 74;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
@@ -71,7 +71,7 @@
             this.panelNhapXuat.Location = new System.Drawing.Point(0, 35);
             this.panelNhapXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelNhapXuat.Name = "panelNhapXuat";
-            this.panelNhapXuat.Size = new System.Drawing.Size(992, 113);
+            this.panelNhapXuat.Size = new System.Drawing.Size(992, 91);
             // 
             // 
             // 
@@ -95,11 +95,32 @@
             this.panelNhapXuat.TabIndex = 73;
             this.panelNhapXuat.Text = "Thông tin";
             // 
+            // rdKH
+            // 
+            this.rdKH.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.rdKH.Checked = true;
+            this.rdKH.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.rdKH.CheckValue = "Y";
+            this.rdKH.Location = new System.Drawing.Point(390, 43);
+            this.rdKH.Name = "rdKH";
+            this.rdKH.Size = new System.Drawing.Size(71, 23);
+            this.rdKH.TabIndex = 77;
+            this.rdKH.Text = "Thu";
+            // 
+            // rdKhac
+            // 
+            this.rdKhac.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.rdKhac.Location = new System.Drawing.Point(467, 43);
+            this.rdKhac.Name = "rdKhac";
+            this.rdKhac.Size = new System.Drawing.Size(95, 23);
+            this.rdKhac.TabIndex = 78;
+            this.rdKhac.Text = "Chi";
+            // 
             // cmdShow
             // 
             this.cmdShow.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdShow.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.cmdShow.Location = new System.Drawing.Point(617, 38);
+            this.cmdShow.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdShow.Location = new System.Drawing.Point(583, 37);
             this.cmdShow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmdShow.Name = "cmdShow";
             this.cmdShow.Size = new System.Drawing.Size(86, 28);
@@ -153,33 +174,13 @@
             this.labelX26.TabIndex = 60;
             this.labelX26.Text = "Tháng:";
             // 
-            // rdKH
-            // 
-            this.rdKH.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.rdKH.Checked = true;
-            this.rdKH.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.rdKH.CheckValue = "Y";
-            this.rdKH.Location = new System.Drawing.Point(390, 43);
-            this.rdKH.Name = "rdKH";
-            this.rdKH.Size = new System.Drawing.Size(71, 23);
-            this.rdKH.TabIndex = 77;
-            this.rdKH.Text = "Thu";
-            // 
-            // rdKhac
-            // 
-            this.rdKhac.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.rdKhac.Location = new System.Drawing.Point(467, 43);
-            this.rdKhac.Name = "rdKhac";
-            this.rdKhac.Size = new System.Drawing.Size(95, 23);
-            this.rdKhac.TabIndex = 78;
-            this.rdKhac.Text = "Chi";
-            // 
             // frmTonghopthu_chi
             // 
             this.ClientSize = new System.Drawing.Size(992, 746);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.panelNhapXuat);
             this.Name = "frmTonghopthu_chi";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Controls.SetChildIndex(this.panelNhapXuat, 0);
             this.Controls.SetChildIndex(this.crystalReportViewer1, 0);
             this.panelNhapXuat.ResumeLayout(false);

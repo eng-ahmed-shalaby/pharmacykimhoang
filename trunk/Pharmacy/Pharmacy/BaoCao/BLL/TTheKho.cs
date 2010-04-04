@@ -24,12 +24,12 @@ namespace Pharmacy.BaoCao.BLL
                                new DataColumn("NgayThang", Type.GetType("System.String")),
 
                                new DataColumn("PhieuNhap", Type.GetType("System.String")),
-                                new DataColumn("PhieuXuat", Type.GetType("System.String")),
+                               new DataColumn("PhieuXuat", Type.GetType("System.String")),
                                new DataColumn("DienGiai", Type.GetType("System.String")),
                                new DataColumn("SLNhap", Type.GetType("System.String")),
-                                new DataColumn("SLXuat", Type.GetType("System.String")),
-                                 new DataColumn("SLTon", Type.GetType("System.String")),
-                                  new DataColumn("GhiChu", Type.GetType("System.String"))
+                               new DataColumn("SLXuat", Type.GetType("System.String")),
+                               new DataColumn("SLTon", Type.GetType("System.String")),
+                               new DataColumn("GhiChu", Type.GetType("System.String"))
 
             };
             data.Columns.AddRange(dc);

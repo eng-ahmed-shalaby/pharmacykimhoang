@@ -286,6 +286,19 @@ namespace Pharmacy.QuanLy
             pr.PrintPreview();
         }
 
+        private void cmdDVT_Click(object sender, EventArgs e)
+        {
+            frmDonvi frm = new frmDonvi();
+            frm.ShowDialog();
+        }
+
+        private void cmbQuyCach_Click(object sender, EventArgs e)
+        {
+            frmQuyCach frm = new frmQuyCach();
+            frm.ShowDialog();
+        }
+
+     
       
 
       
