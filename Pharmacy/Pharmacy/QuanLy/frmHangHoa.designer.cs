@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.cmbQuyCach = new DevComponents.DotNetBar.ButtonX();
             this.cmb_quycach = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.txt_ma = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.cmdInDS = new DevComponents.DotNetBar.ButtonX();
             this.buttonX6 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX5 = new DevComponents.DotNetBar.ButtonX();
@@ -43,7 +44,7 @@
             this.cmb_loai = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem4 = new DevComponents.Editors.ComboItem();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.cmdDVT = new DevComponents.DotNetBar.ButtonX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txt_chidinh = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.cmdNhomHH = new DevComponents.DotNetBar.ButtonX();
@@ -69,7 +70,6 @@
             this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.cmdInDS = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupPanel1.SuspendLayout();
@@ -81,7 +81,7 @@
             this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel2.Controls.Add(this.buttonX3);
+            this.groupPanel2.Controls.Add(this.cmbQuyCach);
             this.groupPanel2.Controls.Add(this.cmb_quycach);
             this.groupPanel2.Controls.Add(this.labelX4);
             this.groupPanel2.Controls.Add(this.txt_ma);
@@ -90,7 +90,7 @@
             this.groupPanel2.Controls.Add(this.panel5);
             this.groupPanel2.Controls.Add(this.labelX2);
             this.groupPanel2.Controls.Add(this.cmb_loai);
-            this.groupPanel2.Controls.Add(this.buttonX1);
+            this.groupPanel2.Controls.Add(this.cmdDVT);
             this.groupPanel2.Controls.Add(this.labelX1);
             this.groupPanel2.Controls.Add(this.txt_chidinh);
             this.groupPanel2.Controls.Add(this.cmdNhomHH);
@@ -129,17 +129,18 @@
             this.groupPanel2.TabIndex = 69;
             this.groupPanel2.Text = "THÔNG TIN THUỐC";
             // 
-            // buttonX3
+            // cmbQuyCach
             // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX3.Location = new System.Drawing.Point(710, 13);
-            this.buttonX3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(25, 25);
-            this.buttonX3.TabIndex = 79;
-            this.buttonX3.Text = "+";
+            this.cmbQuyCach.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmbQuyCach.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmbQuyCach.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbQuyCach.Location = new System.Drawing.Point(710, 13);
+            this.cmbQuyCach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbQuyCach.Name = "cmbQuyCach";
+            this.cmbQuyCach.Size = new System.Drawing.Size(25, 25);
+            this.cmbQuyCach.TabIndex = 79;
+            this.cmbQuyCach.Text = "+";
+            this.cmbQuyCach.Click += new System.EventHandler(this.cmbQuyCach_Click);
             // 
             // cmb_quycach
             // 
@@ -208,6 +209,19 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1002, 30);
             this.panel5.TabIndex = 70;
+            // 
+            // cmdInDS
+            // 
+            this.cmdInDS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdInDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdInDS.Enabled = false;
+            this.cmdInDS.Location = new System.Drawing.Point(589, 2);
+            this.cmdInDS.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdInDS.Name = "cmdInDS";
+            this.cmdInDS.Size = new System.Drawing.Size(70, 27);
+            this.cmdInDS.TabIndex = 55;
+            this.cmdInDS.Text = "In";
+            this.cmdInDS.Click += new System.EventHandler(this.cmdInDS_Click);
             // 
             // buttonX6
             // 
@@ -279,17 +293,18 @@
             // 
             this.comboItem4.Text = "Trả hàng";
             // 
-            // buttonX1
+            // cmdDVT
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX1.Location = new System.Drawing.Point(290, 119);
-            this.buttonX1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(25, 25);
-            this.buttonX1.TabIndex = 71;
-            this.buttonX1.Text = "+";
+            this.cmdDVT.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdDVT.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdDVT.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdDVT.Location = new System.Drawing.Point(290, 119);
+            this.cmdDVT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmdDVT.Name = "cmdDVT";
+            this.cmdDVT.Size = new System.Drawing.Size(25, 25);
+            this.cmdDVT.TabIndex = 71;
+            this.cmdDVT.Text = "+";
+            this.cmdDVT.Click += new System.EventHandler(this.cmdDVT_Click);
             // 
             // labelX1
             // 
@@ -535,19 +550,6 @@
             this.groupPanel1.TabIndex = 72;
             this.groupPanel1.Text = "DANH SÁCH HÀNG HÓA";
             // 
-            // cmdInDS
-            // 
-            this.cmdInDS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdInDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.cmdInDS.Enabled = false;
-            this.cmdInDS.Location = new System.Drawing.Point(589, 2);
-            this.cmdInDS.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdInDS.Name = "cmdInDS";
-            this.cmdInDS.Size = new System.Drawing.Size(70, 27);
-            this.cmdInDS.TabIndex = 55;
-            this.cmdInDS.Text = "In";
-            this.cmdInDS.Click += new System.EventHandler(this.cmdInDS_Click);
-            // 
             // frmHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -584,7 +586,7 @@
         private DevComponents.Editors.ComboItem comboItem2;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_chidinh;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonX cmdDVT;
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmb_loai;
@@ -606,7 +608,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_ma;
         private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
+        private DevComponents.DotNetBar.ButtonX cmbQuyCach;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmb_quycach;
         private DevComponents.DotNetBar.LabelX labelX4;
         private System.Windows.Forms.ColumnHeader columnHeader2;

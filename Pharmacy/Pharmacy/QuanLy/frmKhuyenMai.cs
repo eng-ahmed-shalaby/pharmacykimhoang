@@ -218,7 +218,6 @@ namespace Pharmacy.QuanLy
                 }
             }
         }
-
         private void cmdThem_Click(object sender, EventArgs e)
         {
             InsertKM();

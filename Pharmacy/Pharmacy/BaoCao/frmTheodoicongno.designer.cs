@@ -210,6 +210,7 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.panelTheKho);
             this.Name = "frmTheodoicongno";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Controls.SetChildIndex(this.panelTheKho, 0);
             this.Controls.SetChildIndex(this.crystalReportViewer1, 0);
             this.panelTheKho.ResumeLayout(false);

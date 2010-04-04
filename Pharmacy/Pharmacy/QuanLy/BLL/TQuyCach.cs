@@ -21,8 +21,8 @@ namespace Pharmacy.QuanLy.BLL
         public int InsertQC(Info.QuyCachInfo info)
         {
             int id = cn.ExecuteInsert("SP_INSERTQuyCach",
-                new string[] { "@TEN" },
-                new object[] { info.Ten });
+                new string[] { "@TEN","@SLDVT","@DVTLo","@TINHTRANG" },
+                new object[] { info.Ten, info.Sldv, info.DVTLo, info.TinhTrang });
             return id;
         }
 
@@ -35,10 +35,10 @@ namespace Pharmacy.QuanLy.BLL
         }
 
         public int UpdateQC(Info.QuyCachInfo info)
-        {
-            cn.ExecuteNonQuery("SP_UPDATEQuyCach",
-                new string[] { "@MA", "@TEN" },
-                new object[] { info.Ma, info.Ten });
+        {	
+            cn.ExecuteNonQuery("usp_UpdateQUYCACH",
+                new string[] { "@MA", "@TEN", "@SLDVT", "@TINHTRANG","@MA_DONVI_LO " },
+                new object[] { info.Ma, info.Ten, info.Sldv, info.TinhTrang, info.DVTLo });
             return 1;
         }
 
