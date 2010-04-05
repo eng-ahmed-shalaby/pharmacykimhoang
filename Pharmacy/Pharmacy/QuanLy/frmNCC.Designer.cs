@@ -38,6 +38,8 @@
             this.columnHeader12 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader13 = new System.Windows.Forms.ColumnHeader();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtMST = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtDienThoai = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
@@ -60,8 +62,6 @@
             this.cmb_QG = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.comboItem2 = new DevComponents.Editors.ComboItem();
-            this.txtMST = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -180,6 +180,25 @@
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel2.TabIndex = 73;
             this.groupPanel2.Text = "THÔNG TIN THUỐC";
+            // 
+            // txtMST
+            // 
+            // 
+            // 
+            // 
+            this.txtMST.Border.Class = "TextBoxBorder";
+            this.txtMST.Location = new System.Drawing.Point(106, 111);
+            this.txtMST.Name = "txtMST";
+            this.txtMST.Size = new System.Drawing.Size(193, 24);
+            this.txtMST.TabIndex = 80;
+            // 
+            // labelX1
+            // 
+            this.labelX1.Location = new System.Drawing.Point(21, 110);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(70, 25);
+            this.labelX1.TabIndex = 81;
+            this.labelX1.Text = "Mã Thuế:";
             // 
             // txtDiaChi
             // 
@@ -392,32 +411,13 @@
             // 
             this.comboItem2.Text = "Trả hàng";
             // 
-            // txtMST
-            // 
-            // 
-            // 
-            // 
-            this.txtMST.Border.Class = "TextBoxBorder";
-            this.txtMST.Location = new System.Drawing.Point(106, 111);
-            this.txtMST.Name = "txtMST";
-            this.txtMST.Size = new System.Drawing.Size(193, 24);
-            this.txtMST.TabIndex = 80;
-            // 
-            // labelX1
-            // 
-            this.labelX1.Location = new System.Drawing.Point(21, 110);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(70, 25);
-            this.labelX1.TabIndex = 81;
-            this.labelX1.Text = "Mã Thuế:";
-            // 
             // frmNCC
             // 
             this.ClientSize = new System.Drawing.Size(792, 466);
             this.Controls.Add(this.groupPanel2);
             this.Controls.Add(this.lvNCC);
             this.Name = "frmNCC";
-            this.Text = "frmNCC";
+            this.Text = "Quản lý nhà cung cấp";
             this.Load += new System.EventHandler(this.frmNCC_Load);
             this.Controls.SetChildIndex(this.lvNCC, 0);
             this.Controls.SetChildIndex(this.groupPanel2, 0);

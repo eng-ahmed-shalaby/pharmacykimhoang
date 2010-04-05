@@ -40,7 +40,13 @@ namespace Pharmacy.NhapXuat.Info
             get { return _solo; }
             set { _solo = value; }
         }
+        private int _mactkho;
 
+        public int MaCTKho
+        {
+            get { return _mactkho; }
+            set { _mactkho = value; }
+        }
         private int _soluong;
 
         public int Soluong

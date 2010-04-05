@@ -125,6 +125,7 @@
             // 
             // txtUser
             // 
+            this.txtUser.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -164,6 +165,7 @@
             // 
             // frmLogin
             // 
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(392, 216);
             this.Controls.Add(this.tableLayoutPanel1);
             this.KeyPreview = true;

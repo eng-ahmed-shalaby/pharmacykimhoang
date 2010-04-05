@@ -13,7 +13,7 @@ namespace Pharmacy.ThuChi.BLL
         DLL.DataAccess cn = new DLL.DataAccess();
         public TblHD_Xuat GetHD_No(int _maKH) { 
             string sql =string.Format("select *, convert(char(10), NGAYLAP,103) as NGAYLAP1"+
-                "from dbo.HD_XUAT where MAKH={0} and TINHTRANG={1} order by NGAYXUAT asc", _maKH, 1);
+                " from dbo.HD_XUAT where MAKH={0} and TINHTRANG={1} order by NGAYXUAT asc", _maKH, 1);
             tblHDXuat = new TblHD_Xuat(sql);
             return tblHDXuat;
         }
