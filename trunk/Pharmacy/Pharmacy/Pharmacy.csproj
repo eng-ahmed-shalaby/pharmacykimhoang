@@ -64,15 +64,19 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Documents and Settings\All Users\Documents\DICHSO.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Smo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.SmoEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.SqlEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -91,6 +95,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCao\BLL\TTonKho.cs" />
     <Compile Include="BaoCao\BLL\TDoanhthuBH.cs" />
     <Compile Include="BaoCao\BLL\TDoanhthuTDV.cs" />
     <Compile Include="BaoCao\BLL\TKhachHang.cs" />
@@ -300,6 +305,12 @@
     </Compile>
     <Compile Include="HeThong\frmBk_Restore.Designer.cs">
       <DependentUpon>frmBk_Restore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\frmExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frmExport.Designer.cs">
+      <DependentUpon>frmExport.cs</DependentUpon>
     </Compile>
     <Compile Include="HeThong\frmPhanQuyen.cs">
       <SubType>Form</SubType>
@@ -517,6 +528,10 @@
       <DependentUpon>frmBk_Restore.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frmExport.resx">
+      <DependentUpon>frmExport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="HeThong\frmPhanQuyen.resx">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -625,6 +640,17 @@
     <EmbeddedResource Include="ThuChi\rptPhieuThu.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptPhieuThu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRIAL\FilterControls\UserControl1.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRIAL\SerialBoxControls\SerialBox.resx">
+      <DependentUpon>SerialBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRIAL\TrialMaker\frmDialog.resx">
+      <DependentUpon>frmDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -808,6 +834,25 @@
     <Compile Include="ThuChi\TListView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TRIAL\FilterControls\FilterTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TRIAL\SerialBoxControls\SerialBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TRIAL\SerialBoxControls\SerialBox.designer.cs">
+      <DependentUpon>SerialBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRIAL\TrialMaker\Encryption.cs" />
+    <Compile Include="TRIAL\TrialMaker\FileReadWrite.cs" />
+    <Compile Include="TRIAL\TrialMaker\frmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRIAL\TrialMaker\frmDialog.designer.cs">
+      <DependentUpon>frmDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRIAL\TrialMaker\SystemInfo.cs" />
+    <Compile Include="TRIAL\TrialMaker\TrialMaker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\App.config" />
@@ -878,6 +923,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LogoCauVong.ico" />
+    <Content Include="TRIAL\TrialMaker\LockUsage.txt" />
     <None Include="NhapXuat\Info\dsHoaDon.xsc">
       <DependentUpon>dsHoaDon.xsd</DependentUpon>
     </None>

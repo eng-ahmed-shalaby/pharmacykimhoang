@@ -100,6 +100,7 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmdHDDon = new DevComponents.DotNetBar.ButtonX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.dpkDateHD = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.labelX25 = new DevComponents.DotNetBar.LabelX();
@@ -129,7 +130,6 @@
             this.columnHeader12 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader15 = new System.Windows.Forms.ColumnHeader();
-            this.cmdHDDon = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSLban)).BeginInit();
@@ -1057,6 +1057,18 @@
             this.panel3.Size = new System.Drawing.Size(892, 252);
             this.panel3.TabIndex = 55;
             // 
+            // cmdHDDon
+            // 
+            this.cmdHDDon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdHDDon.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdHDDon.Location = new System.Drawing.Point(270, 211);
+            this.cmdHDDon.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdHDDon.Name = "cmdHDDon";
+            this.cmdHDDon.Size = new System.Drawing.Size(76, 25);
+            this.cmdHDDon.TabIndex = 63;
+            this.cmdHDDon.Text = "In HD";
+            this.cmdHDDon.Click += new System.EventHandler(this.cmdHDDon_Click);
+            // 
             // buttonX1
             // 
             this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -1145,6 +1157,7 @@
             this.buttonX3.TabIndex = 54;
             this.buttonX3.Text = "Sửa CT";
             this.buttonX3.Visible = false;
+
             // 
             // cmdXoaCT
             // 
@@ -1349,18 +1362,6 @@
             // 
             this.columnHeader15.Text = "Mã";
             // 
-            // cmdHDDon
-            // 
-            this.cmdHDDon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdHDDon.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.cmdHDDon.Location = new System.Drawing.Point(270, 211);
-            this.cmdHDDon.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdHDDon.Name = "cmdHDDon";
-            this.cmdHDDon.Size = new System.Drawing.Size(76, 25);
-            this.cmdHDDon.TabIndex = 63;
-            this.cmdHDDon.Text = "In HD";
-            this.cmdHDDon.Click += new System.EventHandler(this.cmdHDDon_Click);
-            // 
             // frmXuatKho
             // 
             this.ClientSize = new System.Drawing.Size(892, 615);
@@ -1368,7 +1369,7 @@
             this.Controls.Add(this.groupPanel2);
             this.Controls.Add(this.groupPanel1);
             this.Name = "frmXuatKho";
-            this.Text = "frmXuatKho";
+            this.Text = "Xuất hàng hóa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmXuatKho_Load);
             this.Controls.SetChildIndex(this.groupPanel1, 0);

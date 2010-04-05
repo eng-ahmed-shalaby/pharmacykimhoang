@@ -559,7 +559,7 @@
             this.Controls.Add(this.groupPanel2);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmHangHoa";
-            this.Text = "frmHangHoa";
+            this.Text = "Quản lý hàng hóa";
             this.Load += new System.EventHandler(this.frmHangHoa_Load);
             this.Controls.SetChildIndex(this.groupPanel2, 0);
             this.Controls.SetChildIndex(this.groupPanel1, 0);

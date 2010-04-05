@@ -1326,7 +1326,7 @@
             this.Controls.Add(this.panel3);
             this.KeyPreview = true;
             this.Name = "frmNhapKho";
-            this.Text = "frmNhapKho";
+            this.Text = "Nhập hàng hóa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmNhapKho_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmNhapKho_KeyDown);

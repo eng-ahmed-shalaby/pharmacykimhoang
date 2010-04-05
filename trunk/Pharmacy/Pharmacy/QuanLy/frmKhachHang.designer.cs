@@ -56,6 +56,7 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.btnNhomKH = new DevComponents.DotNetBar.ButtonX();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.cmdInDS = new DevComponents.DotNetBar.ButtonX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.cmb_nhom = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem3 = new DevComponents.Editors.ComboItem();
@@ -69,7 +70,6 @@
             this.cmb_tinhthanh = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.comboItem2 = new DevComponents.Editors.ComboItem();
-            this.cmdInDS = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -389,6 +389,18 @@
             this.panel5.Size = new System.Drawing.Size(874, 30);
             this.panel5.TabIndex = 70;
             // 
+            // cmdInDS
+            // 
+            this.cmdInDS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdInDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdInDS.Location = new System.Drawing.Point(571, 2);
+            this.cmdInDS.Margin = new System.Windows.Forms.Padding(0);
+            this.cmdInDS.Name = "cmdInDS";
+            this.cmdInDS.Size = new System.Drawing.Size(70, 27);
+            this.cmdInDS.TabIndex = 54;
+            this.cmdInDS.Text = "In DS";
+            this.cmdInDS.Click += new System.EventHandler(this.cmdInDS_Click);
+            // 
             // labelX2
             // 
             this.labelX2.Location = new System.Drawing.Point(21, 83);
@@ -499,24 +511,13 @@
             // 
             this.comboItem2.Text = "Trả hàng";
             // 
-            // cmdInDS
-            // 
-            this.cmdInDS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdInDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.cmdInDS.Location = new System.Drawing.Point(571, 2);
-            this.cmdInDS.Margin = new System.Windows.Forms.Padding(0);
-            this.cmdInDS.Name = "cmdInDS";
-            this.cmdInDS.Size = new System.Drawing.Size(70, 27);
-            this.cmdInDS.TabIndex = 54;
-            this.cmdInDS.Text = "In DS";
-            this.cmdInDS.Click += new System.EventHandler(this.cmdInDS_Click);
-            // 
             // frmKhachHang
             // 
             this.ClientSize = new System.Drawing.Size(897, 577);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.groupPanel2);
             this.Name = "frmKhachHang";
+            this.Text = "Quản lý khách hàng";
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
             this.Controls.SetChildIndex(this.groupPanel2, 0);
             this.Controls.SetChildIndex(this.groupPanel1, 0);

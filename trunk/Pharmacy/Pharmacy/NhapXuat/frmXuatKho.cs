@@ -138,17 +138,25 @@ namespace Pharmacy.NhapXuat
             cmbLo.ValueMember = "MA";
             cmbLo.DataSource = LO;
         }
+        int maCTkho = 0;
         public void ShowInfoLo(string MaLo) {
             int i=0;
             for (i = 0; i < LO.Rows.Count; i++)
                 if (LO.Rows[i]["MALO"].ToString() == MaLo)
                     break;
-            txtSL.Text = LO.Rows[i]["SLTON_LO"].ToString();
-            slton = int.Parse(LO.Rows[i]["SLTON_LO"].ToString());
-            cmbDVT.Text = LO.Rows[i]["TENDV"].ToString();
-            dpkHH.Text = LO.Rows[i]["NGAYHH"].ToString();
-            txtKho.Text = LO.Rows[i]["TEN"].ToString();
-            txtKe.Text = LO.Rows[i]["KE"].ToString();
+            try
+            {
+                txtSL.Text = LO.Rows[i]["SLTON_LO"].ToString();
+                slton = int.Parse(LO.Rows[i]["SLTON_LO"].ToString());
+                cmbDVT.Text = LO.Rows[i]["TENDV"].ToString();
+                dpkHH.Text = LO.Rows[i]["NGAYHH"].ToString();
+                txtKho.Text = LO.Rows[i]["TEN"].ToString();
+                txtKe.Text = LO.Rows[i]["KE"].ToString();
+                maCTkho = int.Parse(LO.Rows[i]["MACTKHO"].ToString());
+            }
+            catch (Exception ex) {
+                TLog.WriteErr("frmXuatKho_ShowinfoLo", ex.Message);
+            }
         }
         private void cmbLoaiSP_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -390,6 +398,7 @@ namespace Pharmacy.NhapXuat
         { 
             infoCTXuat.Mahdxuat = infoHDXUAT.Ma;
             infoCTXuat.Solo= cmbLo.Text;
+            infoCTXuat.MaCTKho = maCTkho;
             infoCTXuat.Mahh = int.Parse(cmbTenThuoc.SelectedValue.ToString());
             infoCTXuat.Soluong= int.Parse( txtSLban.Text);
             infoCTXuat.Dongia = double.Parse(txtDG.Text);
@@ -471,17 +480,19 @@ namespace Pharmacy.NhapXuat
                 {
                     int slKM = int.Parse(txtSLban.Text.ToString()) / int.Parse(dataKM.Rows[0]["SL"].ToString());
                     slKM = slKM * int.Parse(dataKM.Rows[0]["SLKM"].ToString());
-                    int slKMTon = int.Parse(KM.Rows[0]["SLTON_LO"].ToString()) - slKM;
-                    if (slKMTon <= 0)
+                    if (slKM != 0)
                     {
-                        slKMTon = 0;
-                        tt = 0;
+                        int slKMTon = int.Parse(KM.Rows[0]["SLTON_LO"].ToString()) - slKM;
+                        if (slKMTon <= 0)
+                        {
+                            slKMTon = 0;
+                            tt = 0;
+                        }
+                        ////////Insert Update
+                        Info.CTXUATInfo info = SetCTKM(slKM);
+                        tXuatKho.InsertCTNHAP(info);
+                        UpdateLo(int.Parse(KM.Rows[0]["MA"].ToString().ToString()), slKMTon);
                     }
-                    ////////Insert Update
-                    Info.CTXUATInfo info = SetCTKM(slKM);
-                    tXuatKho.InsertCTNHAP(info);
-                    UpdateLo(int.Parse(KM.Rows[0]["MA"].ToString().ToString()), slKMTon);
-
                 }
                 catch (Exception ex)
                 {
@@ -622,5 +633,7 @@ namespace Pharmacy.NhapXuat
                     frm.ShowHD(int.Parse(lvHD.Items[i].SubItems[6].Text));
                 }
         }
+
+   
     }
 }

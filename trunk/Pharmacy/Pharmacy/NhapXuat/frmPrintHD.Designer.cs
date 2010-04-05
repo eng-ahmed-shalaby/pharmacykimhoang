@@ -66,7 +66,7 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmPrintHD";
-            this.Text = "frmPrintHD";
+            this.Text = "Phiếu nhập xuất";
             this.Controls.SetChildIndex(this.crystalReportViewer1, 0);
             this.Controls.SetChildIndex(this.cmdHDDon, 0);
             this.ResumeLayout(false);

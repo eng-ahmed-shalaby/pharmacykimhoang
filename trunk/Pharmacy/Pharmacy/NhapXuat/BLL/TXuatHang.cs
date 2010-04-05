@@ -167,8 +167,8 @@ namespace Pharmacy.NhapXuat.BLL
              try
              {
                  id = cn.ExecuteInsert("usp_InsertCT_HDXUAT",
-                     new string[] { "@MAHDXUAT","@MAHH", "@SOLO", "@SOLUONG","@DONGIA","@VAT","@TIENCHUAVAT","@TIENCOVAT","@ChietKhau","@TINHTRANG" },
-                    new object[] { info.Mahdxuat,info.Mahh, info.Solo, info.Soluong,info.Dongia,info.Vat,info.Tienchuavat, info.Tiencovat,info.CK, info.Tinhtrang });
+                     new string[] { "@MAHDXUAT","@MAHH", "@SOLO","@MACTKHO", "@SOLUONG","@DONGIA","@VAT","@TIENCHUAVAT","@TIENCOVAT","@ChietKhau","@TINHTRANG" },
+                    new object[] { info.Mahdxuat,info.Mahh, info.Solo,  info.MaCTKho,info.Soluong,info.Dongia,info.Vat,info.Tienchuavat, info.Tiencovat,info.CK, info.Tinhtrang });
                  return id;
              }
              catch (Exception ex)

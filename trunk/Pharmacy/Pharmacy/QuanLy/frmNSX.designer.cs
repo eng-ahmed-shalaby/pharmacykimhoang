@@ -308,6 +308,7 @@
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.groupPanel2);
             this.Name = "frmNSX";
+            this.Text = "Nhà sản xuất";
             this.Load += new System.EventHandler(this.frmNSX_Load);
             this.Controls.SetChildIndex(this.groupPanel2, 0);
             this.Controls.SetChildIndex(this.groupPanel1, 0);

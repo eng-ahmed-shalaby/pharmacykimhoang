@@ -225,6 +225,7 @@
             this.MinimumSize = new System.Drawing.Size(584, 435);
             this.Name = "frmDonvi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đơn vị tính";
             this.Load += new System.EventHandler(this.frmDonvi_Load);
             this.Controls.SetChildIndex(this.groupPanel2, 0);
             this.Controls.SetChildIndex(this.groupPanel1, 0);

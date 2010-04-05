@@ -402,7 +402,7 @@
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.groupPanel2);
             this.Name = "frmTDV";
-            this.Text = "frmTDV";
+            this.Text = "Quản lý trình dược viên";
             this.Load += new System.EventHandler(this.frmTDV_Load);
             this.Controls.SetChildIndex(this.groupPanel2, 0);
             this.Controls.SetChildIndex(this.groupPanel1, 0);

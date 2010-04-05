@@ -315,7 +315,7 @@
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.groupPanel2);
             this.Name = "frmNhomHH";
-            this.Text = "frmNhomHH";
+            this.Text = "Quản lý nhóm hàng hóa";
             this.Controls.SetChildIndex(this.groupPanel2, 0);
             this.Controls.SetChildIndex(this.groupPanel1, 0);
             this.groupPanel2.ResumeLayout(false);
