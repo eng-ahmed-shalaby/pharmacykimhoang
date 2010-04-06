@@ -148,6 +148,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dstheodoicongno.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\ds\dsTonKho.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTonKho.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BaoCao\frmDoanhthuBH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -924,6 +929,17 @@
   <ItemGroup>
     <Content Include="LogoCauVong.ico" />
     <Content Include="TRIAL\TrialMaker\LockUsage.txt" />
+    <None Include="BaoCao\ds\dsTonKho.xsc">
+      <DependentUpon>dsTonKho.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\ds\dsTonKho.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTonKho.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCao\ds\dsTonKho.xss">
+      <DependentUpon>dsTonKho.xsd</DependentUpon>
+    </None>
     <None Include="NhapXuat\Info\dsHoaDon.xsc">
       <DependentUpon>dsHoaDon.xsd</DependentUpon>
     </None>
