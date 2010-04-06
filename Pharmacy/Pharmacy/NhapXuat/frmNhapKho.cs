@@ -407,7 +407,7 @@ namespace Pharmacy.NhapXuat
                     {
 
                         double tienCK = double.Parse(CTHD.Rows[i]["TIENCOVAT"].ToString()) * double.Parse(CTHD.Rows[i]["CHIETKHAU"].ToString());
-                        double tienHH = double.Parse(CTHD.Rows[i]["TIENCOVAT"].ToString()) + tienCK;
+                        double tienHH = double.Parse(CTHD.Rows[i]["TIENCOVAT"].ToString()) - tienCK;
                         tNhapKho.UpdateTongtienHD(infoHDNhap.Ma, tienHH, 1);
                         tNhapKho.DeleteCTHD(lvCTHD.Items[i].SubItems[8].Text);
 

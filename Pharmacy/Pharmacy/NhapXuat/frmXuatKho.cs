@@ -434,7 +434,15 @@ namespace Pharmacy.NhapXuat
                 TLog.WriteErr("frmXuatKho_InsertCTHD", ex.Message + "|" + ex.StackTrace);
             }
         }
-
+        private int FindMaHH(int MaCT) {
+            int i = 0;
+            for (i = 0; i < CTHD.Rows.Count; i++) {
+                if (int.Parse(CTHD.Rows[i]["MA"].ToString()) == MaCT)
+                    break;
+ 
+            }
+            return int.Parse(CTHD.Rows[i]["MAHH"].ToString());
+        }
         public void LoadCTHD(int maHD)
         {
 
@@ -468,38 +476,41 @@ namespace Pharmacy.NhapXuat
             tXuatKho.UpdateSLLo(MaCT, sl,tt);
         }
         public void SetHHKhuyenMai() {
-            int tt = 1;
-            KM = tXuatKho.GetLO(int.Parse(dataKM.Rows[0]["MaHHKM"].ToString()), 1);
-            if (KM.Rows.Count < 0)
+            int tt = 1; 
+            if (dataKM.Rows.Count > 0)
             {
-                MessageBox.Show("Hết Hàng Khuyến mãi");
-            }
-            else
-            {
-                try
+                KM = tXuatKho.GetLO(int.Parse(dataKM.Rows[0]["MaHHKM"].ToString()), 1);
+
+                if (KM.Rows.Count < 0)
                 {
-                    int slKM = int.Parse(txtSLban.Text.ToString()) / int.Parse(dataKM.Rows[0]["SL"].ToString());
-                    slKM = slKM * int.Parse(dataKM.Rows[0]["SLKM"].ToString());
-                    if (slKM != 0)
+                    MessageBox.Show("Hết Hàng Khuyến mãi");
+                }
+                else
+                {
+                    try
                     {
-                        int slKMTon = int.Parse(KM.Rows[0]["SLTON_LO"].ToString()) - slKM;
-                        if (slKMTon <= 0)
+                        int slKM = int.Parse(txtSLban.Text.ToString()) / int.Parse(dataKM.Rows[0]["SL"].ToString());
+                        slKM = slKM * int.Parse(dataKM.Rows[0]["SLKM"].ToString());
+                        if (slKM != 0)
                         {
-                            slKMTon = 0;
-                            tt = 0;
+                            int slKMTon = int.Parse(KM.Rows[0]["SLTON_LO"].ToString()) - slKM;
+                            if (slKMTon <= 0)
+                            {
+                                slKMTon = 0;
+                                tt = 0;
+                            }
+                            ////////Insert Update
+                            Info.CTXUATInfo info = SetCTKM(slKM);
+                            tXuatKho.InsertCTNHAP(info);
+                            UpdateLo(int.Parse(KM.Rows[0]["MA"].ToString().ToString()), slKMTon);
                         }
-                        ////////Insert Update
-                        Info.CTXUATInfo info = SetCTKM(slKM);
-                        tXuatKho.InsertCTNHAP(info);
-                        UpdateLo(int.Parse(KM.Rows[0]["MA"].ToString().ToString()), slKMTon);
+                    }
+                    catch (Exception ex)
+                    {
+                        TLog.WriteErr("frmXuatKho_SetHHKhuyenMai", ex.Message + "|" + ex.StackTrace);
                     }
                 }
-                catch (Exception ex)
-                {
-                    TLog.WriteErr("frmXuatKho_SetHHKhuyenMai", ex.Message + "|" + ex.StackTrace);
-                }
             }
-
             
 
         }
@@ -561,8 +572,12 @@ namespace Pharmacy.NhapXuat
             {
                 for (int i = 0; i < lvCTHD.Items.Count; i++)
                     if (lvCTHD.Items[i].Selected == true)
-                    {
+                    { 
                         tXuatKho.DeleteCTHD(lvCTHD.Items[i].SubItems[7].Text);
+                        int sl = int.Parse(lvCTHD.Items[i].SubItems[4].Text);
+
+                        UpdateLo(infoHDXUAT.Ma, sl);
+                        cmbLoaiThuoc_SelectedIndexChanged(null,null);
                     }
                 LoadCTHD(int.Parse(infoHDXUAT.Ma.ToString()));
             }
@@ -617,7 +632,7 @@ namespace Pharmacy.NhapXuat
         private void txtCK_ValueChanged(object sender, EventArgs e)
         {
             double tienCK = txtCK.Value * tienhh;
-            txtGia.Text = (tienhh + tienCK).ToString();
+            txtGia.Text = (tienhh - tienCK).ToString();
         }
         /// <summary>
         /// In Hóa đơn đỏ
