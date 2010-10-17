@@ -55,40 +55,38 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ControlPrint, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Documents and Settings\TruongQuocTrang\My Documents\Downloads\Compressed\ControlPrint\ControlPrint\bin\Release\ControlPrint.dll</HintPath>
+    <Reference Include="ControlPrint">
+      <HintPath>bin\Debug\ControlPrint.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <HintPath>..\..\..\..\---VIETXUAN---\Pharmacy\Pharmacy\bin\Release\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>bin\Release\CrystalDecisions.Enterprise.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\---VIETXUAN---\Pharmacy\Pharmacy\bin\Release\CrystalDecisions.Enterprise.Framework.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>bin\Release\CrystalDecisions.Enterprise.InfoStore.dll</HintPath>
+      <HintPath>..\..\..\..\---VIETXUAN---\Pharmacy\Pharmacy\bin\Release\CrystalDecisions.Enterprise.InfoStore.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\CrystalDecisions.ReportSource.dll</HintPath>
+      <HintPath>..\..\..\..\---VIETXUAN---\Pharmacy\Pharmacy\bin\Release\CrystalDecisions.ReportSource.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\CrystalDecisions.Shared.dll</HintPath>
+      <HintPath>..\..\..\..\---VIETXUAN---\Pharmacy\Pharmacy\bin\Release\CrystalDecisions.Shared.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <HintPath>..\..\..\..\---VIETXUAN---\Pharmacy\Pharmacy\bin\Release\CrystalDecisions.Windows.Forms.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=7.9.0.0, Culture=neutral, PublicKeyToken=5fd520d36328f741, processorArchitecture=MSIL" />
-    <Reference Include="DICHSO, Version=1.0.2254.24682, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Documents and Settings\All Users\Documents\DICHSO.dll</HintPath>
+    <Reference Include="DICHSO">
+      <HintPath>bin\Debug\DICHSO.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
     <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
