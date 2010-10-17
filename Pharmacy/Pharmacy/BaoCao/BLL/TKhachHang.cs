@@ -17,14 +17,16 @@ namespace Pharmacy.BaoCao.BLL
                                new DataColumn("mahh", Type.GetType("System.String")),                              
                                new DataColumn("tenhh", Type.GetType("System.String")),
                                new DataColumn("dvt", Type.GetType("System.String")),
-                               new DataColumn("soluong", Type.GetType("System.Int16")),
+                               new DataColumn("soluong", Type.GetType("System.Int32")),
                                new DataColumn("doanhthu", Type.GetType("System.Double")),
                                new DataColumn("thue", Type.GetType("System.Double")),
                                new DataColumn("thanhtien", Type.GetType("System.Double")),
                                 new DataColumn("makh", Type.GetType("System.String")),
                                  new DataColumn("tentdv", Type.GetType("System.String")),
                                new DataColumn("tungay", Type.GetType("System.DateTime")),
-                               new DataColumn("denngay", Type.GetType("System.DateTime"))
+                               new DataColumn("denngay", Type.GetType("System.DateTime")),
+                               new DataColumn("DonGia", Type.GetType("System.Double")),
+                               new DataColumn("CK", Type.GetType("System.Double"))
 
             };
             data.Columns.AddRange(dc);
@@ -57,6 +59,8 @@ namespace Pharmacy.BaoCao.BLL
                 //r["tentdv"] = dataSQL.Rows[i]["tentdv"];
                 r["tungay"] = from;
                 r["denngay"] = to;
+                r["DonGia"] = dataSQL.Rows[i]["DonGia"];
+                r["CK"] = dataSQL.Rows[i]["ChietKhau"];
                 data.Rows.Add(r);
             }
             return data;

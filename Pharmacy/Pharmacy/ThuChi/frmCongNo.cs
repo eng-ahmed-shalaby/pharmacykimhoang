@@ -90,7 +90,10 @@ namespace Pharmacy.ThuChi
             item.SubItems.Add(dt.Rows[i]["TONGTIEN"].ToString().Trim());
             item.SubItems.Add(dt.Rows[i]["TIENNO"].ToString().Trim());
             item.SubItems.Add(dt.Rows[i]["SoNgayNo"].ToString().Trim());
+
             item.SubItems.Add(dt.Rows[i]["MA"].ToString().Trim());
+            item.SubItems.Add(dt.Rows[i]["HanTra"].ToString().Trim());
+                  item.SubItems.Add(dt.Rows[i]["SoNgayCL"].ToString().Trim());
         }
 
         private void frmCongNo_Load(object sender, EventArgs e)

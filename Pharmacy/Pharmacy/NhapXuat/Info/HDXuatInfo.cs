@@ -116,6 +116,12 @@ namespace Pharmacy.NhapXuat.Info
             get { return _co; }
             set { _co = value; }
         }
+        private string _diengiai;
+        public string DienGiai
+        {
+            get { return _diengiai; }
+            set { _diengiai = value; }
+        }
 
 
     }

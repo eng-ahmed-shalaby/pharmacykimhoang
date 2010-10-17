@@ -30,6 +30,7 @@
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.panelTheKho = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.cmdNCC = new DevComponents.DotNetBar.ButtonX();
             this.dkpTo = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.dpkfrom = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -45,10 +46,10 @@
             this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 95);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 92);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.SelectionFormula = "";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(992, 651);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(992, 654);
             this.crystalReportViewer1.TabIndex = 84;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
@@ -57,13 +58,14 @@
             this.panelTheKho.BackColor = System.Drawing.Color.Transparent;
             this.panelTheKho.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelTheKho.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.panelTheKho.Controls.Add(this.cmdNCC);
             this.panelTheKho.Controls.Add(this.dkpTo);
             this.panelTheKho.Controls.Add(this.dpkfrom);
             this.panelTheKho.Controls.Add(this.labelX2);
             this.panelTheKho.Controls.Add(this.labelX3);
             this.panelTheKho.Controls.Add(this.cmdShow);
             this.panelTheKho.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTheKho.Location = new System.Drawing.Point(0, 35);
+            this.panelTheKho.Location = new System.Drawing.Point(0, 32);
             this.panelTheKho.Name = "panelTheKho";
             this.panelTheKho.Size = new System.Drawing.Size(992, 60);
             // 
@@ -89,6 +91,17 @@
             this.panelTheKho.TabIndex = 83;
             this.panelTheKho.Text = "Thông tin";
             // 
+            // cmdNCC
+            // 
+            this.cmdNCC.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdNCC.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdNCC.Location = new System.Drawing.Point(803, 3);
+            this.cmdNCC.Name = "cmdNCC";
+            this.cmdNCC.Size = new System.Drawing.Size(79, 26);
+            this.cmdNCC.TabIndex = 83;
+            this.cmdNCC.Text = "NCC";
+            this.cmdNCC.Click += new System.EventHandler(this.cmdNCC_Click);
+            // 
             // dkpTo
             // 
             // 
@@ -99,7 +112,7 @@
             this.dkpTo.ButtonDropDown.Visible = true;
             this.dkpTo.CustomFormat = "dd/MM/yyyy";
             this.dkpTo.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
-            this.dkpTo.Location = new System.Drawing.Point(473, 5);
+            this.dkpTo.Location = new System.Drawing.Point(589, 5);
             // 
             // 
             // 
@@ -143,7 +156,7 @@
             this.dpkfrom.ButtonDropDown.Visible = true;
             this.dpkfrom.CustomFormat = "dd/MM/yyyy";
             this.dpkfrom.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
-            this.dpkfrom.Location = new System.Drawing.Point(288, 7);
+            this.dpkfrom.Location = new System.Drawing.Point(394, 7);
             // 
             // 
             // 
@@ -176,32 +189,33 @@
             this.dpkfrom.Name = "dpkfrom";
             this.dpkfrom.Size = new System.Drawing.Size(96, 24);
             this.dpkfrom.TabIndex = 81;
+            this.dpkfrom.Click += new System.EventHandler(this.dpkfrom_Click);
             // 
             // labelX2
             // 
-            this.labelX2.Location = new System.Drawing.Point(390, 4);
+            this.labelX2.Location = new System.Drawing.Point(506, 4);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(83, 25);
+            this.labelX2.Size = new System.Drawing.Size(83, 24);
             this.labelX2.TabIndex = 80;
             this.labelX2.Text = "đến ngày:";
             // 
             // labelX3
             // 
-            this.labelX3.Location = new System.Drawing.Point(210, 6);
+            this.labelX3.Location = new System.Drawing.Point(316, 6);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(72, 25);
+            this.labelX3.Size = new System.Drawing.Size(72, 23);
             this.labelX3.TabIndex = 79;
             this.labelX3.Text = "Từ ngày:";
             // 
             // cmdShow
             // 
             this.cmdShow.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdShow.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.cmdShow.Location = new System.Drawing.Point(575, 5);
+            this.cmdShow.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdShow.Location = new System.Drawing.Point(703, 3);
             this.cmdShow.Name = "cmdShow";
-            this.cmdShow.Size = new System.Drawing.Size(75, 23);
+            this.cmdShow.Size = new System.Drawing.Size(90, 26);
             this.cmdShow.TabIndex = 77;
-            this.cmdShow.Text = "Báo cáo";
+            this.cmdShow.Text = "Khách Hàng";
             this.cmdShow.Click += new System.EventHandler(this.cmdShow_Click);
             // 
             // frmTheodoicongno
@@ -229,5 +243,6 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.ButtonX cmdShow;
+        private DevComponents.DotNetBar.ButtonX cmdNCC;
     }
 }

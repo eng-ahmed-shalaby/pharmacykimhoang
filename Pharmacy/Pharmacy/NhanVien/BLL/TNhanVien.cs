@@ -12,7 +12,8 @@ namespace Pharmacy.NhanVien.BLL
         public DataTable GetTDV()
         {
             DataTable data = new DataTable();
-            data = cn.GetDataByStoredProcedure("usp_SelectTRINHDUOCVIENsAll");
+            data = cn.GetDataByStoredProcedure("usp_SelectTRINHDUOCVIEN_TT", new string[] { "@TINHTRANG" },
+                new object[] { 1 });
             return data;
 
         }

@@ -52,12 +52,12 @@
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 35);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 32);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(392, 181);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(392, 184);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // panel1
@@ -66,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(118, 175);
+            this.panel1.Size = new System.Drawing.Size(118, 178);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -90,7 +90,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(127, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(262, 175);
+            this.panel2.Size = new System.Drawing.Size(262, 178);
             this.panel2.TabIndex = 1;
             // 
             // cmdTHoat
@@ -130,6 +130,7 @@
             // 
             // 
             this.txtUser.Border.Class = "TextBoxBorder";
+            this.txtUser.FocusHighlightEnabled = true;
             this.txtUser.Location = new System.Drawing.Point(107, 22);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(153, 24);
@@ -141,6 +142,7 @@
             // 
             // 
             this.txtPass.Border.Class = "TextBoxBorder";
+            this.txtPass.FocusHighlightEnabled = true;
             this.txtPass.Location = new System.Drawing.Point(107, 62);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';

@@ -30,6 +30,7 @@ namespace Pharmacy.QuanLy
         private void frmLoaiSP_Load(object sender, EventArgs e)
         {
             Init();
+
         }
         private void Init()
         {

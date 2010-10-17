@@ -20,7 +20,9 @@ namespace Pharmacy.ThuChi.BLL
         public TblHD_Xuat GetHD_CongNo(int _maKH)
         {
             string sql = string.Format("select *, convert(char(10), NGAYLAP,103) as NGAYLAP1, " +
-                "DATEDIFF (day , NGAYXUAT , GETDATE()+1) as SoNgayNo" +
+                "DATEDIFF (day , NGAYXUAT , GETDATE()+1) as SoNgayNo," +
+                " convert(char(10),(select GETDATE()+(select HanNo from KH where MAKH={0})),103) as HanTra, "+
+                "((select HanNo from KH where MAKH={0}) -DATEDIFF (day , NGAYXUAT , GETDATE()+1) ) as SoNgayCL " +
                 " from dbo.HD_XUAT where MAKH={0} and TINHTRANG={1}  order by NGAYXUAT asc", _maKH, 1);
             tblHDXuat = new TblHD_Xuat(sql);
             return tblHDXuat;

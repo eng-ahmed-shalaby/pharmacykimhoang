@@ -30,8 +30,8 @@
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.panelNhapXuat = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.rdKH = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.rdKhac = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.rdThu = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.rdChi = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.cmdShow = new DevComponents.DotNetBar.ButtonX();
             this.txtNam = new DevComponents.Editors.IntegerInput();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -60,8 +60,8 @@
             this.panelNhapXuat.BackColor = System.Drawing.Color.Transparent;
             this.panelNhapXuat.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelNhapXuat.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.panelNhapXuat.Controls.Add(this.rdKH);
-            this.panelNhapXuat.Controls.Add(this.rdKhac);
+            this.panelNhapXuat.Controls.Add(this.rdThu);
+            this.panelNhapXuat.Controls.Add(this.rdChi);
             this.panelNhapXuat.Controls.Add(this.cmdShow);
             this.panelNhapXuat.Controls.Add(this.txtNam);
             this.panelNhapXuat.Controls.Add(this.labelX1);
@@ -95,32 +95,32 @@
             this.panelNhapXuat.TabIndex = 73;
             this.panelNhapXuat.Text = "Thông tin";
             // 
-            // rdKH
+            // rdThu
             // 
-            this.rdKH.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.rdKH.Checked = true;
-            this.rdKH.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.rdKH.CheckValue = "Y";
-            this.rdKH.Location = new System.Drawing.Point(390, 43);
-            this.rdKH.Name = "rdKH";
-            this.rdKH.Size = new System.Drawing.Size(71, 23);
-            this.rdKH.TabIndex = 77;
-            this.rdKH.Text = "Thu";
+            this.rdThu.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.rdThu.Checked = true;
+            this.rdThu.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.rdThu.CheckValue = "Y";
+            this.rdThu.Location = new System.Drawing.Point(390, 43);
+            this.rdThu.Name = "rdThu";
+            this.rdThu.Size = new System.Drawing.Size(71, 23);
+            this.rdThu.TabIndex = 77;
+            this.rdThu.Text = "Thu";
             // 
-            // rdKhac
+            // rdChi
             // 
-            this.rdKhac.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.rdKhac.Location = new System.Drawing.Point(467, 43);
-            this.rdKhac.Name = "rdKhac";
-            this.rdKhac.Size = new System.Drawing.Size(95, 23);
-            this.rdKhac.TabIndex = 78;
-            this.rdKhac.Text = "Chi";
+            this.rdChi.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.rdChi.Location = new System.Drawing.Point(467, 43);
+            this.rdChi.Name = "rdChi";
+            this.rdChi.Size = new System.Drawing.Size(59, 23);
+            this.rdChi.TabIndex = 78;
+            this.rdChi.Text = "Chi";
             // 
             // cmdShow
             // 
             this.cmdShow.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdShow.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.cmdShow.Location = new System.Drawing.Point(583, 37);
+            this.cmdShow.Location = new System.Drawing.Point(526, 38);
             this.cmdShow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmdShow.Name = "cmdShow";
             this.cmdShow.Size = new System.Drawing.Size(86, 28);
@@ -199,7 +199,7 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.Editors.IntegerInput txtThang;
         private DevComponents.DotNetBar.LabelX labelX26;
-        private DevComponents.DotNetBar.Controls.CheckBoxX rdKH;
-        private DevComponents.DotNetBar.Controls.CheckBoxX rdKhac;
+        private DevComponents.DotNetBar.Controls.CheckBoxX rdThu;
+        private DevComponents.DotNetBar.Controls.CheckBoxX rdChi;
     }
 }

@@ -54,7 +54,6 @@
             this.cmb_NhomNCC = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem4 = new DevComponents.Editors.ComboItem();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.labelX23 = new DevComponents.DotNetBar.LabelX();
             this.labelX25 = new DevComponents.DotNetBar.LabelX();
             this.txtTen = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -149,7 +148,6 @@
             this.groupPanel2.Controls.Add(this.panel5);
             this.groupPanel2.Controls.Add(this.labelX2);
             this.groupPanel2.Controls.Add(this.cmb_NhomNCC);
-            this.groupPanel2.Controls.Add(this.buttonX1);
             this.groupPanel2.Controls.Add(this.labelX23);
             this.groupPanel2.Controls.Add(this.labelX25);
             this.groupPanel2.Controls.Add(this.txtTen);
@@ -178,7 +176,7 @@
             this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            this.groupPanel2.TabIndex = 73;
+            this.groupPanel2.TabIndex = 0;
             this.groupPanel2.Text = "THÔNG TIN THUỐC";
             // 
             // txtMST
@@ -187,10 +185,11 @@
             // 
             // 
             this.txtMST.Border.Class = "TextBoxBorder";
+            this.txtMST.FocusHighlightEnabled = true;
             this.txtMST.Location = new System.Drawing.Point(106, 111);
             this.txtMST.Name = "txtMST";
             this.txtMST.Size = new System.Drawing.Size(193, 24);
-            this.txtMST.TabIndex = 80;
+            this.txtMST.TabIndex = 3;
             // 
             // labelX1
             // 
@@ -206,10 +205,11 @@
             // 
             // 
             this.txtDiaChi.Border.Class = "TextBoxBorder";
+            this.txtDiaChi.FocusHighlightEnabled = true;
             this.txtDiaChi.Location = new System.Drawing.Point(466, 45);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(193, 24);
-            this.txtDiaChi.TabIndex = 79;
+            this.txtDiaChi.TabIndex = 5;
             // 
             // txtDienThoai
             // 
@@ -217,10 +217,11 @@
             // 
             // 
             this.txtDienThoai.Border.Class = "TextBoxBorder";
+            this.txtDienThoai.FocusHighlightEnabled = true;
             this.txtDienThoai.Location = new System.Drawing.Point(466, 10);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(193, 24);
-            this.txtDienThoai.TabIndex = 78;
+            this.txtDienThoai.TabIndex = 4;
             // 
             // labelX4
             // 
@@ -236,10 +237,11 @@
             // 
             // 
             this.txtMa.Border.Class = "TextBoxBorder";
+            this.txtMa.FocusHighlightEnabled = true;
             this.txtMa.Location = new System.Drawing.Point(106, 14);
             this.txtMa.Name = "txtMa";
             this.txtMa.Size = new System.Drawing.Size(193, 24);
-            this.txtMa.TabIndex = 75;
+            this.txtMa.TabIndex = 0;
             // 
             // labelX3
             // 
@@ -272,7 +274,7 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(734, 30);
-            this.panel5.TabIndex = 70;
+            this.panel5.TabIndex = 7;
             // 
             // cmdSua
             // 
@@ -283,7 +285,7 @@
             this.cmdSua.Name = "cmdSua";
             this.cmdSua.Size = new System.Drawing.Size(70, 27);
             this.cmdSua.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            this.cmdSua.TabIndex = 54;
+            this.cmdSua.TabIndex = 1;
             this.cmdSua.Text = "Sửa";
             this.cmdSua.Click += new System.EventHandler(this.cmdSua_Click);
             // 
@@ -296,7 +298,7 @@
             this.cmdXoa.Name = "cmdXoa";
             this.cmdXoa.Size = new System.Drawing.Size(70, 27);
             this.cmdXoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            this.cmdXoa.TabIndex = 53;
+            this.cmdXoa.TabIndex = 2;
             this.cmdXoa.Text = "Xóa";
             this.cmdXoa.Click += new System.EventHandler(this.cmdXoa_Click);
             // 
@@ -309,7 +311,7 @@
             this.cmdThem.Name = "cmdThem";
             this.cmdThem.Size = new System.Drawing.Size(70, 27);
             this.cmdThem.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            this.cmdThem.TabIndex = 28;
+            this.cmdThem.TabIndex = 0;
             this.cmdThem.Text = "Thêm";
             this.cmdThem.Click += new System.EventHandler(this.cmdThem_Click);
             // 
@@ -325,6 +327,7 @@
             // 
             this.cmb_NhomNCC.DisplayMember = "Text";
             this.cmb_NhomNCC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_NhomNCC.FocusHighlightEnabled = true;
             this.cmb_NhomNCC.FormattingEnabled = true;
             this.cmb_NhomNCC.ItemHeight = 18;
             this.cmb_NhomNCC.Items.AddRange(new object[] {
@@ -333,7 +336,7 @@
             this.cmb_NhomNCC.Location = new System.Drawing.Point(106, 80);
             this.cmb_NhomNCC.Name = "cmb_NhomNCC";
             this.cmb_NhomNCC.Size = new System.Drawing.Size(167, 24);
-            this.cmb_NhomNCC.TabIndex = 73;
+            this.cmb_NhomNCC.TabIndex = 2;
             // 
             // comboItem3
             // 
@@ -342,17 +345,6 @@
             // comboItem4
             // 
             this.comboItem4.Text = "Trả hàng";
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX1.Location = new System.Drawing.Point(634, 80);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(25, 25);
-            this.buttonX1.TabIndex = 71;
-            this.buttonX1.Text = "+";
             // 
             // labelX23
             // 
@@ -376,10 +368,11 @@
             // 
             // 
             this.txtTen.Border.Class = "TextBoxBorder";
+            this.txtTen.FocusHighlightEnabled = true;
             this.txtTen.Location = new System.Drawing.Point(106, 45);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(193, 24);
-            this.txtTen.TabIndex = 0;
+            this.txtTen.TabIndex = 1;
             // 
             // labelX26
             // 
@@ -393,6 +386,7 @@
             // 
             this.cmb_QG.DisplayMember = "Text";
             this.cmb_QG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_QG.FocusHighlightEnabled = true;
             this.cmb_QG.FormattingEnabled = true;
             this.cmb_QG.ItemHeight = 18;
             this.cmb_QG.Items.AddRange(new object[] {
@@ -400,8 +394,8 @@
             this.comboItem2});
             this.cmb_QG.Location = new System.Drawing.Point(466, 80);
             this.cmb_QG.Name = "cmb_QG";
-            this.cmb_QG.Size = new System.Drawing.Size(167, 24);
-            this.cmb_QG.TabIndex = 61;
+            this.cmb_QG.Size = new System.Drawing.Size(193, 24);
+            this.cmb_QG.TabIndex = 6;
             // 
             // comboItem1
             // 
@@ -451,7 +445,6 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmb_NhomNCC;
         private DevComponents.Editors.ComboItem comboItem3;
         private DevComponents.Editors.ComboItem comboItem4;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
         private DevComponents.DotNetBar.LabelX labelX23;
         private DevComponents.DotNetBar.LabelX labelX25;
         private DevComponents.DotNetBar.Controls.TextBoxX txtTen;

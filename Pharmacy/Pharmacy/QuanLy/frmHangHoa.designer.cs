@@ -34,7 +34,7 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.txt_ma = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.cmdLoaiHH = new DevComponents.DotNetBar.ButtonX();
             this.panel5 = new System.Windows.Forms.Panel();
             this.cmdInDS = new DevComponents.DotNetBar.ButtonX();
             this.buttonX6 = new DevComponents.DotNetBar.ButtonX();
@@ -86,7 +86,7 @@
             this.groupPanel2.Controls.Add(this.labelX4);
             this.groupPanel2.Controls.Add(this.txt_ma);
             this.groupPanel2.Controls.Add(this.labelX3);
-            this.groupPanel2.Controls.Add(this.buttonX2);
+            this.groupPanel2.Controls.Add(this.cmdLoaiHH);
             this.groupPanel2.Controls.Add(this.panel5);
             this.groupPanel2.Controls.Add(this.labelX2);
             this.groupPanel2.Controls.Add(this.cmb_loai);
@@ -126,7 +126,7 @@
             this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            this.groupPanel2.TabIndex = 69;
+            this.groupPanel2.TabIndex = 0;
             this.groupPanel2.Text = "THÔNG TIN THUỐC";
             // 
             // cmbQuyCach
@@ -146,13 +146,14 @@
             // 
             this.cmb_quycach.DisplayMember = "Text";
             this.cmb_quycach.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_quycach.FocusHighlightEnabled = true;
             this.cmb_quycach.FormattingEnabled = true;
             this.cmb_quycach.ItemHeight = 18;
             this.cmb_quycach.Location = new System.Drawing.Point(514, 13);
             this.cmb_quycach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmb_quycach.Name = "cmb_quycach";
             this.cmb_quycach.Size = new System.Drawing.Size(190, 24);
-            this.cmb_quycach.TabIndex = 78;
+            this.cmb_quycach.TabIndex = 7;
             // 
             // labelX4
             // 
@@ -169,11 +170,12 @@
             // 
             // 
             this.txt_ma.Border.Class = "TextBoxBorder";
+            this.txt_ma.FocusHighlightEnabled = true;
             this.txt_ma.Location = new System.Drawing.Point(98, 17);
             this.txt_ma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_ma.Name = "txt_ma";
             this.txt_ma.Size = new System.Drawing.Size(221, 24);
-            this.txt_ma.TabIndex = 75;
+            this.txt_ma.TabIndex = 1;
             // 
             // labelX3
             // 
@@ -184,17 +186,18 @@
             this.labelX3.TabIndex = 76;
             this.labelX3.Text = "Mã thuốc:";
             // 
-            // buttonX2
+            // cmdLoaiHH
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Location = new System.Drawing.Point(290, 84);
-            this.buttonX2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(25, 25);
-            this.buttonX2.TabIndex = 74;
-            this.buttonX2.Text = "+";
+            this.cmdLoaiHH.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdLoaiHH.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdLoaiHH.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdLoaiHH.Location = new System.Drawing.Point(290, 84);
+            this.cmdLoaiHH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmdLoaiHH.Name = "cmdLoaiHH";
+            this.cmdLoaiHH.Size = new System.Drawing.Size(25, 25);
+            this.cmdLoaiHH.TabIndex = 74;
+            this.cmdLoaiHH.Text = "+";
+            this.cmdLoaiHH.Click += new System.EventHandler(this.cmdLoaiHH_Click);
             // 
             // panel5
             // 
@@ -208,7 +211,7 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1002, 30);
-            this.panel5.TabIndex = 70;
+            this.panel5.TabIndex = 8;
             // 
             // cmdInDS
             // 
@@ -231,7 +234,7 @@
             this.buttonX6.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX6.Name = "buttonX6";
             this.buttonX6.Size = new System.Drawing.Size(70, 27);
-            this.buttonX6.TabIndex = 54;
+            this.buttonX6.TabIndex = 1;
             this.buttonX6.Text = "Sửa";
             this.buttonX6.Click += new System.EventHandler(this.buttonX6_Click);
             // 
@@ -244,7 +247,7 @@
             this.buttonX4.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.Size = new System.Drawing.Size(70, 27);
-            this.buttonX4.TabIndex = 53;
+            this.buttonX4.TabIndex = 2;
             this.buttonX4.Text = "Xóa";
             this.buttonX4.Click += new System.EventHandler(this.buttonX4_Click);
             // 
@@ -256,7 +259,7 @@
             this.buttonX5.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX5.Name = "buttonX5";
             this.buttonX5.Size = new System.Drawing.Size(70, 27);
-            this.buttonX5.TabIndex = 28;
+            this.buttonX5.TabIndex = 0;
             this.buttonX5.Text = "Thêm";
             this.buttonX5.Click += new System.EventHandler(this.buttonX5_Click);
             // 
@@ -273,6 +276,7 @@
             // 
             this.cmb_loai.DisplayMember = "Text";
             this.cmb_loai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_loai.FocusHighlightEnabled = true;
             this.cmb_loai.FormattingEnabled = true;
             this.cmb_loai.ItemHeight = 18;
             this.cmb_loai.Items.AddRange(new object[] {
@@ -282,8 +286,8 @@
             this.cmb_loai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmb_loai.Name = "cmb_loai";
             this.cmb_loai.Size = new System.Drawing.Size(190, 24);
-            this.cmb_loai.TabIndex = 73;
-            this.cmb_loai.DropDownChange += new DevComponents.DotNetBar.Controls.ComboBoxEx.OnDropDownChangeEventHandler(this.cmb_loai_DropDownChange);
+            this.cmb_loai.TabIndex = 3;
+                       this.cmb_loai.SelectedIndexChanged += new System.EventHandler(this.cmb_loai_SelectedIndexChanged);
             // 
             // comboItem3
             // 
@@ -321,12 +325,13 @@
             // 
             // 
             this.txt_chidinh.Border.Class = "TextBoxBorder";
+            this.txt_chidinh.FocusHighlightEnabled = true;
             this.txt_chidinh.Location = new System.Drawing.Point(426, 80);
             this.txt_chidinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_chidinh.Multiline = true;
             this.txt_chidinh.Name = "txt_chidinh";
             this.txt_chidinh.Size = new System.Drawing.Size(427, 30);
-            this.txt_chidinh.TabIndex = 69;
+            this.txt_chidinh.TabIndex = 8;
             this.txt_chidinh.TextChanged += new System.EventHandler(this.textBoxX1_TextChanged);
             // 
             // cmdNhomHH
@@ -357,24 +362,26 @@
             // 
             // 
             this.txtMota.Border.Class = "TextBoxBorder";
+            this.txtMota.FocusHighlightEnabled = true;
             this.txtMota.Location = new System.Drawing.Point(426, 152);
             this.txtMota.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMota.Multiline = true;
             this.txtMota.Name = "txtMota";
             this.txtMota.Size = new System.Drawing.Size(427, 28);
-            this.txtMota.TabIndex = 54;
+            this.txtMota.TabIndex = 9;
             // 
             // cmb_nhom
             // 
             this.cmb_nhom.DisplayMember = "Text";
             this.cmb_nhom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_nhom.FocusHighlightEnabled = true;
             this.cmb_nhom.FormattingEnabled = true;
             this.cmb_nhom.ItemHeight = 18;
             this.cmb_nhom.Location = new System.Drawing.Point(98, 155);
             this.cmb_nhom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmb_nhom.Name = "cmb_nhom";
             this.cmb_nhom.Size = new System.Drawing.Size(190, 24);
-            this.cmb_nhom.TabIndex = 65;
+            this.cmb_nhom.TabIndex = 6;
             // 
             // labelX23
             // 
@@ -400,11 +407,12 @@
             // 
             // 
             this.txttenthuoc.Border.Class = "TextBoxBorder";
+            this.txttenthuoc.FocusHighlightEnabled = true;
             this.txttenthuoc.Location = new System.Drawing.Point(98, 50);
             this.txttenthuoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txttenthuoc.Name = "txttenthuoc";
             this.txttenthuoc.Size = new System.Drawing.Size(221, 24);
-            this.txttenthuoc.TabIndex = 0;
+            this.txttenthuoc.TabIndex = 2;
             // 
             // labelX26
             // 
@@ -419,6 +427,7 @@
             // 
             this.cmb_dvt.DisplayMember = "Text";
             this.cmb_dvt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_dvt.FocusHighlightEnabled = true;
             this.cmb_dvt.FormattingEnabled = true;
             this.cmb_dvt.ItemHeight = 18;
             this.cmb_dvt.Items.AddRange(new object[] {
@@ -428,7 +437,7 @@
             this.cmb_dvt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmb_dvt.Name = "cmb_dvt";
             this.cmb_dvt.Size = new System.Drawing.Size(190, 24);
-            this.cmb_dvt.TabIndex = 61;
+            this.cmb_dvt.TabIndex = 5;
             // 
             // comboItem1
             // 
@@ -587,7 +596,7 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_chidinh;
         private DevComponents.DotNetBar.ButtonX cmdDVT;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX cmdLoaiHH;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmb_loai;
         private DevComponents.Editors.ComboItem comboItem3;

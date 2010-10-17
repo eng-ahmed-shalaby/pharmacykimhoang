@@ -95,7 +95,7 @@ namespace Pharmacy.ThuChi
                 {
                     Add_LVNo(flag);
                     RemoveRow(lvHD, flag);
-                    txtTongTien.Text = TongTien().ToString();
+                    txtTongTien.Text = string.Format("{0:0.#}", TongTien());
                 }
             }
 
@@ -103,7 +103,7 @@ namespace Pharmacy.ThuChi
         public float TongTien() {
             float result = 0;
             for (int i = 0; i < lvThu.Items.Count; i++)
-               result += float.Parse(lvThu.Items[i].SubItems[2].Text);
+               result +=float.Parse(lvThu.Items[i].SubItems[2].Text);
             infoPhieuChi .TongTien = result;
             return result;
         }
@@ -313,7 +313,7 @@ namespace Pharmacy.ThuChi
 
        private void lvThu_DrawItem(object sender, DrawListViewItemEventArgs e)
         {
-            txtTongTien.Text = TongTien().ToString();
+            txtTongTien.Text = string.Format("{0:0.#}", TongTien());
         }
        public Info.PhieuChi SetInfoPHIEUNHAP_Khac()
        {
@@ -386,7 +386,6 @@ namespace Pharmacy.ThuChi
 
                    }
        }
-      
      
     
     }

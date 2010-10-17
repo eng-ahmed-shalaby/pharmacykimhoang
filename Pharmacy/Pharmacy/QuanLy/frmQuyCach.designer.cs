@@ -172,7 +172,7 @@
             this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            this.groupPanel2.TabIndex = 78;
+            this.groupPanel2.TabIndex = 0;
             this.groupPanel2.Text = "THÔNG TIN QUY CÁCH";
             // 
             // txtSL
@@ -181,10 +181,11 @@
             // 
             // 
             this.txtSL.Border.Class = "TextBoxBorder";
+            this.txtSL.FocusHighlightEnabled = true;
             this.txtSL.Location = new System.Drawing.Point(81, 52);
             this.txtSL.Name = "txtSL";
             this.txtSL.Size = new System.Drawing.Size(134, 24);
-            this.txtSL.TabIndex = 79;
+            this.txtSL.TabIndex = 1;
             this.txtSL.TextChanged += new System.EventHandler(this.txtSL_TextChanged);
             // 
             // buttonX2
@@ -210,6 +211,7 @@
             // 
             this.cmbdvQD.DisplayMember = "Text";
             this.cmbdvQD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbdvQD.FocusHighlightEnabled = true;
             this.cmbdvQD.FormattingEnabled = true;
             this.cmbdvQD.ItemHeight = 18;
             this.cmbdvQD.Items.AddRange(new object[] {
@@ -218,7 +220,7 @@
             this.cmbdvQD.Location = new System.Drawing.Point(393, 17);
             this.cmbdvQD.Name = "cmbdvQD";
             this.cmbdvQD.Size = new System.Drawing.Size(142, 24);
-            this.cmbdvQD.TabIndex = 77;
+            this.cmbdvQD.TabIndex = 2;
             // 
             // comboItem3
             // 
@@ -251,6 +253,7 @@
             // 
             this.cmb_dvt.DisplayMember = "Text";
             this.cmb_dvt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_dvt.FocusHighlightEnabled = true;
             this.cmb_dvt.FormattingEnabled = true;
             this.cmb_dvt.ItemHeight = 18;
             this.cmb_dvt.Items.AddRange(new object[] {
@@ -259,7 +262,7 @@
             this.cmb_dvt.Location = new System.Drawing.Point(81, 17);
             this.cmb_dvt.Name = "cmb_dvt";
             this.cmb_dvt.Size = new System.Drawing.Size(134, 24);
-            this.cmb_dvt.TabIndex = 74;
+            this.cmb_dvt.TabIndex = 0;
             // 
             // comboItem1
             // 
@@ -298,7 +301,7 @@
             this.cmbSua.Margin = new System.Windows.Forms.Padding(0);
             this.cmbSua.Name = "cmbSua";
             this.cmbSua.Size = new System.Drawing.Size(70, 27);
-            this.cmbSua.TabIndex = 54;
+            this.cmbSua.TabIndex = 1;
             this.cmbSua.Text = "Sửa";
             this.cmbSua.Click += new System.EventHandler(this.cmbSua_Click);
             // 
@@ -310,7 +313,7 @@
             this.cmbXoa.Margin = new System.Windows.Forms.Padding(0);
             this.cmbXoa.Name = "cmbXoa";
             this.cmbXoa.Size = new System.Drawing.Size(70, 27);
-            this.cmbXoa.TabIndex = 53;
+            this.cmbXoa.TabIndex = 2;
             this.cmbXoa.Text = "Xóa";
             this.cmbXoa.Click += new System.EventHandler(this.cmbXoa_Click);
             // 
@@ -322,7 +325,7 @@
             this.buttonX5.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX5.Name = "buttonX5";
             this.buttonX5.Size = new System.Drawing.Size(70, 27);
-            this.buttonX5.TabIndex = 28;
+            this.buttonX5.TabIndex = 0;
             this.buttonX5.Text = "Thêm";
             this.buttonX5.Click += new System.EventHandler(this.buttonX5_Click);
             // 
@@ -333,10 +336,11 @@
             // 
             this.txtten.Border.Class = "TextBoxBorder";
             this.txtten.Enabled = false;
+            this.txtten.FocusHighlightEnabled = true;
             this.txtten.Location = new System.Drawing.Point(393, 52);
             this.txtten.Name = "txtten";
             this.txtten.Size = new System.Drawing.Size(142, 24);
-            this.txtten.TabIndex = 0;
+            this.txtten.TabIndex = 3;
             // 
             // labelX26
             // 

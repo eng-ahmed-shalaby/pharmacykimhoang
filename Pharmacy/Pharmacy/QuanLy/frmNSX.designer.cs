@@ -36,7 +36,6 @@
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.cmdNhomNCC = new DevComponents.DotNetBar.ButtonX();
             this.cmb_QG = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem4 = new DevComponents.Editors.ComboItem();
@@ -140,7 +139,6 @@
             this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel2.Controls.Add(this.cmdNhomNCC);
             this.groupPanel2.Controls.Add(this.cmb_QG);
             this.groupPanel2.Controls.Add(this.txtDienThoai);
             this.groupPanel2.Controls.Add(this.labelX2);
@@ -171,24 +169,14 @@
             this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            this.groupPanel2.TabIndex = 74;
+            this.groupPanel2.TabIndex = 0;
             this.groupPanel2.Text = "THÔNG TIN NHÀ SẢN XUẤT";
-            // 
-            // cmdNhomNCC
-            // 
-            this.cmdNhomNCC.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdNhomNCC.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.cmdNhomNCC.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdNhomNCC.Location = new System.Drawing.Point(274, 51);
-            this.cmdNhomNCC.Name = "cmdNhomNCC";
-            this.cmdNhomNCC.Size = new System.Drawing.Size(25, 22);
-            this.cmdNhomNCC.TabIndex = 76;
-            this.cmdNhomNCC.Text = "+";
             // 
             // cmb_QG
             // 
             this.cmb_QG.DisplayMember = "Text";
             this.cmb_QG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_QG.FocusHighlightEnabled = true;
             this.cmb_QG.FormattingEnabled = true;
             this.cmb_QG.ItemHeight = 18;
             this.cmb_QG.Items.AddRange(new object[] {
@@ -196,8 +184,8 @@
             this.comboItem4});
             this.cmb_QG.Location = new System.Drawing.Point(106, 51);
             this.cmb_QG.Name = "cmb_QG";
-            this.cmb_QG.Size = new System.Drawing.Size(167, 24);
-            this.cmb_QG.TabIndex = 75;
+            this.cmb_QG.Size = new System.Drawing.Size(193, 24);
+            this.cmb_QG.TabIndex = 1;
             // 
             // comboItem3
             // 
@@ -213,16 +201,17 @@
             // 
             // 
             this.txtDienThoai.Border.Class = "TextBoxBorder";
+            this.txtDienThoai.FocusHighlightEnabled = true;
             this.txtDienThoai.Location = new System.Drawing.Point(106, 83);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(193, 24);
-            this.txtDienThoai.TabIndex = 73;
+            this.txtDienThoai.TabIndex = 2;
             // 
             // labelX2
             // 
-            this.labelX2.Location = new System.Drawing.Point(21, 80);
+            this.labelX2.Location = new System.Drawing.Point(21, 79);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(70, 25);
+            this.labelX2.Size = new System.Drawing.Size(79, 25);
             this.labelX2.TabIndex = 74;
             this.labelX2.Text = "Điện thoại:";
             // 
@@ -245,7 +234,7 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(549, 30);
-            this.panel5.TabIndex = 70;
+            this.panel5.TabIndex = 3;
             // 
             // buttonX6
             // 
@@ -255,7 +244,7 @@
             this.buttonX6.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX6.Name = "buttonX6";
             this.buttonX6.Size = new System.Drawing.Size(70, 27);
-            this.buttonX6.TabIndex = 54;
+            this.buttonX6.TabIndex = 1;
             this.buttonX6.Text = "Sửa";
             this.buttonX6.Click += new System.EventHandler(this.buttonX6_Click);
             // 
@@ -267,7 +256,7 @@
             this.buttonX4.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.Size = new System.Drawing.Size(70, 27);
-            this.buttonX4.TabIndex = 53;
+            this.buttonX4.TabIndex = 2;
             this.buttonX4.Text = "Xóa";
             this.buttonX4.Click += new System.EventHandler(this.buttonX4_Click);
             // 
@@ -279,7 +268,7 @@
             this.buttonX5.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX5.Name = "buttonX5";
             this.buttonX5.Size = new System.Drawing.Size(70, 27);
-            this.buttonX5.TabIndex = 28;
+            this.buttonX5.TabIndex = 0;
             this.buttonX5.Text = "Thêm";
             this.buttonX5.Click += new System.EventHandler(this.buttonX5_Click);
             // 
@@ -289,6 +278,7 @@
             // 
             // 
             this.txttennsx.Border.Class = "TextBoxBorder";
+            this.txttennsx.FocusHighlightEnabled = true;
             this.txttennsx.Location = new System.Drawing.Point(106, 16);
             this.txttennsx.Name = "txttennsx";
             this.txttennsx.Size = new System.Drawing.Size(193, 24);
@@ -336,7 +326,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtDienThoai;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.ButtonX cmdNhomNCC;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmb_QG;
         private DevComponents.Editors.ComboItem comboItem3;
         private DevComponents.Editors.ComboItem comboItem4;

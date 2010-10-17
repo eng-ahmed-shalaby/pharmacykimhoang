@@ -64,7 +64,7 @@
             this.panelNhapXuat.Controls.Add(this.labelX7);
             this.panelNhapXuat.Controls.Add(this.cmdShow);
             this.panelNhapXuat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNhapXuat.Location = new System.Drawing.Point(0, 35);
+            this.panelNhapXuat.Location = new System.Drawing.Point(0, 32);
             this.panelNhapXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelNhapXuat.Name = "panelNhapXuat";
             this.panelNhapXuat.Size = new System.Drawing.Size(1019, 65);
@@ -211,12 +211,13 @@
             // 
             this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 165);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 162);
             this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.SelectionFormula = "";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1019, 581);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1019, 584);
             this.crystalReportViewer1.TabIndex = 70;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
@@ -235,7 +236,7 @@
             this.panelTheKho.Controls.Add(this.labelX2);
             this.panelTheKho.Controls.Add(this.labelX3);
             this.panelTheKho.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTheKho.Location = new System.Drawing.Point(0, 100);
+            this.panelTheKho.Location = new System.Drawing.Point(0, 97);
             this.panelTheKho.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelTheKho.Name = "panelTheKho";
             this.panelTheKho.Size = new System.Drawing.Size(1019, 65);

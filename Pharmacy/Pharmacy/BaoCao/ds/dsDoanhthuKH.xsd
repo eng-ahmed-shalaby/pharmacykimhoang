@@ -26,6 +26,8 @@
               <xs:element name="tentdv" msprop:Generator_UserColumnName="tentdv" msprop:Generator_ColumnVarNameInTable="columntentdv" msprop:Generator_ColumnPropNameInRow="tentdv" msprop:Generator_ColumnPropNameInTable="tentdvColumn" type="xs:string" minOccurs="0" />
               <xs:element name="tungay" msprop:Generator_UserColumnName="tungay" msprop:Generator_ColumnVarNameInTable="columntungay" msprop:Generator_ColumnPropNameInRow="tungay" msprop:Generator_ColumnPropNameInTable="tungayColumn" type="xs:dateTime" minOccurs="0" />
               <xs:element name="denngay" msprop:Generator_UserColumnName="denngay" msprop:Generator_ColumnVarNameInTable="columndenngay" msprop:Generator_ColumnPropNameInRow="denngay" msprop:Generator_ColumnPropNameInTable="denngayColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DonGia" msprop:Generator_UserColumnName="DonGia" msprop:Generator_ColumnVarNameInTable="columnDonGia" msprop:Generator_ColumnPropNameInRow="DonGia" msprop:Generator_ColumnPropNameInTable="DonGiaColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="CK" msprop:Generator_UserColumnName="CK" msprop:Generator_ColumnVarNameInTable="columnCK" msprop:Generator_ColumnPropNameInRow="CK" msprop:Generator_ColumnPropNameInTable="CKColumn" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

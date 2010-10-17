@@ -90,7 +90,7 @@
             this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            this.groupPanel2.TabIndex = 77;
+            this.groupPanel2.TabIndex = 0;
             this.groupPanel2.Text = "THÔNG TIN NHÓM HÀNG HÓA";
             // 
             // labelX2
@@ -106,6 +106,7 @@
             // 
             this.cmb_loai.DisplayMember = "Text";
             this.cmb_loai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_loai.FocusHighlightEnabled = true;
             this.cmb_loai.FormattingEnabled = true;
             this.cmb_loai.ItemHeight = 18;
             this.cmb_loai.Items.AddRange(new object[] {
@@ -115,7 +116,7 @@
             this.cmb_loai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmb_loai.Name = "cmb_loai";
             this.cmb_loai.Size = new System.Drawing.Size(205, 24);
-            this.cmb_loai.TabIndex = 75;
+            this.cmb_loai.TabIndex = 0;
             this.cmb_loai.SelectedIndexChanged += new System.EventHandler(this.cmb_loai_SelectedIndexChanged);
             // 
             // comboItem3
@@ -140,11 +141,12 @@
             // 
             // 
             this.txt_mota.Border.Class = "TextBoxBorder";
+            this.txt_mota.FocusHighlightEnabled = true;
             this.txt_mota.Location = new System.Drawing.Point(91, 74);
             this.txt_mota.Multiline = true;
             this.txt_mota.Name = "txt_mota";
             this.txt_mota.Size = new System.Drawing.Size(208, 47);
-            this.txt_mota.TabIndex = 71;
+            this.txt_mota.TabIndex = 2;
             // 
             // panel5
             // 
@@ -167,7 +169,7 @@
             this.cmdSuaNhom.Margin = new System.Windows.Forms.Padding(0);
             this.cmdSuaNhom.Name = "cmdSuaNhom";
             this.cmdSuaNhom.Size = new System.Drawing.Size(70, 25);
-            this.cmdSuaNhom.TabIndex = 54;
+            this.cmdSuaNhom.TabIndex = 1;
             this.cmdSuaNhom.Text = "&Sửa";
             this.cmdSuaNhom.Click += new System.EventHandler(this.cmdSuaNhom_Click);
             // 
@@ -179,7 +181,7 @@
             this.cmdXoaNhom.Margin = new System.Windows.Forms.Padding(0);
             this.cmdXoaNhom.Name = "cmdXoaNhom";
             this.cmdXoaNhom.Size = new System.Drawing.Size(70, 25);
-            this.cmdXoaNhom.TabIndex = 53;
+            this.cmdXoaNhom.TabIndex = 2;
             this.cmdXoaNhom.Text = "&Xóa";
             this.cmdXoaNhom.Click += new System.EventHandler(this.cmdXoaNhom_Click);
             // 
@@ -191,7 +193,7 @@
             this.cmdThemNhom.Margin = new System.Windows.Forms.Padding(0);
             this.cmdThemNhom.Name = "cmdThemNhom";
             this.cmdThemNhom.Size = new System.Drawing.Size(70, 25);
-            this.cmdThemNhom.TabIndex = 28;
+            this.cmdThemNhom.TabIndex = 0;
             this.cmdThemNhom.Text = "&Thêm";
             this.cmdThemNhom.Click += new System.EventHandler(this.cmdThemNhom_Click);
             // 
@@ -201,10 +203,11 @@
             // 
             // 
             this.txtten.Border.Class = "TextBoxBorder";
+            this.txtten.FocusHighlightEnabled = true;
             this.txtten.Location = new System.Drawing.Point(91, 40);
             this.txtten.Name = "txtten";
             this.txtten.Size = new System.Drawing.Size(208, 24);
-            this.txtten.TabIndex = 0;
+            this.txtten.TabIndex = 1;
             // 
             // labelX26
             // 

@@ -156,7 +156,7 @@
             this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            this.groupPanel2.TabIndex = 76;
+            this.groupPanel2.TabIndex = 0;
             this.groupPanel2.Text = "THÔNG TIN NHÓM CUNG CẤP";
             // 
             // labelX1
@@ -173,11 +173,12 @@
             // 
             // 
             this.txt_mota.Border.Class = "TextBoxBorder";
+            this.txt_mota.FocusHighlightEnabled = true;
             this.txt_mota.Location = new System.Drawing.Point(106, 44);
             this.txt_mota.Multiline = true;
             this.txt_mota.Name = "txt_mota";
             this.txt_mota.Size = new System.Drawing.Size(193, 47);
-            this.txt_mota.TabIndex = 71;
+            this.txt_mota.TabIndex = 1;
             // 
             // panel5
             // 
@@ -186,11 +187,11 @@
             this.panel5.Controls.Add(this.buttonX4);
             this.panel5.Controls.Add(this.buttonX5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 106);
+            this.panel5.Location = new System.Drawing.Point(0, 104);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(382, 29);
-            this.panel5.TabIndex = 70;
+            this.panel5.TabIndex = 2;
             // 
             // buttonX6
             // 
@@ -200,7 +201,7 @@
             this.buttonX6.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX6.Name = "buttonX6";
             this.buttonX6.Size = new System.Drawing.Size(70, 25);
-            this.buttonX6.TabIndex = 54;
+            this.buttonX6.TabIndex = 1;
             this.buttonX6.Text = "Sửa";
             this.buttonX6.Click += new System.EventHandler(this.buttonX6_Click);
             // 
@@ -212,7 +213,7 @@
             this.buttonX4.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.Size = new System.Drawing.Size(70, 25);
-            this.buttonX4.TabIndex = 53;
+            this.buttonX4.TabIndex = 2;
             this.buttonX4.Text = "Xóa";
             this.buttonX4.Click += new System.EventHandler(this.buttonX4_Click);
             // 
@@ -224,7 +225,7 @@
             this.buttonX5.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX5.Name = "buttonX5";
             this.buttonX5.Size = new System.Drawing.Size(70, 25);
-            this.buttonX5.TabIndex = 28;
+            this.buttonX5.TabIndex = 0;
             this.buttonX5.Text = "Thêm";
             this.buttonX5.Click += new System.EventHandler(this.buttonX5_Click);
             // 
@@ -234,16 +235,17 @@
             // 
             // 
             this.txttennsx.Border.Class = "TextBoxBorder";
+            this.txttennsx.FocusHighlightEnabled = true;
             this.txttennsx.Location = new System.Drawing.Point(106, 16);
             this.txttennsx.Name = "txttennsx";
-            this.txttennsx.Size = new System.Drawing.Size(193, 22);
+            this.txttennsx.Size = new System.Drawing.Size(193, 24);
             this.txttennsx.TabIndex = 0;
             // 
             // labelX26
             // 
             this.labelX26.Location = new System.Drawing.Point(5, 12);
             this.labelX26.Name = "labelX26";
-            this.labelX26.Size = new System.Drawing.Size(97, 25);
+            this.labelX26.Size = new System.Drawing.Size(104, 25);
             this.labelX26.TabIndex = 60;
             this.labelX26.Text = "Tên Nhóm CC:";
             // 
@@ -253,7 +255,6 @@
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.groupPanel2);
             this.Name = "frmNhomNCC";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmNhomNCC_Load);
             this.Controls.SetChildIndex(this.groupPanel2, 0);
             this.Controls.SetChildIndex(this.groupPanel1, 0);

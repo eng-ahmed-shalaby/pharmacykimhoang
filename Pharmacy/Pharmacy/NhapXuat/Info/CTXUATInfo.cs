@@ -32,7 +32,13 @@ namespace Pharmacy.NhapXuat.Info
             get { return _mahh; }
             set { _mahh = value; }
         }
+        private int _mactHDNhap;
 
+        public int MaCTNhap
+        {
+            get { return _mactHDNhap; }
+            set { _mactHDNhap = value; }
+        }
         private string _solo;
 
         public string Solo

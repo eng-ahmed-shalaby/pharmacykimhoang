@@ -15,7 +15,7 @@ namespace Pharmacy.MyTable
         {
         }
         public TblTDV(int tt)
-            : base(MyTableName, "Select * From " + MyTableName + " Where TINHTRANG = " + tt)
+            : base(MyTableName, "Select * From " + MyTableName + " Where TINHTRANG = " + tt+" order by PHONGBAN")
         {
         }
         public TblTDV(string pChuoi_SQL)

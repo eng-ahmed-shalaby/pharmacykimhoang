@@ -63,12 +63,19 @@ namespace Pharmacy.QuanLy
         }
         public void ShowNhomSP()
         {
-            DataTable data = tNhapKho.GetNhomHH(int.Parse( cmb_loai.SelectedValue.ToString()),1);
-            cmb_nhom.DisplayMember = "TEN";
-            cmb_nhom.ValueMember = "MA";
-            cmb_nhom.DataSource = data;
 
-            cmb_nhom.SelectedIndex = 0;
+            DataTable data = tNhapKho.GetNhomHH(int.Parse( cmb_loai.SelectedValue.ToString()),1);
+            if (data.Rows.Count > 0)
+            {
+                cmb_nhom.Enabled = true;
+                cmb_nhom.DisplayMember = "TEN";
+                cmb_nhom.ValueMember = "MA";
+                cmb_nhom.DataSource = data;
+            }
+            else {
+                cmb_nhom.Enabled = false;
+                cmb_nhom.Text = "";
+            }
         }
         public void ShowLoaiSP()
         {
@@ -76,7 +83,7 @@ namespace Pharmacy.QuanLy
             cmb_loai.DisplayMember = "TEN";
             cmb_loai.ValueMember = "MA";
             cmb_loai.DataSource = data;
-            cmb_loai.SelectedIndex = 0;
+          //  cmb_loai.SelectedIndex = 0;
         }
         public void ShowDonVi()
         {
@@ -84,13 +91,6 @@ namespace Pharmacy.QuanLy
             cmb_dvt.DataSource = data;
             cmb_dvt.DisplayMember = "TEN";
             cmb_dvt.ValueMember = "MADONVI";
-        }
-
-        
-
-        private void cmb_loai_DropDownChange(object sender, bool Expanded)
-        {
-            ShowNhomSP();
         }
 
         private void buttonX5_Click(object sender, EventArgs e)
@@ -296,6 +296,23 @@ namespace Pharmacy.QuanLy
         {
             frmQuyCach frm = new frmQuyCach();
             frm.ShowDialog();
+        }
+
+        private void cmdLoaiHH_Click(object sender, EventArgs e)
+        {
+            frmLoaiHH frm = new frmLoaiHH();
+            frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+            frm.ShowDialog();
+        }
+
+        void frm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ShowLoaiSP();
+
+        }
+        private void cmb_loai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowNhomSP();
         }
 
      

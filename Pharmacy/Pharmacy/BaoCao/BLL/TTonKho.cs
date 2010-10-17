@@ -16,15 +16,13 @@ namespace Pharmacy.BaoCao.BLL
             DataColumn[] dc = new DataColumn[]{ 
                               new DataColumn("Thang", Type.GetType("System.String")),
                               new DataColumn("Nam", Type.GetType("System.String")),
-                               new DataColumn("TenHH", Type.GetType("System.String")),
-                               new DataColumn("QuyCach", Type.GetType("System.String")),
-                               new DataColumn("DVT", Type.GetType("System.String")),
-
-                               new DataColumn("DienGiai", Type.GetType("System.String")),
-                               new DataColumn("SLTonDau", Type.GetType("System.String")),
-                               new DataColumn("SLNhap", Type.GetType("System.String")),
-                               new DataColumn("SLXuat", Type.GetType("System.String")),
-                               new DataColumn("SLTon", Type.GetType("System.String")),
+                              new DataColumn("TenHang", Type.GetType("System.String")),
+                              new DataColumn("DVT", Type.GetType("System.String")),
+                              new DataColumn("TonDau", Type.GetType("System.Int32")),
+                              new DataColumn("PhatSinhNhap", Type.GetType("System.Int32")),
+                                new DataColumn("PhatSinhXuat", Type.GetType("System.Int32")),
+                              new DataColumn("Ton", Type.GetType("System.Int32")),
+                              new DataColumn("Kho", Type.GetType("System.String"))
           
             };
             data.Columns.AddRange(dc);
@@ -46,15 +44,14 @@ namespace Pharmacy.BaoCao.BLL
             {
                 DataRow r = data.NewRow();
                 r["Thang"] = thang;
-                r["Nam"] = thang;
-                r["TenHH"]= dataSQL.Rows[i]["tenhang"];
-                r["QuyCach"]= dataSQL.Rows[i]["quycach"];
+                r["Nam"] = nam;
+                r["TenHang"]= dataSQL.Rows[i]["tenhang"];
                 r["DVT"]= dataSQL.Rows[i]["donvitinh"];
-                r["SLTonDau"] = dataSQL.Rows[i]["tondau"];
-                r["DienGiai"]= dataSQL.Rows[i]["diengiai"]; 
-                r["SLNhap"]= dataSQL.Rows[i]["nhap"]; 
-                r["SLXuat"]= dataSQL.Rows[i]["xuat"];
-                r["SLTon"]= dataSQL.Rows[i]["ton"];
+                r["TonDau"] = dataSQL.Rows[i]["tondau"];
+                r["PhatSinhNhap"]= dataSQL.Rows[i]["nhap"];
+                r["PhatSinhXuat"] = dataSQL.Rows[i]["xuat"]; 
+                r["Ton"]= dataSQL.Rows[i]["ton"];
+                r["Kho"]= "";
                 data.Rows.Add(r);
             }
             return data;

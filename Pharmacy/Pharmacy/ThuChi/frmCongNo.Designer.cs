@@ -45,11 +45,13 @@
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.Ma = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.txtDT = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
             this.groupBox4.SuspendLayout();
             this.grbHD.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -90,6 +92,7 @@
             // 
             this.txtMaKH.Border.Class = "TextBoxBorder";
             this.txtMaKH.Enabled = false;
+            this.txtMaKH.FocusHighlightEnabled = true;
             this.txtMaKH.Location = new System.Drawing.Point(143, 20);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(265, 24);
@@ -112,6 +115,7 @@
             // 
             this.cmbKH.DisplayMember = "Text";
             this.cmbKH.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbKH.FocusHighlightEnabled = true;
             this.cmbKH.FormattingEnabled = true;
             this.cmbKH.ItemHeight = 18;
             this.cmbKH.Location = new System.Drawing.Point(143, 54);
@@ -136,6 +140,7 @@
             // 
             // 
             this.txtDiaChi.Border.Class = "TextBoxBorder";
+            this.txtDiaChi.FocusHighlightEnabled = true;
             this.txtDiaChi.Location = new System.Drawing.Point(66, 19);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(309, 25);
@@ -179,7 +184,9 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader6,
-            this.Ma});
+            this.Ma,
+            this.columnHeader7,
+            this.columnHeader8});
             this.lvHD.Font = new System.Drawing.Font("Tahoma", 11F);
             this.lvHD.FullRowSelect = true;
             this.lvHD.GridLines = true;
@@ -225,6 +232,11 @@
             this.Ma.Text = "Ma";
             this.Ma.Width = 0;
             // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Hạn trả";
+            this.columnHeader7.Width = 84;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.labelX2);
@@ -253,6 +265,7 @@
             // 
             // 
             this.txtDT.Border.Class = "TextBoxBorder";
+            this.txtDT.FocusHighlightEnabled = true;
             this.txtDT.Location = new System.Drawing.Point(66, 55);
             this.txtDT.Name = "txtDT";
             this.txtDT.Size = new System.Drawing.Size(309, 25);
@@ -269,6 +282,11 @@
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Ngày CL";
+            this.columnHeader8.Width = 80;
             // 
             // frmCongNo
             // 
@@ -315,5 +333,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private DevComponents.DotNetBar.ButtonX cmdin;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

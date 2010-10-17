@@ -16,18 +16,23 @@ namespace Pharmacy.HeThong
         {
             InitializeComponent();
         }
+        
         public void LoadServer() {
-            DataTable dtServers = SmoApplication.EnumAvailableSqlServers(true);
-            // If there are any servers at all
-            if (dtServers.Rows.Count > 0)
+            try
             {
-                // Loop through each server in the DataTable
-                foreach (DataRow drServer in dtServers.Rows)
+                DataTable dtServers = SmoApplication.EnumAvailableSqlServers(true);
+                // If there are any servers at all
+                if (dtServers.Rows.Count > 0)
                 {
-                    // Add the name to the combobox
-                    cmbNameSer.Items.Add(drServer["Name"]);
+                    // Loop through each server in the DataTable
+                    foreach (DataRow drServer in dtServers.Rows)
+                    {
+                        // Add the name to the combobox
+                        cmbNameSer.Items.Add(drServer["Name"]);
+                    }
                 }
             }
+            catch (Exception ex) { }
         }
 
         private void frmBk_Restore_Load(object sender, EventArgs e)

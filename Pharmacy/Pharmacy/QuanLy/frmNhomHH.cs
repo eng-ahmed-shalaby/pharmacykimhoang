@@ -81,7 +81,7 @@ namespace Pharmacy.QuanLy
             {
                 DataRow newRow = tblNhomHH.NewRow();
                 newRow["TEN"] = txtten.Text.Trim();
-                newRow["TEN"] = txtten.Text.Trim();
+
                 newRow["MALOAISP"] = cmb_loai.SelectedValue.ToString();
                 newRow["MOTA"] = txt_mota.Text.ToString();
                 newRow["TINHTRANG"] = 1;

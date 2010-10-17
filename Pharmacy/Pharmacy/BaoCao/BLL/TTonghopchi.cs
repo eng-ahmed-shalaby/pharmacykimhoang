@@ -46,11 +46,13 @@ namespace Pharmacy.BaoCao.BLL
                 DataRow r = data.NewRow();
 
                 r["ngay"] = dataSQL.Rows[i]["ngay"];
-                r["soct"] = dataSQL.Rows[i]["soct"];                
+                if (dataSQL.Rows[i]["thu"].ToString() == "0")
+                    r["soct"] = "";
+                else
+                r["soct"] = dataSQL.Rows[i]["thu"];                
                 r["tenkh"] = dataSQL.Rows[i]["tenkh"];
                 r["diengiai"] = dataSQL.Rows[i]["diengiai"];
                 r["tongtien"] = dataSQL.Rows[i]["tongtien"];
-                              
                 r["thang"] = thang;
                 r["nam"] = nam;
                 

@@ -26,12 +26,20 @@ namespace Pharmacy.BaoCao
         }
         private void Showtonghopthuchi(int thang, int nam)
         {
-            DataTable dt = tcongno.Gettonghopthuchi(thang, nam);
-            RPT.rptTonghopthuchi rpt = new RPT.rptTonghopthuchi();
-            rpt.SetDataSource(dt);
-            crystalReportViewer1.ReportSource = rpt;
-            crystalReportViewer1.Refresh();
-            dt.Clear();
+            try
+            {
+                DataTable dt = tcongno.Gettonghopthuchi(thang, nam);
+                RPT.rptSoQuy rpt = new RPT.rptSoQuy();
+                rpt.SetDataSource(dt);
+                crystalReportViewer1.ReportSource = rpt;
+                crystalReportViewer1.Refresh();
+                dt.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Kiểm tra lại thông tin");
+                TLog.WriteErr("frmTonghopthuchi.cs.cs.Showtonghopthuchi", ex.Message + "||" + ex.StackTrace);
+            }
         }
     }
 }
