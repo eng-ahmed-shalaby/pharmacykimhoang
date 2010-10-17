@@ -1,9 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy", "Pharmacy\Pharmacy.csproj", "{EEEA72C2-D2F4-402B-A9DF-8F36724F0FC2}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ProParmacy", "F:\HOMEWORK\TIEMTHUOC\PROJ_PHARMACY\Pharmacy\ProParmacy\ProParmacy.vdproj", "{977BAE73-E3B4-48C8-A038-DEFAC79A6C05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EEEA72C2-D2F4-402B-A9DF-8F36724F0FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EEEA72C2-D2F4-402B-A9DF-8F36724F0FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEA72C2-D2F4-402B-A9DF-8F36724F0FC2}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEA72C2-D2F4-402B-A9DF-8F36724F0FC2}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{EEEA72C2-D2F4-402B-A9DF-8F36724F0FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEEA72C2-D2F4-402B-A9DF-8F36724F0FC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{977BAE73-E3B4-48C8-A038-DEFAC79A6C05}.Debug|Any CPU.ActiveCfg = Debug
-		{977BAE73-E3B4-48C8-A038-DEFAC79A6C05}.Debug|Any CPU.Build.0 = Debug
-		{977BAE73-E3B4-48C8-A038-DEFAC79A6C05}.Release|Any CPU.ActiveCfg = Release
-		{977BAE73-E3B4-48C8-A038-DEFAC79A6C05}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
