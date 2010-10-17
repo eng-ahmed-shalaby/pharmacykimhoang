@@ -57,7 +57,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(392, 184);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(384, 180);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // panel1
@@ -66,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(118, 178);
+            this.panel1.Size = new System.Drawing.Size(116, 174);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -75,7 +75,7 @@
             this.pictureBox1.Image = global::Pharmacy.Properties.Resources.cauvonglogin2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 178);
+            this.pictureBox1.Size = new System.Drawing.Size(116, 178);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -88,9 +88,9 @@
             this.panel2.Controls.Add(this.labelX2);
             this.panel2.Controls.Add(this.labelX1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(127, 3);
+            this.panel2.Location = new System.Drawing.Point(125, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(262, 178);
+            this.panel2.Size = new System.Drawing.Size(256, 174);
             this.panel2.TabIndex = 1;
             // 
             // cmdTHoat
@@ -133,7 +133,7 @@
             this.txtUser.FocusHighlightEnabled = true;
             this.txtUser.Location = new System.Drawing.Point(107, 22);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(153, 24);
+            this.txtUser.Size = new System.Drawing.Size(146, 24);
             this.txtUser.TabIndex = 0;
             // 
             // txtPass
@@ -146,7 +146,7 @@
             this.txtPass.Location = new System.Drawing.Point(107, 62);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(153, 24);
+            this.txtPass.Size = new System.Drawing.Size(146, 24);
             this.txtPass.TabIndex = 1;
             // 
             // labelX2
@@ -168,8 +168,9 @@
             // frmLogin
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(392, 216);
+            this.ClientSize = new System.Drawing.Size(384, 212);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.KeyPreview = true;
             this.MaximumSize = new System.Drawing.Size(400, 250);
             this.MinimumSize = new System.Drawing.Size(400, 250);
