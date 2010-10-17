@@ -116,27 +116,27 @@ namespace Pharmacy.NhapXuat.BLL
 
              }
          }
-         public void UpdateTongtienHD(int maHD, double Tong)
+         public void UpdateTongtienHD(int maHD, double Tong, int Type)
          {
              try
              {
                  cn.ExecuteNonQuery("usp_UpdateTongTienHD_XUAT",
-                    new string[] { "@MA", "@TONGTIEN","@TIENNO" },
-                   new object[] { maHD, Tong,Tong });
+                    new string[] { "@MA", "@TONGTIEN","@TIENNO","@Type" },
+                   new object[] { maHD, Tong,Tong,Type });
 
              }
              catch (Exception ex)
              {
-
+                 throw ex;
              }
          }
-         public void UpdateSLLo(int ma, int sl, int trangthai)
+         public void UpdateSLLo(int ma, int sl, int trangthai,int flag)
          {
              try
              {
                  cn.ExecuteNonQuery("usp_UpdateSL_CT_HDNHAP",
-                    new string[] { "@MA","@SLTON_LO","@TINHTRANG" },
-                   new object[] { ma,sl,trangthai });
+                    new string[] { "@MA","@SLTON_LO","@TINHTRANG","@Flag" },
+                   new object[] { ma,sl,trangthai,flag });
 
              }
              catch (Exception ex)
@@ -150,8 +150,8 @@ namespace Pharmacy.NhapXuat.BLL
              try
              {
                  id = cn.ExecuteInsert("usp_InsertHD_XUAT",
-                     new string[] { "@SOHD", "@MAKH","@MATDV", "@NGAYLAP", "@NGAYXUAT", "@LYDO", "@MACTKHO", "@TONGTIEN","@TIENVAT","@TINHTRANG","@TIENNO","@NO","@CO" },
-                    new object[] { info.Sohd, info.Makh,info.Matdv, info.Ngaylap, info.Ngayxuat, info.Lydo, info.Mactkho, info.Tongtien, info.Tienvat, info.Tinhtrang,info.TienNo,info.No, info.Co });
+                     new string[] { "@SOHD", "@MAKH","@MATDV", "@NGAYLAP", "@NGAYXUAT", "@LYDO", "@MACTKHO", "@TONGTIEN","@TIENVAT","@TINHTRANG","@TIENNO","@NO","@CO","@DIENGIAI" },
+                    new object[] { info.Sohd, info.Makh,info.Matdv, info.Ngaylap, info.Ngayxuat, info.Lydo, info.Mactkho, info.Tongtien, info.Tienvat, info.Tinhtrang,info.TienNo,info.No, info.Co,info.DienGiai });
                  return id;
              }
              catch (Exception ex)
@@ -167,8 +167,8 @@ namespace Pharmacy.NhapXuat.BLL
              try
              {
                  id = cn.ExecuteInsert("usp_InsertCT_HDXUAT",
-                     new string[] { "@MAHDXUAT","@MAHH", "@SOLO","@MACTKHO", "@SOLUONG","@DONGIA","@VAT","@TIENCHUAVAT","@TIENCOVAT","@ChietKhau","@TINHTRANG" },
-                    new object[] { info.Mahdxuat,info.Mahh, info.Solo,  info.MaCTKho,info.Soluong,info.Dongia,info.Vat,info.Tienchuavat, info.Tiencovat,info.CK, info.Tinhtrang });
+                     new string[] { "@MAHDXUAT","@MAHH","@MaCTNhap", "@SOLO","@MACTKHO", "@SOLUONG","@DONGIA","@VAT","@TIENCHUAVAT","@TIENCOVAT","@ChietKhau","@TINHTRANG" },
+                    new object[] { info.Mahdxuat,info.Mahh, info.MaCTNhap, info.Solo,  info.MaCTKho,info.Soluong,info.Dongia,info.Vat,info.Tienchuavat, info.Tiencovat,info.CK, info.Tinhtrang });
                  return id;
              }
              catch (Exception ex)

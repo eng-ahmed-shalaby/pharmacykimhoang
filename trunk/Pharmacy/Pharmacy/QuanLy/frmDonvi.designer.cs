@@ -203,6 +203,7 @@
             // 
             // 
             this.txttennsx.Border.Class = "TextBoxBorder";
+            this.txttennsx.FocusHighlightEnabled = true;
             this.txttennsx.Location = new System.Drawing.Point(84, 14);
             this.txttennsx.Name = "txttennsx";
             this.txttennsx.Size = new System.Drawing.Size(193, 24);

@@ -61,7 +61,7 @@
             this.cmb_nhom = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem4 = new DevComponents.Editors.ComboItem();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.cmdTinhThanh = new DevComponents.DotNetBar.ButtonX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX27 = new DevComponents.DotNetBar.LabelX();
             this.txt_diachi = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -70,9 +70,13 @@
             this.cmb_tinhthanh = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.comboItem2 = new DevComponents.Editors.ComboItem();
+            this.labelX7 = new DevComponents.DotNetBar.LabelX();
+            this.labelX8 = new DevComponents.DotNetBar.LabelX();
+            this.txtHanNo = new DevComponents.Editors.IntegerInput();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHanNo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -180,7 +184,7 @@
             // 
             // columnHeader13
             // 
-            this.columnHeader13.Text = "Cấp độ";
+            this.columnHeader13.Text = "Hạn nợ";
             this.columnHeader13.Width = 80;
             // 
             // columnHeader14
@@ -204,6 +208,9 @@
             this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel2.Controls.Add(this.txtHanNo);
+            this.groupPanel2.Controls.Add(this.labelX8);
+            this.groupPanel2.Controls.Add(this.labelX7);
             this.groupPanel2.Controls.Add(this.labelX6);
             this.groupPanel2.Controls.Add(this.txtMST);
             this.groupPanel2.Controls.Add(this.txtdienthoai);
@@ -219,7 +226,7 @@
             this.groupPanel2.Controls.Add(this.panel5);
             this.groupPanel2.Controls.Add(this.labelX2);
             this.groupPanel2.Controls.Add(this.cmb_nhom);
-            this.groupPanel2.Controls.Add(this.buttonX1);
+            this.groupPanel2.Controls.Add(this.cmdTinhThanh);
             this.groupPanel2.Controls.Add(this.labelX1);
             this.groupPanel2.Controls.Add(this.labelX27);
             this.groupPanel2.Controls.Add(this.txt_diachi);
@@ -249,7 +256,7 @@
             this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            this.groupPanel2.TabIndex = 74;
+            this.groupPanel2.TabIndex = 0;
             this.groupPanel2.Text = "THÔNG TIN KHÁCH HÀNG";
             // 
             // labelX6
@@ -266,11 +273,12 @@
             // 
             // 
             this.txtMST.Border.Class = "TextBoxBorder";
+            this.txtMST.FocusHighlightEnabled = true;
             this.txtMST.Location = new System.Drawing.Point(106, 151);
             this.txtMST.Multiline = true;
             this.txtMST.Name = "txtMST";
             this.txtMST.Size = new System.Drawing.Size(193, 24);
-            this.txtMST.TabIndex = 82;
+            this.txtMST.TabIndex = 4;
             // 
             // txtdienthoai
             // 
@@ -278,10 +286,11 @@
             // 
             // 
             this.txtdienthoai.Border.Class = "TextBoxBorder";
+            this.txtdienthoai.FocusHighlightEnabled = true;
             this.txtdienthoai.Location = new System.Drawing.Point(438, 12);
             this.txtdienthoai.Name = "txtdienthoai";
             this.txtdienthoai.Size = new System.Drawing.Size(374, 24);
-            this.txtdienthoai.TabIndex = 81;
+            this.txtdienthoai.TabIndex = 5;
             // 
             // buttonX6
             // 
@@ -291,7 +300,7 @@
             this.buttonX6.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX6.Name = "buttonX6";
             this.buttonX6.Size = new System.Drawing.Size(70, 27);
-            this.buttonX6.TabIndex = 54;
+            this.buttonX6.TabIndex = 9;
             this.buttonX6.Text = "Sửa";
             this.buttonX6.Click += new System.EventHandler(this.buttonX6_Click);
             // 
@@ -303,7 +312,7 @@
             this.buttonX4.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.Size = new System.Drawing.Size(70, 27);
-            this.buttonX4.TabIndex = 53;
+            this.buttonX4.TabIndex = 10;
             this.buttonX4.Text = "Xóa";
             this.buttonX4.Click += new System.EventHandler(this.buttonX4_Click);
             // 
@@ -315,7 +324,7 @@
             this.buttonX5.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX5.Name = "buttonX5";
             this.buttonX5.Size = new System.Drawing.Size(70, 27);
-            this.buttonX5.TabIndex = 28;
+            this.buttonX5.TabIndex = 8;
             this.buttonX5.Text = "Thêm";
             this.buttonX5.Click += new System.EventHandler(this.buttonX5_Click);
             // 
@@ -341,11 +350,12 @@
             // 
             // 
             this.txt_capdo.Border.Class = "TextBoxBorder";
+            this.txt_capdo.FocusHighlightEnabled = true;
             this.txt_capdo.Location = new System.Drawing.Point(438, 121);
             this.txt_capdo.Multiline = true;
             this.txt_capdo.Name = "txt_capdo";
             this.txt_capdo.Size = new System.Drawing.Size(374, 24);
-            this.txt_capdo.TabIndex = 77;
+            this.txt_capdo.TabIndex = 7;
             // 
             // txt_codekh
             // 
@@ -353,10 +363,11 @@
             // 
             // 
             this.txt_codekh.Border.Class = "TextBoxBorder";
+            this.txt_codekh.FocusHighlightEnabled = true;
             this.txt_codekh.Location = new System.Drawing.Point(106, 14);
             this.txt_codekh.Name = "txt_codekh";
             this.txt_codekh.Size = new System.Drawing.Size(193, 24);
-            this.txt_codekh.TabIndex = 75;
+            this.txt_codekh.TabIndex = 0;
             // 
             // labelX3
             // 
@@ -413,6 +424,7 @@
             // 
             this.cmb_nhom.DisplayMember = "Text";
             this.cmb_nhom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_nhom.FocusHighlightEnabled = true;
             this.cmb_nhom.FormattingEnabled = true;
             this.cmb_nhom.ItemHeight = 18;
             this.cmb_nhom.Items.AddRange(new object[] {
@@ -421,7 +433,7 @@
             this.cmb_nhom.Location = new System.Drawing.Point(106, 83);
             this.cmb_nhom.Name = "cmb_nhom";
             this.cmb_nhom.Size = new System.Drawing.Size(193, 24);
-            this.cmb_nhom.TabIndex = 73;
+            this.cmb_nhom.TabIndex = 2;
             // 
             // comboItem3
             // 
@@ -431,16 +443,17 @@
             // 
             this.comboItem4.Text = "Trả hàng";
             // 
-            // buttonX1
+            // cmdTinhThanh
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX1.Location = new System.Drawing.Point(302, 120);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(25, 22);
-            this.buttonX1.TabIndex = 71;
-            this.buttonX1.Text = "+";
+            this.cmdTinhThanh.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdTinhThanh.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdTinhThanh.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdTinhThanh.Location = new System.Drawing.Point(302, 120);
+            this.cmdTinhThanh.Name = "cmdTinhThanh";
+            this.cmdTinhThanh.Size = new System.Drawing.Size(25, 22);
+            this.cmdTinhThanh.TabIndex = 71;
+            this.cmdTinhThanh.Text = "+";
+            this.cmdTinhThanh.Click += new System.EventHandler(this.cmdTinhThanh_Click);
             // 
             // labelX1
             // 
@@ -464,11 +477,12 @@
             // 
             // 
             this.txt_diachi.Border.Class = "TextBoxBorder";
+            this.txt_diachi.FocusHighlightEnabled = true;
             this.txt_diachi.Location = new System.Drawing.Point(438, 48);
             this.txt_diachi.Multiline = true;
             this.txt_diachi.Name = "txt_diachi";
             this.txt_diachi.Size = new System.Drawing.Size(374, 57);
-            this.txt_diachi.TabIndex = 54;
+            this.txt_diachi.TabIndex = 6;
             // 
             // txt_tenkh
             // 
@@ -476,10 +490,11 @@
             // 
             // 
             this.txt_tenkh.Border.Class = "TextBoxBorder";
+            this.txt_tenkh.FocusHighlightEnabled = true;
             this.txt_tenkh.Location = new System.Drawing.Point(106, 48);
             this.txt_tenkh.Name = "txt_tenkh";
             this.txt_tenkh.Size = new System.Drawing.Size(193, 24);
-            this.txt_tenkh.TabIndex = 0;
+            this.txt_tenkh.TabIndex = 1;
             // 
             // labelX26
             // 
@@ -493,6 +508,7 @@
             // 
             this.cmb_tinhthanh.DisplayMember = "Text";
             this.cmb_tinhthanh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_tinhthanh.FocusHighlightEnabled = true;
             this.cmb_tinhthanh.FormattingEnabled = true;
             this.cmb_tinhthanh.ItemHeight = 18;
             this.cmb_tinhthanh.Items.AddRange(new object[] {
@@ -501,7 +517,7 @@
             this.cmb_tinhthanh.Location = new System.Drawing.Point(106, 120);
             this.cmb_tinhthanh.Name = "cmb_tinhthanh";
             this.cmb_tinhthanh.Size = new System.Drawing.Size(193, 24);
-            this.cmb_tinhthanh.TabIndex = 61;
+            this.cmb_tinhthanh.TabIndex = 3;
             // 
             // comboItem1
             // 
@@ -510,6 +526,35 @@
             // comboItem2
             // 
             this.comboItem2.Text = "Trả hàng";
+            // 
+            // labelX7
+            // 
+            this.labelX7.Location = new System.Drawing.Point(364, 152);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.Size = new System.Drawing.Size(71, 25);
+            this.labelX7.TabIndex = 84;
+            this.labelX7.Text = "Hạn nợ:";
+            // 
+            // labelX8
+            // 
+            this.labelX8.Location = new System.Drawing.Point(520, 154);
+            this.labelX8.Name = "labelX8";
+            this.labelX8.Size = new System.Drawing.Size(40, 25);
+            this.labelX8.TabIndex = 86;
+            this.labelX8.Text = "ngày";
+            // 
+            // txtHanNo
+            // 
+            // 
+            // 
+            // 
+            this.txtHanNo.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtHanNo.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtHanNo.Location = new System.Drawing.Point(438, 154);
+            this.txtHanNo.Name = "txtHanNo";
+            this.txtHanNo.ShowUpDown = true;
+            this.txtHanNo.Size = new System.Drawing.Size(80, 24);
+            this.txtHanNo.TabIndex = 87;
             // 
             // frmKhachHang
             // 
@@ -524,6 +569,7 @@
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtHanNo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -557,7 +603,7 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmb_nhom;
         private DevComponents.Editors.ComboItem comboItem3;
         private DevComponents.Editors.ComboItem comboItem4;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonX cmdTinhThanh;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX27;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_diachi;
@@ -572,5 +618,8 @@
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.Controls.TextBoxX txtMST;
         private DevComponents.DotNetBar.ButtonX cmdInDS;
+        private DevComponents.Editors.IntegerInput txtHanNo;
+        private DevComponents.DotNetBar.LabelX labelX8;
+        private DevComponents.DotNetBar.LabelX labelX7;
     }
 }

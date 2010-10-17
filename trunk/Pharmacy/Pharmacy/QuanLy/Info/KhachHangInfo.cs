@@ -87,6 +87,13 @@ namespace Pharmacy.QuanLy.Info
            get { return _MAKH; }
            set { _MAKH = value; }
        }
+       private int _HanNo;
+
+       public int HanNo
+       {
+           get { return _HanNo; }
+           set { _HanNo = value; }
+       }
 
     }
 }

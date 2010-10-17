@@ -42,11 +42,24 @@ namespace Pharmacy.NhapXuat
         }
         public void ShowHD(int ma)
         {  DataTable dt = new DataTable();
-            if(ma==0)
-         //   DataSet ds = new DataSet();
-           dt = tXuat.GetDataHD(maHD);
-
+        if (ma == 0)
+            //   DataSet ds = new DataSet();
+            dt = tXuat.GetDataHD(maHD);
+        else dt = tXuat.GetDataHD(ma);
           //  ds.Tables.Add(dt);
+            rptHD rpt = new rptHD();
+            rpt.SetDataSource(dt);
+            crystalReportViewer1.ReportSource = rpt;
+            crystalReportViewer1.Refresh();
+        }
+        public void ShowHDNoView(int ma)
+        {
+            DataTable dt = new DataTable();
+            if (ma == 0)
+                //   DataSet ds = new DataSet();
+                dt = tXuat.GetDataHD(maHD);
+            else dt = tXuat.GetDataHD(ma);
+            //  ds.Tables.Add(dt);
             rptHD rpt = new rptHD();
             rpt.SetDataSource(dt);
             CrystalReportViewer rptview = new CrystalReportViewer();

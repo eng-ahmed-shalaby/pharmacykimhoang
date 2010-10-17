@@ -236,8 +236,8 @@
             this.cmdThemCT.Location = new System.Drawing.Point(1, 1);
             this.cmdThemCT.Margin = new System.Windows.Forms.Padding(0);
             this.cmdThemCT.Name = "cmdThemCT";
-            this.cmdThemCT.Size = new System.Drawing.Size(75, 27);
-            this.cmdThemCT.TabIndex = 28;
+            this.cmdThemCT.Size = new System.Drawing.Size(90, 27);
+            this.cmdThemCT.TabIndex = 0;
             this.cmdThemCT.Text = "Thêm CT";
             this.cmdThemCT.Click += new System.EventHandler(this.cmdThemCT_Click);
             // 
@@ -245,36 +245,39 @@
             // 
             this.cmbLoaiSP.DisplayMember = "Text";
             this.cmbLoaiSP.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLoaiSP.FocusHighlightEnabled = true;
             this.cmbLoaiSP.FormattingEnabled = true;
             this.cmbLoaiSP.ItemHeight = 18;
             this.cmbLoaiSP.Location = new System.Drawing.Point(91, 27);
             this.cmbLoaiSP.Name = "cmbLoaiSP";
             this.cmbLoaiSP.Size = new System.Drawing.Size(192, 24);
-            this.cmbLoaiSP.TabIndex = 35;
+            this.cmbLoaiSP.TabIndex = 1;
             this.cmbLoaiSP.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiSP_SelectedIndexChanged);
             // 
             // cmbNhomThuoc
             // 
             this.cmbNhomThuoc.DisplayMember = "Text";
             this.cmbNhomThuoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbNhomThuoc.FocusHighlightEnabled = true;
             this.cmbNhomThuoc.FormattingEnabled = true;
             this.cmbNhomThuoc.ItemHeight = 18;
             this.cmbNhomThuoc.Location = new System.Drawing.Point(91, 56);
             this.cmbNhomThuoc.Name = "cmbNhomThuoc";
             this.cmbNhomThuoc.Size = new System.Drawing.Size(192, 24);
-            this.cmbNhomThuoc.TabIndex = 36;
+            this.cmbNhomThuoc.TabIndex = 2;
             this.cmbNhomThuoc.SelectedIndexChanged += new System.EventHandler(this.cmbNhomThuoc_SelectedIndexChanged);
             // 
             // cmbTenThuoc
             // 
             this.cmbTenThuoc.DisplayMember = "Text";
             this.cmbTenThuoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTenThuoc.FocusHighlightEnabled = true;
             this.cmbTenThuoc.FormattingEnabled = true;
             this.cmbTenThuoc.ItemHeight = 18;
             this.cmbTenThuoc.Location = new System.Drawing.Point(91, 84);
             this.cmbTenThuoc.Name = "cmbTenThuoc";
             this.cmbTenThuoc.Size = new System.Drawing.Size(192, 24);
-            this.cmbTenThuoc.TabIndex = 37;
+            this.cmbTenThuoc.TabIndex = 3;
             this.cmbTenThuoc.SelectedIndexChanged += new System.EventHandler(this.cmbTenThuoc_SelectedIndexChanged);
             // 
             // txtSoLo
@@ -283,10 +286,11 @@
             // 
             // 
             this.txtSoLo.Border.Class = "TextBoxBorder";
+            this.txtSoLo.FocusHighlightEnabled = true;
             this.txtSoLo.Location = new System.Drawing.Point(91, 0);
             this.txtSoLo.Name = "txtSoLo";
             this.txtSoLo.Size = new System.Drawing.Size(192, 24);
-            this.txtSoLo.TabIndex = 38;
+            this.txtSoLo.TabIndex = 0;
             // 
             // txtDonGiaNhap
             // 
@@ -295,12 +299,14 @@
             // 
             this.txtDonGiaNhap.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtDonGiaNhap.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtDonGiaNhap.FocusHighlightEnabled = true;
             this.txtDonGiaNhap.Increment = 1;
             this.txtDonGiaNhap.Location = new System.Drawing.Point(437, 112);
+            this.txtDonGiaNhap.MinValue = 0;
             this.txtDonGiaNhap.Name = "txtDonGiaNhap";
             this.txtDonGiaNhap.ShowUpDown = true;
             this.txtDonGiaNhap.Size = new System.Drawing.Size(182, 24);
-            this.txtDonGiaNhap.TabIndex = 39;
+            this.txtDonGiaNhap.TabIndex = 9;
             this.txtDonGiaNhap.Tag = "140,22";
             this.txtDonGiaNhap.ValueChanged += new System.EventHandler(this.txtDonGiaNhap_ValueChanged);
             this.txtDonGiaNhap.TabIndexChanged += new System.EventHandler(this.txtDonGiaNhap_TabIndexChanged);
@@ -309,6 +315,7 @@
             // 
             this.cmbVAT.DisplayMember = "Text";
             this.cmbVAT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbVAT.FocusHighlightEnabled = true;
             this.cmbVAT.FormattingEnabled = true;
             this.cmbVAT.ItemHeight = 18;
             this.cmbVAT.Items.AddRange(new object[] {
@@ -318,7 +325,7 @@
             this.cmbVAT.Location = new System.Drawing.Point(768, 0);
             this.cmbVAT.Name = "cmbVAT";
             this.cmbVAT.Size = new System.Drawing.Size(46, 24);
-            this.cmbVAT.TabIndex = 40;
+            this.cmbVAT.TabIndex = 10;
             this.cmbVAT.Tag = "140,22";
             this.cmbVAT.Text = "0";
             this.cmbVAT.SelectedIndexChanged += new System.EventHandler(this.cmbVAT_SelectedIndexChanged_1);
@@ -340,12 +347,13 @@
             this.cmbDonVi.DisplayMember = "Text";
             this.cmbDonVi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbDonVi.Enabled = false;
+            this.cmbDonVi.FocusHighlightEnabled = true;
             this.cmbDonVi.FormattingEnabled = true;
             this.cmbDonVi.ItemHeight = 18;
             this.cmbDonVi.Location = new System.Drawing.Point(437, 56);
             this.cmbDonVi.Name = "cmbDonVi";
             this.cmbDonVi.Size = new System.Drawing.Size(182, 24);
-            this.cmbDonVi.TabIndex = 41;
+            this.cmbDonVi.TabIndex = 7;
             this.cmbDonVi.Tag = "140,22";
             // 
             // txtSoLuong
@@ -355,11 +363,13 @@
             // 
             this.txtSoLuong.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtSoLuong.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtSoLuong.FocusHighlightEnabled = true;
             this.txtSoLuong.Location = new System.Drawing.Point(437, 84);
+            this.txtSoLuong.MinValue = 0;
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.ShowUpDown = true;
             this.txtSoLuong.Size = new System.Drawing.Size(182, 24);
-            this.txtSoLuong.TabIndex = 43;
+            this.txtSoLuong.TabIndex = 8;
             // 
             // dpkNgayHH
             // 
@@ -369,6 +379,9 @@
             this.dpkNgayHH.BackgroundStyle.Class = "DateTimeInputBackground";
             this.dpkNgayHH.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dpkNgayHH.ButtonDropDown.Visible = true;
+            this.dpkNgayHH.CustomFormat = "dd/MM/yyyy";
+            this.dpkNgayHH.FocusHighlightEnabled = true;
+            this.dpkNgayHH.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dpkNgayHH.Location = new System.Drawing.Point(437, 29);
             // 
             // 
@@ -401,7 +414,7 @@
             this.dpkNgayHH.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dpkNgayHH.Name = "dpkNgayHH";
             this.dpkNgayHH.Size = new System.Drawing.Size(182, 24);
-            this.dpkNgayHH.TabIndex = 44;
+            this.dpkNgayHH.TabIndex = 6;
             // 
             // dpkNgaySX
             // 
@@ -411,6 +424,9 @@
             this.dpkNgaySX.BackgroundStyle.Class = "DateTimeInputBackground";
             this.dpkNgaySX.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dpkNgaySX.ButtonDropDown.Visible = true;
+            this.dpkNgaySX.CustomFormat = "dd/MM/yyyy";
+            this.dpkNgaySX.FocusHighlightEnabled = true;
+            this.dpkNgaySX.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dpkNgaySX.Location = new System.Drawing.Point(437, 3);
             // 
             // 
@@ -443,18 +459,19 @@
             this.dpkNgaySX.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dpkNgaySX.Name = "dpkNgaySX";
             this.dpkNgaySX.Size = new System.Drawing.Size(182, 24);
-            this.dpkNgaySX.TabIndex = 45;
+            this.dpkNgaySX.TabIndex = 5;
             // 
             // cmdNuonSX
             // 
             this.cmdNuonSX.DisplayMember = "Text";
             this.cmdNuonSX.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmdNuonSX.FocusHighlightEnabled = true;
             this.cmdNuonSX.FormattingEnabled = true;
             this.cmdNuonSX.ItemHeight = 18;
             this.cmdNuonSX.Location = new System.Drawing.Point(91, 112);
             this.cmdNuonSX.Name = "cmdNuonSX";
             this.cmdNuonSX.Size = new System.Drawing.Size(192, 24);
-            this.cmdNuonSX.TabIndex = 46;
+            this.cmdNuonSX.TabIndex = 4;
             // 
             // lvHD
             // 
@@ -598,12 +615,12 @@
             // 
             this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(180, 220);
+            this.buttonX1.Location = new System.Drawing.Point(198, 220);
             this.buttonX1.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(54, 24);
+            this.buttonX1.Size = new System.Drawing.Size(64, 24);
             this.buttonX1.TabIndex = 59;
-            this.buttonX1.Text = "In HD";
+            this.buttonX1.Text = "In Phiếu";
             this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // dpkDateHD
@@ -647,7 +664,7 @@
             this.dpkDateHD.MonthCalendar.TodayButtonVisible = true;
             this.dpkDateHD.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dpkDateHD.Name = "dpkDateHD";
-            this.dpkDateHD.Size = new System.Drawing.Size(69, 24);
+            this.dpkDateHD.Size = new System.Drawing.Size(85, 24);
             this.dpkDateHD.TabIndex = 58;
             this.dpkDateHD.ValueChanged += new System.EventHandler(this.dpkDateHD_ValueChanged);
             // 
@@ -669,16 +686,16 @@
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(548, 29);
-            this.panel4.TabIndex = 55;
+            this.panel4.TabIndex = 1;
             // 
             // buttonX3
             // 
             this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX3.Location = new System.Drawing.Point(162, 1);
+            this.buttonX3.Location = new System.Drawing.Point(194, 1);
             this.buttonX3.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(75, 27);
+            this.buttonX3.Size = new System.Drawing.Size(90, 27);
             this.buttonX3.TabIndex = 54;
             this.buttonX3.Text = "Sửa CT";
             this.buttonX3.Visible = false;
@@ -687,11 +704,11 @@
             // 
             this.cmdXoaCT.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdXoaCT.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.cmdXoaCT.Location = new System.Drawing.Point(82, 1);
+            this.cmdXoaCT.Location = new System.Drawing.Point(97, 1);
             this.cmdXoaCT.Margin = new System.Windows.Forms.Padding(0);
             this.cmdXoaCT.Name = "cmdXoaCT";
-            this.cmdXoaCT.Size = new System.Drawing.Size(75, 27);
-            this.cmdXoaCT.TabIndex = 53;
+            this.cmdXoaCT.Size = new System.Drawing.Size(90, 27);
+            this.cmdXoaCT.TabIndex = 1;
             this.cmdXoaCT.Text = "Xóa CT";
             this.cmdXoaCT.Click += new System.EventHandler(this.cmdXoaCT_Click);
             // 
@@ -706,7 +723,7 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(361, 29);
-            this.panel5.TabIndex = 56;
+            this.panel5.TabIndex = 0;
             // 
             // cmdTaoMoi
             // 
@@ -715,8 +732,8 @@
             this.cmdTaoMoi.Location = new System.Drawing.Point(0, 1);
             this.cmdTaoMoi.Margin = new System.Windows.Forms.Padding(0);
             this.cmdTaoMoi.Name = "cmdTaoMoi";
-            this.cmdTaoMoi.Size = new System.Drawing.Size(75, 27);
-            this.cmdTaoMoi.TabIndex = 55;
+            this.cmdTaoMoi.Size = new System.Drawing.Size(91, 27);
+            this.cmdTaoMoi.TabIndex = 0;
             this.cmdTaoMoi.Text = "Tạo mới";
             this.cmdTaoMoi.Click += new System.EventHandler(this.cmdTaoMoi_Click);
             // 
@@ -724,11 +741,11 @@
             // 
             this.buttonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX6.Location = new System.Drawing.Point(165, 1);
+            this.buttonX6.Location = new System.Drawing.Point(198, 1);
             this.buttonX6.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX6.Name = "buttonX6";
-            this.buttonX6.Size = new System.Drawing.Size(75, 27);
-            this.buttonX6.TabIndex = 54;
+            this.buttonX6.Size = new System.Drawing.Size(91, 27);
+            this.buttonX6.TabIndex = 2;
             this.buttonX6.Text = "SửaHD";
             this.buttonX6.Visible = false;
             // 
@@ -736,11 +753,11 @@
             // 
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX4.Location = new System.Drawing.Point(83, 1);
+            this.buttonX4.Location = new System.Drawing.Point(99, 1);
             this.buttonX4.Margin = new System.Windows.Forms.Padding(0);
             this.buttonX4.Name = "buttonX4";
-            this.buttonX4.Size = new System.Drawing.Size(75, 27);
-            this.buttonX4.TabIndex = 53;
+            this.buttonX4.Size = new System.Drawing.Size(91, 27);
+            this.buttonX4.TabIndex = 1;
             this.buttonX4.Text = "Xóa HD";
             this.buttonX4.Click += new System.EventHandler(this.buttonX4_Click);
             // 
@@ -751,7 +768,7 @@
             this.cmdThemHD.Location = new System.Drawing.Point(0, 1);
             this.cmdThemHD.Margin = new System.Windows.Forms.Padding(0);
             this.cmdThemHD.Name = "cmdThemHD";
-            this.cmdThemHD.Size = new System.Drawing.Size(75, 27);
+            this.cmdThemHD.Size = new System.Drawing.Size(91, 27);
             this.cmdThemHD.TabIndex = 28;
             this.cmdThemHD.Text = "Lập hóa đơn";
             this.cmdThemHD.Click += new System.EventHandler(this.cmdThemHD_Click);
@@ -819,7 +836,7 @@
             this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            this.groupPanel1.TabIndex = 53;
+            this.groupPanel1.TabIndex = 1;
             this.groupPanel1.Text = "CHI TIẾT HÓA ĐƠN";
             // 
             // txtCK
@@ -829,12 +846,14 @@
             // 
             this.txtCK.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtCK.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtCK.FocusHighlightEnabled = true;
             this.txtCK.Increment = 1;
             this.txtCK.Location = new System.Drawing.Point(769, 55);
+            this.txtCK.MinValue = 0;
             this.txtCK.Name = "txtCK";
             this.txtCK.ShowUpDown = true;
             this.txtCK.Size = new System.Drawing.Size(149, 24);
-            this.txtCK.TabIndex = 76;
+            this.txtCK.TabIndex = 11;
             this.txtCK.Tag = "140,22";
             this.txtCK.ValueChanged += new System.EventHandler(this.txtCK_ValueChanged);
             // 
@@ -853,6 +872,7 @@
             // 
             this.txtTienHH.Border.Class = "TextBoxBorder";
             this.txtTienHH.Enabled = false;
+            this.txtTienHH.FocusHighlightEnabled = true;
             this.txtTienHH.Location = new System.Drawing.Point(768, 27);
             this.txtTienHH.Name = "txtTienHH";
             this.txtTienHH.Size = new System.Drawing.Size(150, 24);
@@ -862,12 +882,13 @@
             // 
             this.cmbNgan.DisplayMember = "Text";
             this.cmbNgan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbNgan.FocusHighlightEnabled = true;
             this.cmbNgan.FormattingEnabled = true;
             this.cmbNgan.ItemHeight = 18;
             this.cmbNgan.Location = new System.Drawing.Point(865, 110);
             this.cmbNgan.Name = "cmbNgan";
             this.cmbNgan.Size = new System.Drawing.Size(53, 24);
-            this.cmbNgan.TabIndex = 53;
+            this.cmbNgan.TabIndex = 14;
             this.cmbNgan.Visible = false;
             this.cmbNgan.SelectedIndexChanged += new System.EventHandler(this.cmbNgan_SelectedIndexChanged);
             // 
@@ -912,24 +933,26 @@
             // 
             this.cmbKe.DisplayMember = "Text";
             this.cmbKe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbKe.FocusHighlightEnabled = true;
             this.cmbKe.FormattingEnabled = true;
             this.cmbKe.ItemHeight = 18;
             this.cmbKe.Location = new System.Drawing.Point(769, 109);
             this.cmbKe.Name = "cmbKe";
             this.cmbKe.Size = new System.Drawing.Size(53, 24);
-            this.cmbKe.TabIndex = 51;
+            this.cmbKe.TabIndex = 13;
             this.cmbKe.SelectedIndexChanged += new System.EventHandler(this.cmbKe_SelectedIndexChanged);
             // 
             // cmbKho
             // 
             this.cmbKho.DisplayMember = "Text";
             this.cmbKho.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbKho.FocusHighlightEnabled = true;
             this.cmbKho.FormattingEnabled = true;
             this.cmbKho.ItemHeight = 18;
             this.cmbKho.Location = new System.Drawing.Point(769, 82);
             this.cmbKho.Name = "cmbKho";
             this.cmbKho.Size = new System.Drawing.Size(150, 24);
-            this.cmbKho.TabIndex = 49;
+            this.cmbKho.TabIndex = 12;
             this.cmbKho.SelectedIndexChanged += new System.EventHandler(this.cmbKho_SelectedIndexChanged);
             // 
             // labelX3
@@ -962,11 +985,12 @@
             // 
             // 
             this.txtNguyenNhan.Border.Class = "TextBoxBorder";
+            this.txtNguyenNhan.FocusHighlightEnabled = true;
             this.txtNguyenNhan.Location = new System.Drawing.Point(693, 77);
             this.txtNguyenNhan.Multiline = true;
             this.txtNguyenNhan.Name = "txtNguyenNhan";
             this.txtNguyenNhan.Size = new System.Drawing.Size(216, 26);
-            this.txtNguyenNhan.TabIndex = 54;
+            this.txtNguyenNhan.TabIndex = 13;
             // 
             // labelX22
             // 
@@ -1012,6 +1036,7 @@
             // 
             this.cmbLiDo.DisplayMember = "Text";
             this.cmbLiDo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLiDo.FocusHighlightEnabled = true;
             this.cmbLiDo.FormattingEnabled = true;
             this.cmbLiDo.ItemHeight = 18;
             this.cmbLiDo.Items.AddRange(new object[] {
@@ -1020,7 +1045,7 @@
             this.cmbLiDo.Location = new System.Drawing.Point(91, 79);
             this.cmbLiDo.Name = "cmbLiDo";
             this.cmbLiDo.Size = new System.Drawing.Size(192, 24);
-            this.cmbLiDo.TabIndex = 61;
+            this.cmbLiDo.TabIndex = 6;
             this.cmbLiDo.Text = "Nhập hàng";
             // 
             // comboItem1
@@ -1037,6 +1062,7 @@
             // 
             // 
             this.txtSoHD.Border.Class = "TextBoxBorder";
+            this.txtSoHD.FocusHighlightEnabled = true;
             this.txtSoHD.Location = new System.Drawing.Point(92, 2);
             this.txtSoHD.Name = "txtSoHD";
             this.txtSoHD.Size = new System.Drawing.Size(191, 24);
@@ -1050,6 +1076,9 @@
             this.dpkNgayLap.BackgroundStyle.Class = "DateTimeInputBackground";
             this.dpkNgayLap.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dpkNgayLap.ButtonDropDown.Visible = true;
+            this.dpkNgayLap.CustomFormat = "dd/MM/yyyy";
+            this.dpkNgayLap.FocusHighlightEnabled = true;
+            this.dpkNgayLap.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dpkNgayLap.Location = new System.Drawing.Point(92, 28);
             // 
             // 
@@ -1082,7 +1111,7 @@
             this.dpkNgayLap.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dpkNgayLap.Name = "dpkNgayLap";
             this.dpkNgayLap.Size = new System.Drawing.Size(191, 24);
-            this.dpkNgayLap.TabIndex = 1;
+            this.dpkNgayLap.TabIndex = 4;
             // 
             // dpkNgayNhap
             // 
@@ -1092,6 +1121,9 @@
             this.dpkNgayNhap.BackgroundStyle.Class = "DateTimeInputBackground";
             this.dpkNgayNhap.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dpkNgayNhap.ButtonDropDown.Visible = true;
+            this.dpkNgayNhap.CustomFormat = "dd/MM/yyyy";
+            this.dpkNgayNhap.FocusHighlightEnabled = true;
+            this.dpkNgayNhap.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dpkNgayNhap.Location = new System.Drawing.Point(92, 54);
             // 
             // 
@@ -1124,18 +1156,19 @@
             this.dpkNgayNhap.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dpkNgayNhap.Name = "dpkNgayNhap";
             this.dpkNgayNhap.Size = new System.Drawing.Size(191, 24);
-            this.dpkNgayNhap.TabIndex = 64;
+            this.dpkNgayNhap.TabIndex = 5;
             // 
             // cmbNCC
             // 
             this.cmbNCC.DisplayMember = "Text";
             this.cmbNCC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbNCC.FocusHighlightEnabled = true;
             this.cmbNCC.FormattingEnabled = true;
             this.cmbNCC.ItemHeight = 18;
             this.cmbNCC.Location = new System.Drawing.Point(437, 2);
             this.cmbNCC.Name = "cmbNCC";
             this.cmbNCC.Size = new System.Drawing.Size(182, 24);
-            this.cmbNCC.TabIndex = 65;
+            this.cmbNCC.TabIndex = 7;
             // 
             // labelX27
             // 
@@ -1143,7 +1176,7 @@
             this.labelX27.Name = "labelX27";
             this.labelX27.Size = new System.Drawing.Size(105, 19);
             this.labelX27.TabIndex = 67;
-            this.labelX27.Text = "Nguyên nhân";
+            this.labelX27.Text = "Diễn giải";
             // 
             // groupPanel2
             // 
@@ -1197,7 +1230,7 @@
             this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            this.groupPanel2.TabIndex = 68;
+            this.groupPanel2.TabIndex = 0;
             this.groupPanel2.Text = "HÓA ĐƠN";
             // 
             // txtCO
@@ -1206,10 +1239,11 @@
             // 
             // 
             this.txtCO.Border.Class = "TextBoxBorder";
+            this.txtCO.FocusHighlightEnabled = true;
             this.txtCO.Location = new System.Drawing.Point(756, 27);
             this.txtCO.Name = "txtCO";
             this.txtCO.Size = new System.Drawing.Size(153, 24);
-            this.txtCO.TabIndex = 77;
+            this.txtCO.TabIndex = 12;
             // 
             // txtNo
             // 
@@ -1217,10 +1251,11 @@
             // 
             // 
             this.txtNo.Border.Class = "TextBoxBorder";
+            this.txtNo.FocusHighlightEnabled = true;
             this.txtNo.Location = new System.Drawing.Point(756, 0);
             this.txtNo.Name = "txtNo";
             this.txtNo.Size = new System.Drawing.Size(153, 24);
-            this.txtNo.TabIndex = 76;
+            this.txtNo.TabIndex = 11;
             // 
             // labelX29
             // 
@@ -1245,10 +1280,11 @@
             // 
             this.txtTongTien.Border.Class = "TextBoxBorder";
             this.txtTongTien.Enabled = false;
+            this.txtTongTien.FocusHighlightEnabled = true;
             this.txtTongTien.Location = new System.Drawing.Point(437, 79);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(182, 24);
-            this.txtTongTien.TabIndex = 73;
+            this.txtTongTien.TabIndex = 10;
             this.txtTongTien.Text = "0";
             // 
             // txtTyGia
@@ -1258,12 +1294,13 @@
             // 
             this.txtTyGia.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtTyGia.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTyGia.FocusHighlightEnabled = true;
             this.txtTyGia.Increment = 1;
             this.txtTyGia.Location = new System.Drawing.Point(437, 54);
             this.txtTyGia.Name = "txtTyGia";
             this.txtTyGia.ShowUpDown = true;
             this.txtTyGia.Size = new System.Drawing.Size(182, 24);
-            this.txtTyGia.TabIndex = 72;
+            this.txtTyGia.TabIndex = 9;
             this.txtTyGia.Value = 1;
             // 
             // labelX18
@@ -1279,6 +1316,7 @@
             this.cmbNgoaiTe.DisplayMember = "Text";
             this.cmbNgoaiTe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbNgoaiTe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNgoaiTe.FocusHighlightEnabled = true;
             this.cmbNgoaiTe.FormattingEnabled = true;
             this.cmbNgoaiTe.ItemHeight = 18;
             this.cmbNgoaiTe.Items.AddRange(new object[] {
@@ -1287,7 +1325,7 @@
             this.cmbNgoaiTe.Location = new System.Drawing.Point(437, 28);
             this.cmbNgoaiTe.Name = "cmbNgoaiTe";
             this.cmbNgoaiTe.Size = new System.Drawing.Size(182, 24);
-            this.cmbNgoaiTe.TabIndex = 70;
+            this.cmbNgoaiTe.TabIndex = 8;
             // 
             // comboItem6
             // 

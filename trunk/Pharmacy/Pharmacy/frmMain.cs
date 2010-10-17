@@ -332,22 +332,39 @@ namespace Pharmacy
             frm.Show();
         }
 
-     
+        private void tab4cmdTonKho_Click(object sender, EventArgs e)
+        {
+            BaoCao.frmTonKho frm = new BaoCao.frmTonKho();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+        private void tab4cmdTHChi_Click(object sender, EventArgs e)
+        {
+            BaoCao.frmTonghopthu_chi frm = new BaoCao.frmTonghopthu_chi();
+            frm.MdiParent = this;
+            frm.Show();
+        }
 
-      
-
-     
-
-
+        private void tabAbout_Click(object sender, EventArgs e)
+        {
+            frmAbout frm = new frmAbout();
    
+            frm.ShowDialog();
+        }
 
-    
+        private void bntAboutCompany_Click(object sender, EventArgs e)
+        {
+            frmAbout frm = new frmAbout();
+            frm.ShowDialog();
 
-     
+        }
 
-      
-
-    
+        private void bntKho_Click(object sender, EventArgs e)
+        {
+            QuanLy.frmKho frm = new QuanLy.frmKho();
+            frm.ShowDialog();
+        }
+  
 
      
     }

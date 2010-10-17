@@ -22,8 +22,8 @@ namespace Pharmacy.BaoCao.BLL
                                new DataColumn("diengiai", Type.GetType("System.String")),                              
                                new DataColumn("thu_ps", Type.GetType("System.Double")),
                                new DataColumn("chi_ps", Type.GetType("System.Double")),
-                               new DataColumn("thu_sd", Type.GetType("System.Double")),
-                               new DataColumn("chi_sd", Type.GetType("System.Double")),
+                               new DataColumn("sodu", Type.GetType("System.Double")),
+                           
                                new DataColumn("thang", Type.GetType("System.Int16")),
                                 new DataColumn("nam", Type.GetType("System.Int16"))
                                
@@ -57,8 +57,7 @@ namespace Pharmacy.BaoCao.BLL
                 r["diengiai"] = dataSQL.Rows[i]["diengiai"];
                 r["thu_ps"] = dataSQL.Rows[i]["thu_ps"];
                 r["chi_ps"] = dataSQL.Rows[i]["chi_ps"];
-                r["thu_sd"] = dataSQL.Rows[i]["thu_sd"];
-                r["chi_sd"] = dataSQL.Rows[i]["chi_sd"];
+                r["sodu"] = dataSQL.Rows[i]["sodu"];
                
                 r["thang"] = thang;
                 r["nam"] = nam;

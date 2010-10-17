@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -12,9 +12,14 @@
     <AssemblyName>Pharmacy</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <ApplicationIcon>LogoCauVong.ico</ApplicationIcon>
+    <ApplicationIcon>LogoCV.ico</ApplicationIcon>
     <StartupObject>
     </StartupObject>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
     <PublishUrl>http://localhost/Pharmacy/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -27,7 +32,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -39,6 +43,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,18 +52,43 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlPrint, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Documents and Settings\TruongQuocTrang\My Documents\Downloads\Compressed\ControlPrint\ControlPrint\bin\Release\ControlPrint.dll</HintPath>
     </Reference>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\rpt\New Folder\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework">
+      <HintPath>..\..\..\..\..\..\rpt\New Folder\CrystalDecisions.Enterprise.Framework.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore">
+      <HintPath>..\..\..\..\..\..\rpt\New Folder\CrystalDecisions.Enterprise.InfoStore.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\rpt\New Folder\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\rpt\New Folder\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\rpt\New Folder\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=7.9.0.0, Culture=neutral, PublicKeyToken=5fd520d36328f741, processorArchitecture=MSIL" />
     <Reference Include="DICHSO, Version=1.0.2254.24682, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
@@ -106,9 +136,32 @@
     <Compile Include="BaoCao\BLL\TTonghopthuchi.cs" />
     <Compile Include="BaoCao\BLL\TXuat.cs" />
     <Compile Include="BaoCao\BLL\TNhap.cs" />
+    <Compile Include="BaoCao\ds\dsSo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\ds\dstonghopthuhchi.cs">
+      <DependentUpon>dstonghopthuhchi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\ds\dsTonKho.cs">
+      <DependentUpon>dsTonKho.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\frmRptTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\frmRptTonKho.designer.cs">
+      <DependentUpon>frmRptTonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCao\dsXuatNew.cs">
       <DependentUpon>dsXuatNew.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="BaoCao\dsXuatNew.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -231,6 +284,12 @@
       <DependentUpon>rptNhap.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BaoCao\RPT\rptSoQuy.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSoQuy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BaoCao\RPT\rptTheKho.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -261,10 +320,10 @@
       <DependentUpon>rptTonghopthu.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaoCao\RPT\rptTonghopthuchi.cs">
+    <Compile Include="BaoCao\RPT\rptTonKho.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>rptTonghopthuchi.rpt</DependentUpon>
+      <DependentUpon>rptTonKho.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="BaoCao\RPT\rptXuat.cs">
@@ -295,8 +354,15 @@
     <Compile Include="BLL\TNhaCC.cs" />
     <Compile Include="BLL\TQuycach.cs" />
     <Compile Include="DLL\DataAccess.cs" />
+    <Compile Include="Info\KhoInfo.cs" />
     <Compile Include="DLL\TLog.cs" />
     <Compile Include="DLL\UTLXML.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +394,12 @@
     <Compile Include="Info\LoaiHangHoaInfo.cs" />
     <Compile Include="Info\LoInfo.cs" />
     <Compile Include="Info\NhomHangHoaInfo.cs" />
+    <Compile Include="MyTable\TbTinhThanh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyTable\TbLoaiHH.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MyTable\TblKhuyenMai.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -437,6 +509,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaoCao\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\frmRptTonKho.resx">
+      <DependentUpon>frmRptTonKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\frmDoanhthuBH.resx">
       <DependentUpon>frmDoanhthuBH.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -489,6 +569,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptNhap.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\RPT\rptSoQuy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSoQuy.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\RPT\rptTheKho.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptTheKho.cs</LastGenOutput>
@@ -509,9 +593,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptTonghopthu.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\RPT\rptTonghopthuchi.rpt">
+    <EmbeddedResource Include="BaoCao\RPT\rptTonKho.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptTonghopthuchi.cs</LastGenOutput>
+      <LastGenOutput>rptTonKho.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\RPT\rptXuat.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -519,6 +603,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BASIC\frmChild.resx">
       <DependentUpon>frmChild.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
@@ -574,6 +662,18 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\frmKho.resx">
+      <DependentUpon>frmKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\frmTinhThanh.resx">
+      <DependentUpon>frmTinhThanh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\frmLoaiHH.resx">
+      <DependentUpon>frmLoaiHH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLy\frmKhuyenMai.resx">
       <DependentUpon>frmKhuyenMai.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -618,10 +718,6 @@
       <DependentUpon>fromNhomKH.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThuChi\CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="ThuChi\frmCongNo.resx">
       <DependentUpon>frmCongNo.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -634,8 +730,8 @@
       <DependentUpon>frmPhieuChi.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThuChi\frmPhieuThu.resx">
-      <DependentUpon>frmPhieuThu.cs</DependentUpon>
+    <EmbeddedResource Include="ThuChi\frmXuatKho.resx">
+      <DependentUpon>frmXuatKho.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ThuChi\frmrptThu.resx">
@@ -688,6 +784,24 @@
     <Compile Include="QuanLy\BLL\TQuyCach.cs" />
     <Compile Include="QuanLy\BLL\TTinhThanh.cs" />
     <Compile Include="QuanLy\BLL\TTonkho.cs" />
+    <Compile Include="QuanLy\frmKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmKho.designer.cs">
+      <DependentUpon>frmKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy\frmTinhThanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmTinhThanh.Designer.cs">
+      <DependentUpon>frmTinhThanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy\frmLoaiHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmLoaiHH.Designer.cs">
+      <DependentUpon>frmLoaiHH.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLy\frmKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -769,12 +883,6 @@
     <Compile Include="ThuChi\BLL\TPhieuChi.cs" />
     <Compile Include="ThuChi\BLL\TPhieuThu.cs" />
     <Compile Include="ThuChi\BLL\TrptThu.cs" />
-    <Compile Include="ThuChi\CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="ThuChi\frmCongNo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -789,7 +897,6 @@
     </Compile>
     <Compile Include="ThuChi\DS\dsChi.cs">
       <DependentUpon>dsChi.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ThuChi\DS\dsChi.Designer.cs">
       <DependentUpon>dsChi.xsd</DependentUpon>
@@ -824,11 +931,11 @@
     <Compile Include="ThuChi\ListDemo.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ThuChi\frmPhieuThu.cs">
+    <Compile Include="ThuChi\frmXuatKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThuChi\frmPhieuThu.Designer.cs">
-      <DependentUpon>frmPhieuThu.cs</DependentUpon>
+    <Compile Include="ThuChi\frmXuatKho.Designer.cs">
+      <DependentUpon>frmXuatKho.cs</DependentUpon>
     </Compile>
     <Compile Include="ThuChi\rptPhieuThu.cs">
       <AutoGen>True</AutoGen>
@@ -911,6 +1018,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BaoCao\ds\dsTheKho.xsc">
@@ -928,7 +1036,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LogoCauVong.ico" />
+    <None Include="Resources\LOGO2_ copy.png" />
+    <None Include="Resources\LOGO2_ copy1.png" />
+    <None Include="Resources\LOGO2.jpg" />
+    <None Include="Resources\PM NEWSUN.jpg" />
+    <Content Include="LogoCV.ico" />
+    <Content Include="logoMTMoi.ico" />
+    <None Include="Resources\NEN NS.jpg" />
+    <None Include="Resources\home_48.png" />
     <Content Include="TRIAL\TrialMaker\LockUsage.txt" />
+    <None Include="BaoCao\ds\dsSo.xsc">
+      <DependentUpon>dsSo.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\ds\dsSo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCao\ds\dsSo.xss">
+      <DependentUpon>dsSo.xsd</DependentUpon>
+    </None>
     <None Include="BaoCao\ds\dsTonKho.xsc">
       <DependentUpon>dsTonKho.xsd</DependentUpon>
     </None>
@@ -1065,6 +1192,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
       <Visible>False</Visible>
       <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
@@ -1080,6 +1212,11 @@
       <ProductName>.NET Framework 3.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
       <Visible>False</Visible>
       <ProductName>Windows Installer 3.1</ProductName>
@@ -1089,6 +1226,17 @@
   <ItemGroup>
     <Folder Include="NhanVien\DLL\" />
     <Folder Include="ThuChi\DLL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

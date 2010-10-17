@@ -29,7 +29,6 @@ namespace Pharmacy.BaoCao.BLL
 
             };
             data.Columns.AddRange(dc);
-
         }
         public DataTable GetXuat(DateTime tu, DateTime den)
         {
@@ -55,7 +54,7 @@ namespace Pharmacy.BaoCao.BLL
                 r["KH"] = dataSQL.Rows[i]["tenkh"];
                 r["SOLUONG"] = dataSQL.Rows[i]["SOLUONG"];
                 r["DONGIA"] = dataSQL.Rows[i]["DONGIA"];
-                r["THANHTIEN"] = dataSQL.Rows[i]["TIENCOVAT"];
+                 r["THANHTIEN"] = dataSQL.Rows[i]["TIENCOVAT"];
                 r["Thang"] = String.Format("{0:dd/MM/yyyy}", tu);
                 r["Ngay"] =String.Format("{0:dd/MM/yyyy}", den);
                 data.Rows.Add(r);

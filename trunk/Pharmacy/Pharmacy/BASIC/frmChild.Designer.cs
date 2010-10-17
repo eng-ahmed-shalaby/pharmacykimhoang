@@ -38,7 +38,7 @@ namespace Pharmacy.BASIC
             this.lblTitle.ForeColor = System.Drawing.Color.Tomato;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(992, 35);
+            this.lblTitle.Size = new System.Drawing.Size(992, 32);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "[title]";
             this.lblTitle.TextAlignment = System.Drawing.StringAlignment.Center;

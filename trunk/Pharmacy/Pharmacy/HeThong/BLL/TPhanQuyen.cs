@@ -13,6 +13,7 @@ namespace Pharmacy.HeThong.BLL
         {
             DataTable data = new DataTable();
             data = cn.GetDataByStoredProcedure("usp_SelectCHUCNANGsAll");
+           
             return data;
         }
         public DataTable GetPhanQuyen(int MaTDV)

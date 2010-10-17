@@ -66,31 +66,55 @@ namespace Pharmacy.BaoCao
         }
         private void ShowNhap(DateTime tu, DateTime den)
         {
-            DataTable dt = tNhap.SetData(tu, den);
-            RPT.rptNhap rpt = new RPT.rptNhap();
-            rpt.SetDataSource(dt);
-            crystalReportViewer1.ReportSource = rpt;
-            crystalReportViewer1.Refresh();
-            dt.Clear();
+            try
+            {
+                DataTable dt = tNhap.SetData(tu, den);
+                RPT.rptNhap rpt = new RPT.rptNhap();
+                rpt.SetDataSource(dt);
+                crystalReportViewer1.ReportSource = rpt;
+                crystalReportViewer1.Refresh();
+                dt.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Kiểm tra lại thông tin");
+                TLog.WriteErr("frmRptNhap.cs.cs_ShowNhap", ex.Message + "||" + ex.StackTrace);
+            }
         }
         private void ShowXuat(DateTime tu, DateTime den)
         {
-            DataTable dt = tXuat.SetData(tu, den);
-            RPT.rptXuat rpt = new RPT.rptXuat();
-            rpt.SetDataSource(dt);
-            crystalReportViewer1.ReportSource = rpt;
-            crystalReportViewer1.Refresh();
-            dt.Clear();
+            try
+            {
+                DataTable dt = tXuat.SetData(tu, den);
+                RPT.rptXuat rpt = new RPT.rptXuat();
+                rpt.SetDataSource(dt);
+                crystalReportViewer1.ReportSource = rpt;
+                crystalReportViewer1.Refresh();
+                dt.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Kiểm tra lại thông tin");
+                TLog.WriteErr("frmRptNhap.cs.cs_ShowXuat", ex.Message + "||" + ex.StackTrace);
+            }
         }
 
         private void ShowTheKho(int maHH, int maKho, DateTime from, DateTime to)
         {
-            DataTable dt = tTheKho.SetData(maHH, maKho, from, to);
-            RPT.rptTheKho rpt = new RPT.rptTheKho();
-            rpt.SetDataSource(dt);
-            crystalReportViewer1.ReportSource = rpt;
-            crystalReportViewer1.Refresh();
-            dt.Clear();
+            try
+            {
+                DataTable dt = tTheKho.SetData(maHH, maKho, from, to);
+                RPT.rptTheKho rpt = new RPT.rptTheKho();
+                rpt.SetDataSource(dt);
+                crystalReportViewer1.ReportSource = rpt;
+                crystalReportViewer1.Refresh();
+                dt.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Kiểm tra lại thông tin");
+                TLog.WriteErr("frmRptNhap.cs.cs_ShowTheKho", ex.Message + "||" + ex.StackTrace);
+            }
         }
         private void cmdShow_Click(object sender, EventArgs e)
         {

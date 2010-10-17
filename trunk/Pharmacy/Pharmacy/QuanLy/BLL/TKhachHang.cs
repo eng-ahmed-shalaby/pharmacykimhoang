@@ -20,8 +20,8 @@ namespace Pharmacy.QuanLy.BLL
         public int InsertKH(Info.KhachHangInfo info)
         {
             int id = cn.ExecuteInsert("SP_INSERTKH",
-                new string[] { "@CODEKH", "@MANHOM", "@TEN", "@TUOI", "@GIOITINH", "@MATINH", "@DIACHI", "@DIENTHOAI", "@CAPDO","@MST" },
-                new object[] { info.CODEKH, info.MANHOM, info.TEN, info.TUOI, info.GIOITINH, info.MATINH, info.DIACHI, info.DIENTHOAI, info.CAPDO, info.MST });
+                new string[] { "@CODEKH", "@MANHOM", "@TEN", "@TUOI", "@GIOITINH", "@MATINH", "@DIACHI", "@DIENTHOAI", "@CAPDO","@MST","@HANNO" },
+                new object[] { info.CODEKH, info.MANHOM, info.TEN, info.TUOI, info.GIOITINH, info.MATINH, info.DIACHI, info.DIENTHOAI, info.CAPDO, info.MST,info.HanNo });
             return id;
         }
 
@@ -36,8 +36,8 @@ namespace Pharmacy.QuanLy.BLL
         public int UpdateKH(Info.KhachHangInfo info)
         {
             cn.ExecuteNonQuery("SP_UPDATEKH",
-                new string[] { "@MAKH", "@CODEKH", "@MANHOM", "@TEN", "@TUOI", "@GIOITINH", "@MATINH", "@DIACHI", "@DIENTHOAI", "@CAPDO","@MST" },
-                new object[] { info.MAKH, info.CODEKH, info.MANHOM, info.TEN, info.TUOI, info.GIOITINH, info.MATINH, info.DIACHI, info.DIENTHOAI, info.CAPDO,info.MST });
+                new string[] { "@MAKH", "@CODEKH", "@MANHOM", "@TEN", "@TUOI", "@GIOITINH", "@MATINH", "@DIACHI", "@DIENTHOAI", "@CAPDO","@MST","@HANNO" },
+                new object[] { info.MAKH, info.CODEKH, info.MANHOM, info.TEN, info.TUOI, info.GIOITINH, info.MATINH, info.DIACHI, info.DIENTHOAI, info.CAPDO,info.MST,info.HanNo });
             return 1;
         }
     }

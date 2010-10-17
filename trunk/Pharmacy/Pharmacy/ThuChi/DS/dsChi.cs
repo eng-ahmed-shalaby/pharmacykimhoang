@@ -1,6 +1,12 @@
 ﻿namespace Pharmacy.ThuChi.DS
 {
 }
+namespace Pharmacy.ThuChi.DS
+{
+}
+namespace Pharmacy.ThuChi.DS
+{
+}
 namespace Pharmacy.ThuChi.DS {
     
     

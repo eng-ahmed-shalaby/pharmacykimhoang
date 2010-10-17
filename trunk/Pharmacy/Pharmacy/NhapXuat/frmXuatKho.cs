@@ -26,6 +26,8 @@ namespace Pharmacy.NhapXuat
         Info.CTXUATInfo infoCTXuat = new NhapXuat.Info.CTXUATInfo();
         int slton = 0;
         double tienhh = 0;
+        double tienchuacat = 0;
+        double tienchuacatCoCK = 0;
         public frmXuatKho()
         {
 
@@ -37,9 +39,15 @@ namespace Pharmacy.NhapXuat
         public void ShowHH(int loaiHH)
         {
             HANGHOA = tNhapKho.GetHH(loaiHH);
-            cmbTenThuoc.DisplayMember = "TENHANGHOA";
-            cmbTenThuoc.ValueMember = "MA";
-            cmbTenThuoc.DataSource = HANGHOA;
+            if (HANGHOA.Rows.Count > 0)
+            {cmbTenThuoc.Enabled=true;
+                cmbTenThuoc.DisplayMember = "TENHANGHOA";
+                cmbTenThuoc.ValueMember = "MA";
+                cmbTenThuoc.DataSource = HANGHOA;
+            }
+            else { cmbTenThuoc.Enabled = false;
+                ResetFromCTHD();
+            }
         }
         public void ShowTDV()
         {
@@ -94,9 +102,17 @@ namespace Pharmacy.NhapXuat
         public void ShowKH(int nhom)
         {
             DataTable data = tKH.GetKhachHang(nhom);
-            cmbKH.DisplayMember = "TEN";
-            cmbKH.ValueMember = "MAKH";
-            cmbKH.DataSource = data;
+            if (data.Rows.Count > 0)
+            {
+                cmbKH.Enabled = true;
+                cmbKH.DisplayMember = "TEN";
+                cmbKH.ValueMember = "MAKH";
+                cmbKH.DataSource = data;
+            }
+            else {
+                cmbKH.Enabled = false;
+                cmbKH.Text = "";
+            }
         }
         public void ShowLoaiSP()
         {
@@ -150,6 +166,7 @@ namespace Pharmacy.NhapXuat
                 slton = int.Parse(LO.Rows[i]["SLTON_LO"].ToString());
                 cmbDVT.Text = LO.Rows[i]["TENDV"].ToString();
                 dpkHH.Text = LO.Rows[i]["NGAYHH"].ToString();
+
                 txtKho.Text = LO.Rows[i]["TEN"].ToString();
                 txtKe.Text = LO.Rows[i]["KE"].ToString();
                 maCTkho = int.Parse(LO.Rows[i]["MACTKHO"].ToString());
@@ -166,8 +183,12 @@ namespace Pharmacy.NhapXuat
 
         public void ResetFromCTHD()
         {
-            
-         
+            cmbTenThuoc.Text = "";
+            lblKM.Text = "";
+            cmbLo.Text = "";
+            txtSL.Text = "0";
+            txtSLban.Text = "0";
+            txtDG.Text = "0";       
         }
 
         public void ResetFromHD()
@@ -255,6 +276,7 @@ namespace Pharmacy.NhapXuat
             infoHDXUAT.TienNo = infoHDXUAT.Tongtien;
             infoHDXUAT.No = txtNo.Text;
             infoHDXUAT.Co = txtCO.Text;
+            infoHDXUAT.DienGiai = txtNguyenNhan.Text;
         }
 
         void ChangeInsertCT()
@@ -349,6 +371,7 @@ namespace Pharmacy.NhapXuat
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Kiểm tra lại thông tin");
                 TLog.WriteErr("frmXuatKho_cmdThemHD_Click", ex.Message + "|" + ex.StackTrace);
             }
         }
@@ -365,20 +388,23 @@ namespace Pharmacy.NhapXuat
 
         private void cmdTaoMoi_Click(object sender, EventArgs e)
         {
+            cmbVat.Enabled = true;
             ChangeInsertHD();
             ResetFromHD();
             lvCTHD.Items.Clear();
         }
         private void txtDG_ValueChanged(object sender, EventArgs e)
-        {   double tienchuacat=0;
+        {  
         try
         {
             if (txtSLban.Text != "" && txtDG.Text != "")
                 tienchuacat = int.Parse(txtSLban.Text) * double.Parse(txtDG.Text);
-            txtGia.Text = (tienchuacat + tienchuacat * (float.Parse(cmbVat.Text.ToString()) / 100)).ToString();
+            tienchuacatCoCK = tienchuacat - tienchuacat * txtCK.Value;
+            txtGia.Text = (tienchuacatCoCK + tienchuacatCoCK * (float.Parse(cmbVat.Text.ToString()) / 100)).ToString();
             tienhh = double.Parse(txtGia.Text);
         }
         catch (Exception ex) {
+            MessageBox.Show("Kiểm tra lại thông tin");
             TLog.WriteErr("frmXuatKho_txtDG_ValueChanged", ex.Message +"|"+ ex.StackTrace );
         }
         }
@@ -386,11 +412,14 @@ namespace Pharmacy.NhapXuat
         {
             try
             {
-                double tienchuacat = int.Parse(txtSLban.Text) * double.Parse(txtDG.Text);
-                txtGia.Text = (tienchuacat + tienchuacat * (float.Parse(cmbVat.Text.ToString()) / 100)).ToString();
+                tienchuacat = int.Parse(txtSLban.Text) * double.Parse(txtDG.Text);
+                tienchuacatCoCK = tienchuacat - tienchuacat * txtCK.Value;
+                txtGia.Text = (tienchuacatCoCK + tienchuacatCoCK * (float.Parse(cmbVat.Text.ToString()) / 100)).ToString();
+ 
                 tienhh = double.Parse(txtGia.Text);
             }
             catch (Exception ex) {
+                MessageBox.Show("Kiểm tra lại thông tin");
                 TLog.WriteErr("frmXuatKho_txtCMDVat_ValueChanged", ex.Message + "|" + ex.StackTrace);
             }
         }
@@ -398,13 +427,14 @@ namespace Pharmacy.NhapXuat
         { 
             infoCTXuat.Mahdxuat = infoHDXUAT.Ma;
             infoCTXuat.Solo= cmbLo.Text;
+            infoCTXuat.MaCTNhap = int.Parse(cmbLo.SelectedValue.ToString()) ;
             infoCTXuat.MaCTKho = maCTkho;
             infoCTXuat.Mahh = int.Parse(cmbTenThuoc.SelectedValue.ToString());
             infoCTXuat.Soluong= int.Parse( txtSLban.Text);
             infoCTXuat.Dongia = double.Parse(txtDG.Text);
-            infoCTXuat.Tienchuavat = int.Parse( txtSLban.Text) *double.Parse(txtDG.Text);
+            infoCTXuat.Tienchuavat = tienchuacatCoCK; // có chiết khấu
             infoCTXuat.Vat = int.Parse(cmbVat.Text.ToString());
-            infoCTXuat.Tiencovat = infoCTXuat.Tienchuavat + infoCTXuat.Tienchuavat * (float.Parse(cmbVat.Text.ToString()) / 100);
+            infoCTXuat.Tiencovat = tienchuacatCoCK + tienchuacatCoCK * (float.Parse(cmbVat.Text.ToString()) / 100);
             infoCTXuat.CK = txtCK.Value; 
             infoCTXuat.Tinhtrang = 1;
             return infoCTXuat;
@@ -420,10 +450,10 @@ namespace Pharmacy.NhapXuat
                     tXuatKho.InsertCTNHAP(infoCTXuat);
 
                     txtTongTien.Text = (double.Parse(txtTongTien.Text) + double.Parse(txtGia.Text)).ToString();
-                    tXuatKho.UpdateTongtienHD(infoHDXUAT.Ma, float.Parse(txtTongTien.Text));
+                    tXuatKho.UpdateTongtienHD(infoHDXUAT.Ma, float.Parse(txtTongTien.Text),0);
                    
                     slton = slton - int.Parse(txtSLban.Text);
-                    UpdateLo(int.Parse(cmbLo.SelectedValue.ToString()), slton);
+                    UpdateLo(int.Parse(cmbLo.SelectedValue.ToString()), slton,0);
          //////////////////////////////
                     SetHHKhuyenMai();
                 }
@@ -431,18 +461,11 @@ namespace Pharmacy.NhapXuat
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Kiểm tra lại thông tin");
                 TLog.WriteErr("frmXuatKho_InsertCTHD", ex.Message + "|" + ex.StackTrace);
             }
         }
-        private int FindMaHH(int MaCT) {
-            int i = 0;
-            for (i = 0; i < CTHD.Rows.Count; i++) {
-                if (int.Parse(CTHD.Rows[i]["MA"].ToString()) == MaCT)
-                    break;
- 
-            }
-            return int.Parse(CTHD.Rows[i]["MAHH"].ToString());
-        }
+      
         public void LoadCTHD(int maHD)
         {
 
@@ -466,14 +489,14 @@ namespace Pharmacy.NhapXuat
                 }
             }
         }
-        public void UpdateLo(int MaCT, int sl){
+        public void UpdateLo(int MaCT, int sl, int flag){
             int tt = 1;
             if (sl <= 0)
             {
                 sl = 0;
                 tt = 0;
             }
-            tXuatKho.UpdateSLLo(MaCT, sl,tt);
+            tXuatKho.UpdateSLLo(MaCT, sl,tt,flag);
         }
         public void SetHHKhuyenMai() {
             int tt = 1; 
@@ -502,7 +525,7 @@ namespace Pharmacy.NhapXuat
                             ////////Insert Update
                             Info.CTXUATInfo info = SetCTKM(slKM);
                             tXuatKho.InsertCTNHAP(info);
-                            UpdateLo(int.Parse(KM.Rows[0]["MA"].ToString().ToString()), slKMTon);
+                            UpdateLo(int.Parse(KM.Rows[0]["MA"].ToString().ToString()), slKMTon,0);
                         }
                     }
                     catch (Exception ex)
@@ -517,7 +540,8 @@ namespace Pharmacy.NhapXuat
         public Info.CTXUATInfo SetCTKM(int soluong) {
             Info.CTXUATInfo info = new Info.CTXUATInfo();
             info.Mahdxuat = infoHDXUAT.Ma;
-            info.Solo =KM.Rows[0]["MALO"].ToString().ToString();
+            info.Solo =KM.Rows[0]["MALO"].ToString();
+            info.MaCTNhap =int.Parse(KM.Rows[0]["MA"].ToString());
             info.Mahh = int.Parse(dataKM.Rows[0]["MaHHKM"].ToString());
             info.Soluong = soluong;
             info.Dongia = 0;
@@ -530,14 +554,17 @@ namespace Pharmacy.NhapXuat
         }
         private void cmdThemCT_Click(object sender, EventArgs e)
         {
-   
+            cmbVat.Enabled = false;
+            txtDG_ValueChanged(null, null);
+            cmbVat_SelectedIndexChanged(null,null);
+            txtCK_ValueChanged(null, null);
             InsertCTHD();
             LoadCTHD(infoHDXUAT.Ma);
             ShowLo(int.Parse(cmbTenThuoc.SelectedValue.ToString()));
             ShowInfoLo(cmbLo.Text);
           // 
             //  LoadCTHD("20");
-            ResetFromCTHD();
+            //ResetFromCTHD();
         }
         private void dpkDateHD_ValueChanged(object sender, EventArgs e)
         {
@@ -572,12 +599,22 @@ namespace Pharmacy.NhapXuat
             {
                 for (int i = 0; i < lvCTHD.Items.Count; i++)
                     if (lvCTHD.Items[i].Selected == true)
-                    { 
-                        tXuatKho.DeleteCTHD(lvCTHD.Items[i].SubItems[7].Text);
+                    {  
                         int sl = int.Parse(lvCTHD.Items[i].SubItems[4].Text);
+                        double tienCK = double.Parse(CTHD.Rows[i]["TIENCHUAVAT"].ToString()) * double.Parse(CTHD.Rows[i]["CHIETKHAU"].ToString());
+                        double tienHH = double.Parse(CTHD.Rows[i]["TIENCOVAT"].ToString());
+                        tXuatKho.UpdateTongtienHD(infoHDXUAT.Ma, tienHH, 1);
+                        Delete(lvCTHD.Items[i].SubItems[7].Text, sl);
 
-                        UpdateLo(infoHDXUAT.Ma, sl);
-                        cmbLoaiThuoc_SelectedIndexChanged(null,null);
+                        if (i + 1 < lvCTHD.Items.Count)
+                        {
+                       sl = int.Parse(lvCTHD.Items[i+i].SubItems[4].Text);
+                        int dongia = int.Parse(lvCTHD.Items[i+1].SubItems[5].Text);
+                        int tien = int.Parse(lvCTHD.Items[i+1].SubItems[6].Text);
+                            if(dongia==0&&tien==0)
+                        Delete(lvCTHD.Items[i+1].SubItems[7].Text, sl);
+                        }
+                        cmbLo_SelectedIndexChanged(null,null);
                     }
                 LoadCTHD(int.Parse(infoHDXUAT.Ma.ToString()));
             }
@@ -586,7 +623,23 @@ namespace Pharmacy.NhapXuat
                 TLog.WriteErr("frmXuatKho_cmdXoaCT_Click", ex.Message + "|" + ex.StackTrace);
             }
         }
-
+        public void Delete(string maCTXuat, int sl) {
+            int mact = FindMaCTNhap(int.Parse(maCTXuat));
+            UpdateLo(mact, sl, 1);
+            tXuatKho.DeleteCTHD(maCTXuat);
+        } 
+        private int FindMaCTNhap(int Ma)
+        {
+            int i = 0;
+            for (i = 0; i < CTHD.Rows.Count; i++)
+            {
+                if (int.Parse(CTHD.Rows[i]["MA"].ToString()) == Ma)
+                    break;
+            }
+            if (i < CTHD.Rows.Count)
+                return int.Parse(CTHD.Rows[i]["MaCTNhap"].ToString());
+            else return 0;
+        }
         private void cmdXoaHD_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < lvHD.Items.Count; i++)
@@ -599,6 +652,7 @@ namespace Pharmacy.NhapXuat
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
+
             frmPrintHD frm = new frmPrintHD();
             for (int i = 0; i < lvHD.Items.Count; i++)
                 if (lvHD.Items[i].Selected == true)
@@ -610,11 +664,20 @@ namespace Pharmacy.NhapXuat
         private void txtSLban_ValueChanged(object sender, EventArgs e)
         {
 
-            if (txtSLban.Text != "")
-            if (int.Parse(txtSL.Text) < int.Parse(txtSLban.Text))
+            try
             {
-                MessageBox.Show("Không đủ số lượng trong lô");
-                txtSLban.Value = 0;
+                if (txtSLban.Text != "")
+                    if (int.Parse(txtSL.Text) < int.Parse(txtSLban.Text))
+                    {
+                        MessageBox.Show("Không đủ số lượng trong lô");
+                        txtSLban.Value = 0;
+                    }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Kiểm tra lại thông tin");
+                TLog.WriteErr("frmNhapkho_txtSLban_ValueChanged", ex.Message + "||" + ex.StackTrace);
+
             }
 
         }
@@ -631,9 +694,20 @@ namespace Pharmacy.NhapXuat
 
         private void txtCK_ValueChanged(object sender, EventArgs e)
         {
-            double tienCK = txtCK.Value * tienhh;
-            txtGia.Text = (tienhh - tienCK).ToString();
-        }
+            try
+            {
+                double tienCK = txtCK.Value * tienchuacat;
+                tienchuacat = int.Parse(txtSLban.Text) * double.Parse(txtDG.Text);
+                tienchuacatCoCK = tienchuacat - tienchuacat * txtCK.Value;
+                txtGia.Text = (tienchuacatCoCK + tienchuacatCoCK * (float.Parse(cmbVat.Text.ToString()) / 100)).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Kiểm tra lại thông tin");
+                TLog.WriteErr("frmNhapkho_txtCK_ValueChanged", ex.Message + "||" + ex.StackTrace);
+
+            }
+         }
         /// <summary>
         /// In Hóa đơn đỏ
         /// </summary>
@@ -641,13 +715,30 @@ namespace Pharmacy.NhapXuat
         /// <param name="e"></param>
         private void cmdHDDon_Click(object sender, EventArgs e)
         {
-             frmPrintHD frm = new frmPrintHD();
-            for (int i = 0; i < lvHD.Items.Count; i++)
-                if (lvHD.Items[i].Selected == true)
-                {
-                    frm.ShowHD(int.Parse(lvHD.Items[i].SubItems[6].Text));
-                }
+
+            try
+            {
+                frmPrintHD frm = new frmPrintHD();
+                for (int i = 0; i < lvHD.Items.Count; i++)
+                    if (lvHD.Items[i].Selected == true)
+                    {
+                        frm.ShowHDNoView(int.Parse(lvHD.Items[i].SubItems[6].Text));
+                    }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Kiểm tra lại thông tin");
+                TLog.WriteErr("frmNhapkho_cmdHDDon_Click", ex.Message + "||" + ex.StackTrace);
+
+            }
         }
+
+        private void cmdThemKH_Click(object sender, EventArgs e)
+        {
+            QuanLy.frmKhachHang frm = new QuanLy.frmKhachHang();
+            frm.ShowDialog();
+        }
+
 
    
     }

@@ -195,7 +195,7 @@
             this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            this.groupPanel2.TabIndex = 76;
+            this.groupPanel2.TabIndex = 0;
             this.groupPanel2.Text = "Thông tin";
             // 
             // groupBox2
@@ -216,12 +216,13 @@
             // 
             this.cmbHHKM.DisplayMember = "Text";
             this.cmbHHKM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbHHKM.FocusHighlightEnabled = true;
             this.cmbHHKM.FormattingEnabled = true;
             this.cmbHHKM.ItemHeight = 18;
             this.cmbHHKM.Location = new System.Drawing.Point(92, 10);
             this.cmbHHKM.Name = "cmbHHKM";
             this.cmbHHKM.Size = new System.Drawing.Size(225, 24);
-            this.cmbHHKM.TabIndex = 83;
+            this.cmbHHKM.TabIndex = 0;
             this.cmbHHKM.SelectedIndexChanged += new System.EventHandler(this.cmbHHKM_SelectedIndexChanged);
             // 
             // labelX4
@@ -238,10 +239,11 @@
             // 
             // 
             this.txtSLKM.Border.Class = "TextBoxBorder";
+            this.txtSLKM.FocusHighlightEnabled = true;
             this.txtSLKM.Location = new System.Drawing.Point(91, 70);
             this.txtSLKM.Name = "txtSLKM";
             this.txtSLKM.Size = new System.Drawing.Size(225, 24);
-            this.txtSLKM.TabIndex = 81;
+            this.txtSLKM.TabIndex = 1;
             // 
             // labelX5
             // 
@@ -265,6 +267,7 @@
             // 
             // 
             this.txtDVKM.Border.Class = "TextBoxBorder";
+            this.txtDVKM.FocusHighlightEnabled = true;
             this.txtDVKM.Location = new System.Drawing.Point(91, 40);
             this.txtDVKM.Name = "txtDVKM";
             this.txtDVKM.ReadOnly = true;
@@ -282,19 +285,20 @@
             this.groupBox1.Location = new System.Drawing.Point(3, -8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(320, 106);
-            this.groupBox1.TabIndex = 83;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // cmbHH
             // 
             this.cmbHH.DisplayMember = "Text";
             this.cmbHH.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbHH.FocusHighlightEnabled = true;
             this.cmbHH.FormattingEnabled = true;
             this.cmbHH.ItemHeight = 18;
             this.cmbHH.Location = new System.Drawing.Point(74, 11);
             this.cmbHH.Name = "cmbHH";
             this.cmbHH.Size = new System.Drawing.Size(215, 24);
-            this.cmbHH.TabIndex = 77;
+            this.cmbHH.TabIndex = 0;
             this.cmbHH.SelectedIndexChanged += new System.EventHandler(this.cmbHH_SelectedIndexChanged);
             // 
             // txtDVTban
@@ -303,6 +307,7 @@
             // 
             // 
             this.txtDVTban.Border.Class = "TextBoxBorder";
+            this.txtDVTban.FocusHighlightEnabled = true;
             this.txtDVTban.Location = new System.Drawing.Point(74, 44);
             this.txtDVTban.Name = "txtDVTban";
             this.txtDVTban.ReadOnly = true;
@@ -339,10 +344,11 @@
             // 
             // 
             this.txtSLBan.Border.Class = "TextBoxBorder";
+            this.txtSLBan.FocusHighlightEnabled = true;
             this.txtSLBan.Location = new System.Drawing.Point(74, 74);
             this.txtSLBan.Name = "txtSLBan";
             this.txtSLBan.Size = new System.Drawing.Size(215, 24);
-            this.txtSLBan.TabIndex = 75;
+            this.txtSLBan.TabIndex = 1;
             // 
             // panel5
             // 
@@ -366,7 +372,7 @@
             this.cmbIn.Margin = new System.Windows.Forms.Padding(0);
             this.cmbIn.Name = "cmbIn";
             this.cmbIn.Size = new System.Drawing.Size(70, 25);
-            this.cmbIn.TabIndex = 55;
+            this.cmbIn.TabIndex = 3;
             this.cmbIn.Text = "In";
             this.cmbIn.Click += new System.EventHandler(this.cmbIn_Click);
             // 
@@ -378,7 +384,7 @@
             this.cmdSua.Margin = new System.Windows.Forms.Padding(0);
             this.cmdSua.Name = "cmdSua";
             this.cmdSua.Size = new System.Drawing.Size(70, 25);
-            this.cmdSua.TabIndex = 54;
+            this.cmdSua.TabIndex = 1;
             this.cmdSua.Text = "Sửa";
             this.cmdSua.Click += new System.EventHandler(this.cmdSua_Click);
             // 
@@ -390,7 +396,7 @@
             this.cmdXoa.Margin = new System.Windows.Forms.Padding(0);
             this.cmdXoa.Name = "cmdXoa";
             this.cmdXoa.Size = new System.Drawing.Size(70, 25);
-            this.cmdXoa.TabIndex = 53;
+            this.cmdXoa.TabIndex = 2;
             this.cmdXoa.Text = "Xóa";
             this.cmdXoa.Click += new System.EventHandler(this.cmdXoa_Click);
             // 
@@ -402,7 +408,7 @@
             this.cmdThem.Margin = new System.Windows.Forms.Padding(0);
             this.cmdThem.Name = "cmdThem";
             this.cmdThem.Size = new System.Drawing.Size(70, 25);
-            this.cmdThem.TabIndex = 28;
+            this.cmdThem.TabIndex = 0;
             this.cmdThem.Text = "Thêm";
             this.cmdThem.Click += new System.EventHandler(this.cmdThem_Click);
             // 

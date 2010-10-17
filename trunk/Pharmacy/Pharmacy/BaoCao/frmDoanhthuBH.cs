@@ -37,12 +37,20 @@ namespace Pharmacy.BaoCao
         }
         private void ShowDoanhthuBH(DateTime from, DateTime to)
         {
-            DataTable dt = tDoanhthuBH.SetData(from, to);
-            RPT.rptDoanhthuBH rpt = new RPT.rptDoanhthuBH();
-            rpt.SetDataSource(dt);
-            crystalReportViewer1.ReportSource = rpt;
-            crystalReportViewer1.Refresh();
-            dt.Clear();
+            try
+            {
+                DataTable dt = tDoanhthuBH.SetData(from, to);
+                RPT.rptDoanhthuBH rpt = new RPT.rptDoanhthuBH();
+                rpt.SetDataSource(dt);
+                crystalReportViewer1.ReportSource = rpt;
+                crystalReportViewer1.Refresh();
+                dt.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Kiểm tra lại thông tin");
+                TLog.WriteErr("frmDoanhthuBH.cs_ShowDoanhthuBH", ex.Message + "||" + ex.StackTrace);
+            }
         }
     }
 }

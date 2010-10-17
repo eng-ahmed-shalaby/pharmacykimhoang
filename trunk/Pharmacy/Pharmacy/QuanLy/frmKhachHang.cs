@@ -86,7 +86,7 @@ namespace Pharmacy.QuanLy
                 cmb_tinhthanh.DisplayMember = "TEN";
                 cmb_tinhthanh.ValueMember = "MA";
                 cmb_tinhthanh.DataSource = data;
-                cmb_tinhthanh.SelectedIndex = 0;
+                cmb_tinhthanh.SelectedValue = "5100";
             }
             catch (Exception ex)
             {
@@ -125,6 +125,7 @@ namespace Pharmacy.QuanLy
             infoKH.DIENTHOAI = txtdienthoai.Text;
             infoKH.CAPDO = txt_capdo.Text;
             infoKH.MST = txtMST.Text;
+            infoKH.HanNo = txtHanNo.Value;
 
 
         }
@@ -141,7 +142,6 @@ namespace Pharmacy.QuanLy
                         int stt = i + 1;
                         ListViewItem item = new ListViewItem(stt.ToString());
                         lvhanghoa.Items.Add(item);
-
                         item.SubItems.Add(HH.Rows[i]["CODEKH"].ToString().Trim());
                         item.SubItems.Add(HH.Rows[i]["TEN"].ToString().Trim());
                         item.SubItems.Add(HH.Rows[i]["MST"].ToString().Trim());
@@ -149,7 +149,7 @@ namespace Pharmacy.QuanLy
                         item.SubItems.Add(HH.Rows[i]["TENTT"].ToString().Trim());
                         item.SubItems.Add(HH.Rows[i]["DIACHI"].ToString().Trim());
                         item.SubItems.Add(HH.Rows[i]["DIENTHOAI"].ToString().Trim());
-                        item.SubItems.Add(HH.Rows[i]["CAPDO"].ToString().Trim());
+                        item.SubItems.Add(HH.Rows[i]["HANNO"].ToString().Trim());
                         item.SubItems.Add(HH.Rows[i]["MANHOM"].ToString().Trim());
                         item.SubItems.Add(HH.Rows[i]["MATINH"].ToString().Trim());
                         item.SubItems.Add(HH.Rows[i]["MAKH"].ToString().Trim());
@@ -172,6 +172,7 @@ namespace Pharmacy.QuanLy
             txtdienthoai.Text = "";
             txt_diachi.Text = "";
             txtMST.Text = "";
+            txtHanNo.Value= 0;
             loadnhacungcap();
         }
         public void ShowListToForm(int id)
@@ -183,10 +184,11 @@ namespace Pharmacy.QuanLy
                 txt_codekh.Text = HH.Rows[id]["CODEKH"].ToString();
                 cmb_nhom.SelectedValue = int.Parse(HH.Rows[id]["MANHOM"].ToString());
                 cmb_tinhthanh.SelectedValue = HH.Rows[id]["MATINH"].ToString();
-                txtdienthoai.Text = HH.Rows[id]["DIACHI"].ToString();
-                txt_diachi.Text = HH.Rows[id]["DIENTHOAI"].ToString();
+                txtdienthoai.Text = HH.Rows[id]["DIENTHOAI"].ToString();
+                txt_diachi.Text = HH.Rows[id]["DIACHI"].ToString();
                 txt_capdo.Text = HH.Rows[id]["CAPDO"].ToString();
                 txtMST.Text = HH.Rows[id]["MST"].ToString();
+                txtHanNo.Value =int.Parse(HH.Rows[id]["HANNO"].ToString());
                 //cmb_gioitinh.Text = HH.Rows[id]["GIOITINH"].ToString();
             }
             catch (Exception ex)
@@ -253,6 +255,7 @@ namespace Pharmacy.QuanLy
         private void btnNhomKH_Click(object sender, EventArgs e)
         {
             fromNhomKH frm = new fromNhomKH();
+            frm.FormClosed +=new FormClosedEventHandler(frm_FormClosed);
             frm.ShowDialog();
         }
 
@@ -261,6 +264,19 @@ namespace Pharmacy.QuanLy
             ListViewPrinter pr = new ListViewPrinter("DANH SÁCH KHÁCH HÀNG");
             pr.ListView = lvhanghoa;
             pr.PrintPreview();
+        }
+
+        private void cmdTinhThanh_Click(object sender, EventArgs e)
+        {
+            frmTinhThanh frm = new frmTinhThanh();
+            frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+            frm.ShowDialog();
+        }
+
+        void frm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ShowNhom();
+            ShowTinh();
         }
 
     }
